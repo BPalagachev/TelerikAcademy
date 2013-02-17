@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		table
+		{
+			border-collapse: collapse;
+		}
+		.left
+		{
+			width: 150px;
+			text-align: right;
+		}
+		#buttons
+		{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td class="left"><label for="lastName">Last Name</label></td>
+			<td class="right"><input type="text" id="lastName" size="50"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="firstName">First Name</label></td>
+			<td class="right"><input type="text" id="firstName" size="50"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="address">Address</label></td>
+			<td class="right"><textarea rows="4" cols="40" id="address"></textarea></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="city">City</label></td>
+			<td class="right"><input type="text" id="city" size="40"/><label for="state">State</label><input type="text" id="state" size="8"/></td>
+		</tr>
+		<tr>
+			<td class="left" ><label for="code">Zip/Postal Code</label></td>
+			<td class="right"><input type="text" id="code" size="15"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="country">Country</label></td>
+			<td class="right">
+				<select id="country" style="width:270px">
+					<option value="Bulgaria" size="40">Bulgaria</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="left"><label for="phone">Phone (country code, area code, number)</label></td>
+			<td class="right">(<input type="text" id="phone" size="3"/>)<input type="text"size="3"\>-<input type="text" size="30"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="email">E-mail</label></td>
+			<td class="right"><input type="email" size="50" id="email"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="month">Birth Date</label></td>
+			<td class="right">Month<input type="text" id="month" size="2"/>Day<input type="text" size="2"/>Year(4 digit)<input type="text" size="6"/></td>
+		</tr>
+		<tr>
+			<td class="left"><label for="gender">Gender</label></td>
+			<td class="right"><select name="gender" style="width:100px">
+				<option value="male">male</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td class="left">Starting Date</td>
+			<td class="right"><label for="spring2006">Spring 2006</label><input type="radio" name="startingDade" value="Spring 2006" id="spring2006"/>
+			    <label for="summer2006">Summer 2006</label><input type="radio" name="startingDade" value="Summer 2006" id="summer2006"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="left"><label for="commentsQuestions">Comments/Questions</label></td>
+			<td class="right"><textarea id="commentsQuestions" cols="40" rows="6"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" id="buttons"><input type="submit" value="Submit"/><input type="reset" value="Clear This Form"/></td>
+		</tr>
+	</table>
+</body>
+</html>

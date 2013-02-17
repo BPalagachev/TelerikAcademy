@@ -1,0 +1,52 @@
+body
+{
+	color: #303030;
+}
+section h1
+{
+	font-weight: normal;
+}
+section{
+
+	width: 480px;
+	background-color: #eee;
+	border: solid 1px #AFAEAB;
+}
+section article
+{
+	overflow: hidden;
+	border: solid 1px #AFAEAB;
+	padding: 15px;
+	margin: 15px;
+	background-color: #EEE;
+
+}
+section article span.templates
+{
+	color: #383838;
+	font-weight: bold;
+}
+
+section article img
+{
+	float: left;
+	margin: 15px;
+	border: solid 1px #AFAEAB;
+}
+section article button.large
+{
+	color: white;
+	margin-left: 100px;
+	padding-right: 10px;
+	width: 75px;
+	text-align: right;
+	background: url("images/large.jpg");
+}
+section article button.small
+{
+	color: white;
+	padding-right: 10px;
+	width: 60px;
+	text-align: right;
+	background: url("images/small.jpg");
+}

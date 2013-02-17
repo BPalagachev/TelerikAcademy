@@ -1,0 +1,190 @@
+*{
+	margin:0;
+	padding: 0;
+}
+div.wrapper{
+	padding: 10px;
+	overflow: hidden;
+	width: 1200px;
+	background-color: #F1F1F1;
+}
+ul
+{
+	list-style: none;
+}
+
+nav{
+	display: inline-block;
+	float:left;
+}
+nav h2
+{
+	
+	font-size: 1.1em;
+	color: #900B09;
+	font-weight: bold;
+}
+nav a{
+	color: black;
+	text-decoration: none;
+}
+nav section{
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+section.main{
+	border: #C6C6C6 2px solid;
+	padding-bottom: 10px;
+	display: inline-block;
+	float:left;
+	background-color: white;
+}
+section.main header
+{
+	margin-right: 10px;
+	margin-left: 10px;
+	border-bottom: 3px solid black;
+	padding-bottom: 10px;
+}
+section.main header h1
+{
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+}
+section.main header a
+{
+	display: inline-block;
+	border: solid 1px black;
+	text-decoration: none;
+	color:black;
+	text-align: center;
+	width: 150px;
+}
+section.main header a:hover
+{
+	display: inline-block;
+	border: solid 1px black;
+	text-decoration: none;
+	color:red;
+	background-color: black;
+	text-align: center;
+	width: 150px;
+}
+section.main article
+{
+	margin: 10px;
+}
+section.main article p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+section.main article a
+{
+	margin: 10px;
+	color: #900B09;
+	text-decoration: underline;
+}
+section.main article  h2
+{
+	display: block;
+	font-size: 1.1em;
+	background-color:#808080;
+	color:white; 
+
+
+}
+section.main article div.logo{
+	margin: 10px;
+	display: inline-block;
+	float: left;
+}
+section.main article p.bolder
+{
+	font-weight: bold;
+}
+
+section.main>footer
+{
+	margin-right: 10px;
+	margin-left: 10px;
+	border-width:1160px;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+section.main>footer a
+{
+	display: inline-block;
+	border: solid 1px black;
+	text-decoration: none;
+	color:black;
+	text-align: center;
+	width: 150px;
+}
+section.main>footer a:hover
+{
+
+	display: inline-block;
+	border: solid 1px black;
+	text-decoration: none;
+	color:red;
+	background-color: black;
+	text-align: center;
+	width: 150px;
+}
+
+
+
+aside{
+	
+
+	padding: 10px;
+	text-align: center;
+	display: inline-block;
+	float:left;
+}
+aside a
+{
+	margin: 10px;
+	color: #900B09;
+	text-decoration: underline;
+}
+aside  h3
+{
+	margin: 5px;
+	display: block;
+	font-size: 1.1em;
+	background-color:#808080;
+	color:white; 
+}
+aside section{
+	border-collapse: collapse;
+	background-color: white;
+	display: block;
+	border: #808080 1px inset;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 5px;
+	margin-bottom: 5px;
+}
+section.hosting{
+	border-style: none;
+	background-color: #F1F1F1;
+}
+aside section input[type=text]
+{
+	width: 50%;
+}

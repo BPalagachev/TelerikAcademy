@@ -1,0 +1,83 @@
+$pictures: (1 cat1, 2 cat2, 3 cat3, 4 cat4, 5 cat5);
+$thumbWid : 1200px;
+$thumbH: 150px;
+$thumbPad: 10px;
+
+$picMarg: 6px;
+$picRow: 5;
+
+$picH: $thumbH - (2*$thumbPad);
+$picWid: ($thumbWid - 2 * $thumbPad - ($picRow - 1) * $picMarg ) / $picRow - 5px;
+
+
+
+
+body,div
+{
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	div
+	{
+		@each $el in $pictures
+		{
+			&.pic-#{ nth($el,1) }
+			{
+				background-image: url('\images\\#{nth($el, 2)}.png');
+				background-size: $picWid;
+			}
+		}
+	}
+
+	background-color: #dedede;
+	div.thumbnails
+	{
+		margin-left: auto;
+		margin-right: auto;
+		padding: $thumbPad;
+		border: solid black 3px;
+		border-radius: 5px;
+		height: $thumbH;
+		width: $thumbWid;
+		a 
+		{
+			div
+			{
+				display: inline-block;
+				width:$picWid;
+				height: $picH;
+				
+			}
+			&:not(:last-child)>div
+			{
+				margin-right: $picMarg;
+			}
+		}
+
+	}
+	div.preview
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		border: 3px solid black;
+		border-radius: 5px;
+		width: $thumbWid;
+		height: 500px;
+		a
+		{
+			&:target>div
+			{
+				margin: auto;
+				width: 1000px;
+				height: 500px;
+				background-repeat: no-repeat;
+				background-size: 600px;
+				background-position: center;
+			}
+		}	
+	}
+}

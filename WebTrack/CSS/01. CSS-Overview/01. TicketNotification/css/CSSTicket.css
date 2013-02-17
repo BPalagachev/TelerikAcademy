@@ -1,0 +1,60 @@
+table
+{
+    background-color: #595959;
+}
+
+table tbody tr td:first-child
+{
+    color: #E5E5E5;
+    vertical-align: top;
+}
+table tbody tr td:last-child
+{
+    padding-left: 1.5em;
+    width: 330px;
+}
+
+.stress
+{
+    background: inherit;
+    color: #FF0305;
+}
+.timeSpan
+{
+    background: inherit;
+    color: #9BA8AA;
+}
+#ticketId
+{
+    background: inherit;
+    color: #9BA8AA;
+    text-align: left;
+    font-size: 1.3em;
+}
+#status
+{
+    background: inherit;
+    color: #DF692E;
+}
+#circle
+{
+    display:inline-block;
+    background: #71B47A;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+}
+a
+{
+    color: #CDB778;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #CDB778;
+    text-decoration: none;
+}
+
+
+
+

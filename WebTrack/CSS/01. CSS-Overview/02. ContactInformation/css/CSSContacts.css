@@ -1,0 +1,58 @@
+table
+{
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+td
+{
+    border-right: solid;
+    border-color: #D3D2C0;
+    border-width: 1px;
+}
+th
+{
+    background-color:#59BD06;
+    color:#E4F5CB;
+    border-right: solid;
+    border-bottom: solid;
+    border-color: #D3D2C0;
+    border-width: 1px;
+}
+th:last-child, td:last-child
+{
+    border-right:inherit;
+}
+table tbody tr:nth-child(2n+1)
+{
+    background-color: white;
+    color:#3D2C44;
+}
+table tbody tr:nth-child(2n)
+{
+    background-color: #ECECD8;
+    color:#3D2C44;
+}
+span.germany:before
+{
+    content:url(../images/Germany.jpg);
+}
+.mexico:before
+{
+    content: url(../images/Mexico.jpg);
+}
+.UK:before
+{
+    content: url(../images/UK.jpg);
+}
+.contactName
+{
+    width: 10em;
+}
+.city
+{
+    width: 7em;
+}
+.country
+{
+    width: 7em;
+}

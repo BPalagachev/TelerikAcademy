@@ -1,0 +1,35 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+aside{
+	padding: 2%;
+}
+aside ul
+{
+
+	list-style: none;
+}
+aside ul ul{
+	display: none
+}
+aside ul li:hover>ul{
+	display: block;
+	color:red;
+}
+aside ul li ul
+{
+	margin-left: 2%;
+}
+a:hover{
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+ul ul a 
+{
+	color: gray;
+}

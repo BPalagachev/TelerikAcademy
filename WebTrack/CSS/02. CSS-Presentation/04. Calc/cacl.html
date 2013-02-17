@@ -1,0 +1,151 @@
+<!DOCTYPE html/>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="css/CSSCalc.css"/>
+        <title>
+            Windiws Calculator
+        </title>
+    </head>
+    <body>
+        <div class="OutestBorder">
+            
+        
+            <div class="Bar">
+                <button type="button" id="Exit">X</button>
+                <button disabled=disabled type="button" >◻</button>
+                <button type="button" id="Minimize">_</button>
+                
+                
+                
+                <div class="title">
+                    Calculator
+                </div>
+                <div class="Logo">
+                    
+                </div>
+                
+            </div>
+                 
+            
+            <div class="outer">
+                <div class="Menu">
+                    <button type="button">View</button>
+                    <button type="button">Edit</button>
+                    <button type="button">Help</button>
+                </div>
+            <div class="output-box-frame">
+                <input type="text" disabled=disable value="13">
+            </div>
+            <div class="frame-binary-representation">
+                <ul>
+                    <div>
+                        <li>0000<div class="left">63</div></li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000<div class="left">47</div></li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000<div class="right">32</div></li>
+                    </div>
+                    <div>
+                        <li>0000<div class="left">31</div></li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000<div class="left">15</div></li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>1101<div class="right">0</div></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="buttons-frame">
+                <table>
+                    <tr>
+                        <td rowspan=3>
+                            <div class="radio">
+                                    <div class="group-frame">
+                                        <input type="radio" name="Numerical" id="Hex"/><label for="Hex">Hex</label><br/>
+                                        <input type="radio" name="Numerical" id="Dec" checked=checked/><label for="Dec">Dec</label><br/>
+                                        <input type="radio" name="Numerical" id="Oct"/><label for="Oct">Oct</label><br/>
+                                        <input type="radio" name="Numerical" id="Bin"/><label for="Bin">Bin</label><br />
+                                    </div>
+                                    
+                            </div>
+                        </td>
+                        <td><button type="button" class="Key-Disabled" disabled=disable></button></td>
+                        <td> <button type="button" class="Key-Normal">Mod</button> </td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>A</button></td>
+                        <td> <button type="button" class="Key-Dark">MC</button></td>
+                        <td> <button type="button" class="Key-Dark">MR</button></td>
+                        <td> <button type="button" class="Key-Dark">MS</button></td>
+                        <td> <button type="button" class="Key-Dark">M+</button></td>
+                        <td> <button type="button" class="Key-Dark">M-</button></td>
+                    </tr>
+                    <tr>
+                       
+                        <td><button type="button" class="Key-Normal">(</button></td>
+                        <td> <button type="button" class="Key-Normal">)</button> </td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>B</button></td>
+                        <td> <button type="button" class="Key-Normal">←</button></td>
+                        <td> <button type="button" class="Key-Normal">CE</button></td>
+                        <td> <button type="button" class="Key-Normal">C</button></td> 
+                        <td> <button type="button" class="Key-Normal">+/-</button></td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>√</button></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><button type="button" class="Key-Normal">Rot</button></td>
+                        <td> <button type="button" class="Key-Normal">RoR</button> </td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>C</button></td>
+                        <td> <button type="button" class="Key-Normal">7</button></td>
+                        <td> <button type="button" class="Key-Normal">8</button></td>
+                        <td> <button type="button" class="Key-Normal">9</button></td>
+                        <td> <button type="button" class="Key-Normal">/</button></td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>%</button></td>
+                    </tr>
+                    <tr>
+                        <td rowspan=3>
+                            <div class="group-frame">
+                                <input type="radio" name="WordSize" id="Qword" checked=checked/><label for="Qword">Qword</label><br/>
+                                <input type="radio" name="WordSize" id="Dword"/><label for="Dword">Dword</label><br/>
+                                <input type="radio" name="WordSize" id="Word"/><label for="Word">Word</label><br/>
+                                <input type="radio" name="WordSize" id="Byte"/><label for="Byte">Byte</label>
+                            </div>
+                        </td>
+                        <td><button type="button" class="Key-Normal">Or</button></td>
+                        <td> <button type="button" class="Key-Normal">Xor</button> </td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>D</button></td>
+                        <td> <button type="button" class="Key-Normal">4</button></td>
+                        <td> <button type="button" class="Key-Normal">5</button></td>
+                        <td> <button type="button" class="Key-Normal">6</button></td>
+                        <td> <button type="button" class="Key-Normal">*</button></td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>1/s</button></td>
+                    </tr>
+                    <tr>
+                        
+                        <td> <button type="button" class="Key-Normal">Lsh</button> </td>
+                        <td> <button type="button" class="Key-Normal">Rsh</button></td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>E</button></td>
+                        <td> <button type="button" class="Key-Normal">1</button></td>
+                        <td> <button type="button" class="Key-Normal">2</button></td>
+                        <td> <button type="button" class="Key-Normal">3</button></td>
+                        <td> <button type="button" class="Key-Normal">-</button></td>
+                        <td rowspan=2> <button id="EqualsButton" type="button" class="Key-Normal">=</button></td></td>
+                    </tr>
+                    <tr>
+                        
+                        <td> <button type="button" class="Key-Normal">Not</button></td>
+                        <td> <button type="button" class="Key-Normal">And</button></td>
+                        <td> <button type="button" class="Key-Disabled" disabled=disable>F</button></td>
+                        <td colspan=2><button type="button" class="Key-Normal">0</button></td>
+                        <td> <button type="button" class="Key-Disabled">.</button> </td>
+                        <td> <button type="button" class="Key-Normal">+</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

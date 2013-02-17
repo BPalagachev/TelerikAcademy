@@ -1,0 +1,52 @@
+body, div {
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 10px;
+  background-color: #dedede; }
+  body div.pic-1 {
+    background-image: url("\images\\cat1.png");
+    background-size: 226.2px; }
+  body div.pic-2 {
+    background-image: url("\images\\cat2.png");
+    background-size: 226.2px; }
+  body div.pic-3 {
+    background-image: url("\images\\cat3.png");
+    background-size: 226.2px; }
+  body div.pic-4 {
+    background-image: url("\images\\cat4.png");
+    background-size: 226.2px; }
+  body div.pic-5 {
+    background-image: url("\images\\cat5.png");
+    background-size: 226.2px; }
+  body div.thumbnails {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: solid black 3px;
+    border-radius: 5px;
+    height: 150px;
+    width: 1200px; }
+    body div.thumbnails a div {
+      display: inline-block;
+      width: 226.2px;
+      height: 130px; }
+    body div.thumbnails a:not(:last-child) > div {
+      margin-right: 6px; }
+  body div.preview {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 1200px;
+    height: 500px; }
+    body div.preview a:target > div {
+      margin: auto;
+      width: 1000px;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-size: 600px;
+      background-position: center; }

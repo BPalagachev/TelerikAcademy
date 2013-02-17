@@ -1,0 +1,48 @@
+body
+{
+    background-color : #A9A9A9;
+}
+    header
+    {
+        text-align: center;
+        color: #FAFAD2;
+    }
+    h1
+    {   
+        
+        font-size: 4em;
+    }
+    ul
+    {
+        display: inline-block;
+        font-size:1.7em;
+        list-style-type: none;
+    }
+    nav ul li:nth-child(2)
+    {
+        
+        background-color: #D2D2D2;
+    }
+    nav ul li:last-child
+    {
+        text-decoration: underline;
+    }
+    nav ul li a
+    {
+        color: #FAFAD2;
+    }
+a
+{
+    color: black;
+    text-decoration: none;
+}
+section article header h1
+{
+    font-size: 2.3em;
+    text-align: left;
+}
+body>footer
+{
+    text-align: center;
+    font-size: 1.3em;
+}

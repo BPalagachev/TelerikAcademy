@@ -1,0 +1,68 @@
+*{
+	margin:0 ;
+	padding: 0;
+}
+div.wrapper {
+	width: 663px;
+	border: solid 3px #806850;
+	border-radius: 5px;
+}
+section.LogIn
+{
+	background-color: #323232;
+	text-align: center;
+
+	padding-top: 15px;
+	padding-left: 7px;
+	padding-right:7px;
+	height: 50px;
+
+	color:white;
+	font-size: 1.5em;
+}
+section.LogIn input#register
+{
+	
+	float: left;
+	width:26px;
+	height: 30px;
+	background: url("images/lt.png");
+}
+section.LogIn input#Go
+{
+	
+	float: right;
+	width:60px;
+	height: 30px;
+	background: url("images/go.png");
+}
+section.LogIn input[type=button]
+{
+	border-style: none;
+}
+section.LogIn input[type=button]:hover
+{
+	border-style: outset;
+	border-color:black;
+	border-width: 1px;
+}
+section.main{
+	background-color: #3B3B3B;
+	padding-top: 15px;
+	color: #A3A3A3;
+
+	padding-top: 15px;
+	padding-left: 7px;
+	padding-right:7px;
+	padding-bottom: 15px;
+
+}
+section.main h1{
+	color:#FCD70B;
+	font-size: 1.7em;
+
+}
+section.main a{
+	color: #DDDDDD;
+	text-decoration: none;
+}
