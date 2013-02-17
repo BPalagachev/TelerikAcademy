@@ -1,0 +1,8 @@
+starttable finish table finish finish 
+startstart table RUN  table 
+startstart RUN table  finish finish table 
+startstart table finish finish finish 
+finish finish tableRUNRUN 
+starttable  finish finish table 
+RUN 
+FINISH!
