@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Process3DCoords\Common.csproj", "{A61C2A56-77B1-4B2F-A9FC-9541AC188042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterace", "UserInterace\UserInterace.csproj", "{25790E41-52CA-437D-BF94-694141FD78C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A61C2A56-77B1-4B2F-A9FC-9541AC188042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61C2A56-77B1-4B2F-A9FC-9541AC188042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61C2A56-77B1-4B2F-A9FC-9541AC188042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61C2A56-77B1-4B2F-A9FC-9541AC188042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25790E41-52CA-437D-BF94-694141FD78C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25790E41-52CA-437D-BF94-694141FD78C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25790E41-52CA-437D-BF94-694141FD78C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25790E41-52CA-437D-BF94-694141FD78C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
