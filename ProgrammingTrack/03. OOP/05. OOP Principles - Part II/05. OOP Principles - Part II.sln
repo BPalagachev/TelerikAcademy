@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Geometrics", "01. Geometrics\01. Geometrics.csproj", "{DCD49A63-91C3-4D1C-9001-276A1BD57B1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{FEA7FCFA-0D4C-4838-9AAA-52603E15EA3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Bank", "02. Bank\02. Bank.csproj", "{90433FD4-BFD2-4C98-8C9C-F63E5E8C3008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. InvalidRangeException", "03. InvalidRangeException\03. InvalidRangeException.csproj", "{17734F03-E896-467C-A580-155F7EC393D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCD49A63-91C3-4D1C-9001-276A1BD57B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD49A63-91C3-4D1C-9001-276A1BD57B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD49A63-91C3-4D1C-9001-276A1BD57B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD49A63-91C3-4D1C-9001-276A1BD57B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA7FCFA-0D4C-4838-9AAA-52603E15EA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA7FCFA-0D4C-4838-9AAA-52603E15EA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA7FCFA-0D4C-4838-9AAA-52603E15EA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA7FCFA-0D4C-4838-9AAA-52603E15EA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90433FD4-BFD2-4C98-8C9C-F63E5E8C3008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90433FD4-BFD2-4C98-8C9C-F63E5E8C3008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90433FD4-BFD2-4C98-8C9C-F63E5E8C3008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90433FD4-BFD2-4C98-8C9C-F63E5E8C3008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17734F03-E896-467C-A580-155F7EC393D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17734F03-E896-467C-A580-155F7EC393D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17734F03-E896-467C-A580-155F7EC393D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17734F03-E896-467C-A580-155F7EC393D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

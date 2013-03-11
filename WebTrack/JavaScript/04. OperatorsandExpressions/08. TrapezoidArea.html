@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write an expression that calculates trapezoid's area by given sides a and b and height h.
+		</p>
+		<p>Trapezoid Area: S = (a+b)*(h/2)</p>
+	</div>
+	<input type="text" id = "a" value = "Side a"/>
+	<input type="text" id = "b" value = "Size b"/>
+	<input type="text" id = "h" value = "Height h"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var a = jsConsole.readFloat("#a");
+		var b = jsConsole.readFloat("#b");
+		var h = jsConsole.readFloat("#h");
+		jsConsole.writeLine(h*(a+b)/2);
+
+		
+	}
+	
+	</script>
+</body>
+</html>

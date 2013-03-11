@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.
+		</p>
+	</div>
+	<input type="text" id = "number" value = "number"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	
+	<script>
+	function Solve()
+	{
+		var number = jsConsole.readFloat("#number");
+		var number = Math.floor(number/100);
+		jsConsole.writeLine((number%10==7) !=0?"Third digit is Seven!":
+											 	   "Third digit is not Seven!");
+	}
+	
+	</script>
+</body>
+</html>

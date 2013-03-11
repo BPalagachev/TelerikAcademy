@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a boolean expression for finding if the bit 3 (counting from 0) of a given integer is 1 or 0.
+		</p>
+	</div>
+	<input type="text" id = "number" value = "number"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	
+	<script>
+	function Solve()
+	{
+		var number = jsConsole.readFloat("#number");
+		var number = Math.floor(number);
+		var mask = 1;
+		for (var b = 31; b>=0; b--)
+		{
+			jsConsole.write( (number&(mask<<b)) != 0 ? 1:0);
+		}
+		jsConsole.writeLine("");
+		jsConsole.writeLine((number&(mask<<3)) !=0?"Third bis is One!":
+											 	   "Third bit is Zero!");
+	}
+	
+	</script>
+</body>
+</html>

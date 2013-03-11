@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05. Conditional Statements</title>
+    <script>
+        function Solve() {
+            var digit = parseFloat(document.
+                        getElementById("digit").value);
+            var digitName;
+            switch(digit)
+            {
+                case 0: digitName = "Zero"; break;
+                case 1: digitName = "One"; break;
+                case 2: digitName = "Two"; break;
+                case 3: digitName = "Three"; break;
+                case 4: digitName = "Four"; break;
+                case 5: digitName = "Five"; break;
+                case 6: digitName = "Six"; break;
+                case 7: digitName = "Seven"; break;
+                case 8: digitName = "Eight"; break;
+                case 9: digitName = "Nine"; break;
+                default: digitName = "Thats nota digit!"; break;
+            }
+            
+            var name = document.getElementById("name");
+            name.value = "Name: " + digitName;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>Write script that asks for a digit and depending on the input shows the name of that digit (in English) using a switch statement.
+        </p>
+    </div>
+    <input type="text" name="digit" id="digit" value="Your Digit" />
+    <input type="text-area" name="name" id="name" disabled="disabled" value="Name: " />
+
+    <button onclick="Solve()">Solve Problem</button>
+</body>
+</html>

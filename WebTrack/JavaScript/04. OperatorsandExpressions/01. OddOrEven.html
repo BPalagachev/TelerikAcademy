@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div><p>Write an expression that checks if given integer is odd or even.
+</p></div>
+	<input type="text" id = "number" value = "number"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var integerNumber = jsConsole.readFloat("#number")		
+		jsConsole.writeLine(integerNumber%2==0?"Number is even":"Number is odd");
+	}
+	</script>
+</body>
+</html>

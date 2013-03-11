@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05. Conditional Statements</title>
+    <script>
+        function Solve() {
+            var lowNumbers = ["","one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen"];
+            var decimals = ["twenty ", "thirty "];
+            var ty = "ty ";
+            var teen = "teen ";
+
+            var number = parseInt(document.
+                        getElementById("number").value);
+
+            var reminder1 = number%10;
+            number = Math.floor(number/10);
+            var reminder2 = number%10;
+            number = Math.floor(number/10);
+            var reminder3 = number%10;
+            number = Math.floor(number/10);
+
+            var pronun = "";
+            switch (reminder2)
+                {
+                    case 0:
+                        pronun = lowNumbers[reminder1];
+                        break;
+                    case 1:
+                        switch (reminder1)
+                        {
+                            case 0:
+                            case 1:
+                            case 2:
+                            case 3:
+                                pronun = lowNumbers[reminder1 + 10];
+                                break;
+                            case 4:
+                            case 5:
+                            case 6:
+                            case 7:
+                            case 8:
+                            case 9:
+                                pronun = lowNumbers[reminder1] + teen;
+                                break;
+
+                        }
+                        break;
+                    case 2:
+                        pronun = decimals[0];
+                        pronun = pronun + lowNumbers[reminder1];
+                        break;
+                    case 3: 
+                        pronun = decimals[1];
+                        pronun = pronun + lowNumbers[reminder1];
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                        pronun = lowNumbers[reminder2] + ty;
+                        pronun = pronun + lowNumbers[reminder1];
+                        break;
+                }
+
+                switch (reminder3)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                        pronun = lowNumbers[reminder3] + " hundred and " + pronun;
+                        if (reminder1 == 0  && reminder2 == 0)
+                        {
+                            pronun = lowNumbers[reminder3] + " hundred";
+                        }
+                        break;
+
+                }
+                if (reminder1 == 0 && reminder2 == 0 && reminder3 == 0)
+                {
+                    pronun = "zero";
+            }
+           
+            var result = document.getElementById("result");
+            result.value =  "" + pronun;
+
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>* Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:
+            <p>0 -> "Zero"</p>
+            <p>273 -> "Two hundred seventy three"</p>
+            <p>400 -> "Four hundred"</p>
+            <p>501 -> "Five hundred and one"</p>
+            <p>711 -> "Seven hundred and eleven"</p>
+        </p>
+    </div>
+    <input type="text" name="number" id="number" value="Your number:" />
+    <input type="text" name="result" id="result" disabled="disabled" value="In English: " style="width:300px;" />
+
+    <button onclick="Solve()">Solve Problem</button>
+</body>
+</html>

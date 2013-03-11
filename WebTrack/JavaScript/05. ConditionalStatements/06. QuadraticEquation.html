@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05. Conditional Statements</title>
+    <script>
+        function Solve() {
+            var a = parseInt(document.
+                        getElementById("a").value);
+            var b = parseInt(document.
+                        getElementById("b").value);
+            var c = parseInt(document.
+                        getElementById("c").value);
+            
+
+            var D = b*b - 4*a*c;
+            if (D>0) {
+                var root1Val = (-b + Math.Sqrt(D))/(2*a);
+                var root2Val = (-b - Math.Sqrt(D))/(2*a);
+            }
+            else if(D==0){
+                root1Val = (-b)/(2*a);
+                root2Val = root1Val;
+            }
+            else
+            {
+                var root1Val = "not real";
+                var root2Val = "not real";
+            }
+            var discriminant = document.getElementById("discriminant");
+            discriminant.value = "Discriminant: " + D;
+            var root1 = document.getElementById("root1");
+            root1.value = "root1: " + root1Val;
+            var root2 = document.getElementById("root2");
+            root2.value = "root2: " + root2Val;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>Write a script that enters the coefficients a, b and c of a quadratic equation
+        a*x2 + b*x + c = 0
+        and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.
+        </p>
+    </div>
+    <input type="text" name="a" id="a" value="a" />
+    <input type="text" name="b" id="b" value="b" />
+    <input type="text" name="c" id="c" value="c" />
+    <input type="text" name="discriminant" id="discriminant" disabled="disabled" value="Discriminant : " />
+    <input type="text" name="root1" id="root1" disabled="disabled" value="root1: " />
+    <input type="text" name="root2" id="root2" disabled="disabled" value="root2: " />
+
+    <button onclick="Solve()">Solve Problem</button>
+</body>
+</html>

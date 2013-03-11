@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05. Conditional Statements</title>
+    <script>
+        function Solve() {
+            var num1 = parseInt(document.
+                        getElementById("num1").value);
+            var num2 = parseInt(document.
+                        getElementById("num2").value);
+            var num3 = parseInt(document.
+                        getElementById("num3").value);
+            var counter = 0;
+
+            if (num1 < 0) {
+                counter++;
+            };
+            if (num2 < 0) {
+                counter++;
+            };
+            if (num3 < 0) {
+                counter++;
+            };
+            if (counter%2==0) {
+                var sign = document.getElementById("sign");
+                sign.value = "Sign: plus";
+            }
+            else{
+                var sign = document.getElementById("sign");
+                sign.value = "Sign: minus"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
+        </p>
+    </div>
+    <input type="text" name="num1" id="num1" value="First Number" />
+    <input type="text" name="num2" id="num2" value="Second Number" />
+    <input type="text" name="num3" id="num3" value="Third Number" />
+    <input type="text" name="sign" id="sign" disabled="disabled" value="Sign: " />
+
+    <button onclick="Solve()">Solve Problem</button>
+</body>
+</html>

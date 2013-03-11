@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05. Conditional Statements</title>
+    <script>
+        function Solve() {
+            var num1 = parseInt(document.
+                        getElementById("num1").value);
+            var num2 = parseInt(document.
+                        getElementById("num2").value);
+            var num3 = parseInt(document.
+                        getElementById("num3").value);
+            var biggest;
+            if (num1 < num2) {
+                biggest = num2 > num3 ? num2: num3;
+            }
+            else{
+                biggest = num1 > num3 ? num1: num3;
+            }
+            var msg = document.getElementById("biggest");
+            msg.value = "Biggest is: " + biggest;
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>Write a script that finds the biggest of three integers using nested if statements.
+        </p>
+    </div>
+    <input type="text" name="num1" id="num1" value="First Number" />
+    <input type="text" name="num2" id="num2" value="Second Number" />
+    <input type="text" name="num3" id="num3" value="Third Number" />
+    <input type="text" name="bigges" id="biggest" disabled="disabled" value="Biggest is: " />
+
+    <button onclick="Solve()">Solve Problem</button>
+</body>
+</html>

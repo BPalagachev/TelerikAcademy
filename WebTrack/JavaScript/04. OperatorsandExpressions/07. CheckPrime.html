@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+	</p>
+	</div>
+	<input type="text" id = "number" value = "number"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var number = jsConsole.readFloat("#number");
+		var isPrime = true;
+		
+		for(var i = 2; i <= Math.sqrt(number); i++)
+		{
+			if (number%i==0)
+			 {
+			 	isPrime = false;
+			 };
+		}
+		jsConsole.writeLine(isPrime ? "Your number is prime!" :
+									 "Your number is not prime");
+	}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.
+		</p>
+	</div>
+	<input type="text" id = "number" value = "number"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var integerNumber = jsConsole.readFloat("#number");
+		var result = false;
+		if (integerNumber%7==0 && integerNumber%5==0) {
+			result = true;
+		};
+		jsConsole.writeLine(result? integerNumber + " CAN be devided by 7 and 5 both":
+									integerNumber + " CANNOT be devided by 7 and 5 both!");
+	}
+	
+	</script>
+</body>
+</html>

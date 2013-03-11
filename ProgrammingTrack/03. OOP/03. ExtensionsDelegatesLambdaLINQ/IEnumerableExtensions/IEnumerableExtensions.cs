@@ -22,7 +22,7 @@ public static class IEnumerableExtensions
     // Min and Max require for T to implement IComperable
     public static T Max<T>(this IEnumerable<T> enumerable) where T : IComparable
     {
-        dynamic max = enumerable.First<T>();
+        var max = enumerable.First<T>();
         foreach (var item in enumerable)
         {
             if (item.CompareTo(max) > 0)
@@ -34,7 +34,7 @@ public static class IEnumerableExtensions
     }
     public static T Min<T>(this IEnumerable<T> enumerable) where T : IComparable
     {
-        dynamic min = enumerable.First<T>();
+        var min = enumerable.First<T>();
         foreach (var item in enumerable)
         {
             if (item.CompareTo(min) < 0)
@@ -53,7 +53,7 @@ public static class IEnumerableExtensions
         {
             throw new ArgumentException("IEnumerable instance must not me empty!");
         }
-        dynamic sum = iter.Current;
+        var sum = iter.Current;
         while (iter.MoveNext())
         {
             sum = sumator(sum, iter.Current);
@@ -68,7 +68,7 @@ public static class IEnumerableExtensions
         {
             throw new ArgumentException("IEnumerable instance must not me empty!");
         }
-        dynamic product = iter.Current;
+        var product = iter.Current;
         while (iter.MoveNext())
         {
             product = multiplier(product, iter.Current);
@@ -78,7 +78,7 @@ public static class IEnumerableExtensions
 
     public static T Average<T>(this IEnumerable<T> enumerable, AritmeticDelegate<T> sumator, DevisibleByInt<T> devisor)
     {
-        dynamic sum = enumerable.Sum<T>(sumator);
+        var sum = enumerable.Sum<T>(sumator);
         int counter = 0;
         foreach (var item in enumerable)
         {
@@ -100,7 +100,7 @@ class Program
         Console.WriteLine("Value type: Min: {0}; Max: {1}", testReference.Min<string>(), testReference.Max<string>());
 
         // Test for Sum, product, max of ints
-        int[] array = new int[0] ;       
+        int[] array = new int[]{1,2,3,4,5} ;       
         Console.WriteLine("Sum: " + array.Sum<int>( delegate(int x, int y)
         {
             return x + y;

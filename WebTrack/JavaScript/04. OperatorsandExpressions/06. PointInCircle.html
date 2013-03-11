@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
+		</p>
+	</div>
+	<input type="text" id = "XCoord" value = "XCoord"/>
+	<input type="text" id = "YCoord" value = "YCoord"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var xCoord = jsConsole.readFloat("#XCoord");
+		var yCoord = jsConsole.readFloat("#YCoord");
+		var radius = 5;
+
+		var isInCircle = false;
+		if (yCoord*yCoord + xCoord*xCoord <= radius*radius) {
+			isInCircle = true;
+		};
+		jsConsole.writeLine(isInCircle ? "Your point is in the circle!" :
+									 "Your point is outside the circle");
+	}
+	
+	</script>
+</body>
+</html>

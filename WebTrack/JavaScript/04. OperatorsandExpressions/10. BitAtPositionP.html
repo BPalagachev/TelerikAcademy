@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>04. OperatorsandExpressions</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a boolean expression that returns true if the bit at position p (counting from 0) in a given integer number v has value of 1. Example: v=5; p=1  false.
+		</p>
+	</div>
+	<input type="text" id = "number" value = "number"/>
+	<input type="text" id = "position" value = "position"/>
+	<a href="#" onclick="Solve()">Evaluate</a><br/>
+	<div id="js-console"></div>	
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var number = jsConsole.readFloat("#number");
+		var position = jsConsole.readFloat("#position");
+		var number = Math.floor(number);
+		var mask = 1;
+		for (var b = 31; b>=0; b--)
+		{
+			jsConsole.write( (number&(mask<<b)) != 0 ? 1:0);
+		}
+		jsConsole.writeLine("");
+		jsConsole.writeLine((number&(mask<<position)) !=0?"true":
+											 	   "false");		
+	}
+	
+	</script>
+</body>
+</html>
