@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Performs caseinsensitive word count</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <script src="scripts/string-extensions.js"></script>
+</head>
+<body>
+    <div>
+        <p>Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).</p>
+        <p>Example: The target substring is "in". The text is as follows:</p>
+        <p>We are living in an yellow submarine. We dont have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.</p>
+        <p><strong>The result is: 9.</strong></p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+    function countWords(str, word)
+    {
+        var counter = 0;
+        var index = 0;
+
+        while(index >= 0)
+        {
+            index = str.indexOf(word, index+1);
+            counter++;
+        }
+        return counter;
+    }
+        var str ="We are living in an yellow submarine. We dont have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+        
+        var word = "in";
+
+        var occurences = countWords(str, word)
+        jsConsole.writeLine("Your word occurs " + occurences + " times!")
+    </script>
+</body>
+</html>

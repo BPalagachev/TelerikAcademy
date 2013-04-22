@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Check if an object has a property</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a function that checks if a given object contains a given property
+			<div>
+				<code>
+					var obj  = …; </br>
+					var hasProp = hasProperty(obj,"length");
+				</code>
+			</div>
+		</p>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		function hasProperty(obj, prop)
+		{
+			if (obj[prop] != undefined)
+			{
+				return true;
+			}
+			return false;
+		}
+
+		var arr = [1, 3, 4];
+		jsConsole.writeLine("Array has property length: " + hasProperty(arr,"length"));
+		jsConsole.writeLine("Array has property catapultation: " + hasProperty(arr,"catapultation"));
+
+		var obj =
+		{
+			name: "Bat Stamat",
+			moto : "Rakiq i salata",
+		}
+
+		jsConsole.writeLine("obj has property moto: " + hasProperty(obj,"moto"));
+
+
+	</script>
+</body>
+</html>

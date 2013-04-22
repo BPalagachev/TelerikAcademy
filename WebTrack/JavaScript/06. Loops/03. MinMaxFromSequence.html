@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that finds the max and min number from a sequence of numbers.
+		</p>
+	</div>
+	<button onclick="Solve()">Solve Problem</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{
+		var sequence = [1, 4, 6, 10, 23, 54, 67, 87, 3, 0];		
+		var min = sequence[0];
+		var max = sequence[0];
+
+		jsConsole.write("Sequence: " + sequence[0] + " ");
+
+		for ( var i = 1; i < sequence.length; i++ )
+		{
+			jsConsole.write(sequence[i] + " ");
+			if (min > sequence[i]) {
+				min = sequence[i];
+			};
+			if (max < sequence[i]) {
+				max = sequence[i];
+			};
+		}
+		jsConsole.writeLine(" ");
+		jsConsole.writeLine("Max: " + max);
+		jsConsole.writeLine("Min: " + min);
+	}
+	</script>
+</body>
+</html>

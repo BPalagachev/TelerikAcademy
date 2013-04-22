@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that calculates N!*K! / (K-N)! for given N and K ( 1 < N < K).
+		</p>
+	</div>
+	<input type="text" id = "N" value = "N: "/>
+	<input type="text" id = "K" value = "K: "/>
+	<button onclick="Solve()">Evaluate</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var N = jsConsole.readInteger("#N");
+		var K = jsConsole.readInteger("#K");
+
+		if( N < 1 || K < N )
+		{
+			jsConsole.writeLine("Incorrect input data!");
+			jsConsole.writeLine("1 < N < K");
+		}
+		else{
+			var result = factorial(N)*factorial(K)/(factorial(K-N));
+			jsConsole.writeLine("N!*K! / (K-N)! = " + result);
+		}
+	}
+	function factorial(num)
+	{
+		var result = 1;
+		while(num > 0)
+		{
+			result*=num;
+			num--;
+		}
+		return result;
+	}
+	</script>
+</body>
+</html>

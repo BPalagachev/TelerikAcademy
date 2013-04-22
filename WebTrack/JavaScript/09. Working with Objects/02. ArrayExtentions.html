@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Extention Methods/title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a function that removes all elements with a given value			
+			<div>
+				<code>
+					var arr = [1,2,1,4,1,3,4,1,111,3,2,1,"1"]; </br>
+					arr.remove(1); //arr = [2,4,3,4,111,3,2,"1"];
+				</code>
+			</div>
+			<ul>
+				<li>Attach it to the array class</li>
+				<li>Read about prototype and how to attach methods</li>
+			</ul>
+		</p>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+		Array.prototype.remove = function(value)
+		{
+			for( var i = 0; i < this.length; i++)
+			{
+				if (this[i] === value)
+				{
+					this.splice(i, 1);
+				}
+			}
+		}
+		
+		var arr = [1,2,1,4,1,3,4,1,111,3,2,1,"1"];
+		arr.remove(1); //arr = [2,4,3,4,111,3,2,"1"];
+		jsConsole.writeLine("Array: " + arr);
+	</script>
+</body>
+</html>

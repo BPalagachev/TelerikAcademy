@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>Digit to word</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function that returns the last digit of given integer as an English word. Examples: 512 -> "two", 1024 -> "four", 12309 -> "nine"
+	</p>
+	</div>
+	<label for="tb-number">Number</label>
+	<input id="tb-number" type="text" class="js-console-input" />
+	<a href="#" class="js-console-btn" onclick="Solve()">Translate</a>
+	<div id="js-console"></div>
+	<br />
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function Solve()
+	{
+		var number = jsConsole.readFloat("#tb-number");
+		switch(number)
+		{
+			case 0:
+				jsConsole.writeLine("Zero");
+				break;
+			case 1:
+				jsConsole.writeLine("One");
+				break;
+			case 2:
+				jsConsole.writeLine("Two");
+				break;
+			case 3:
+				jsConsole.writeLine("Three");
+				break;
+			case 4:
+				jsConsole.writeLine("Four");
+				break;
+			case 5:
+				jsConsole.writeLine("Five");
+				break;
+			case 6:
+				jsConsole.writeLine("Six");
+				break;
+			case 7:
+				jsConsole.writeLine("Seven");
+				break;
+			case 8:
+				jsConsole.writeLine("Eight");
+				break;
+			case 9: 
+				jsConsole.writeLine("Nine");
+				break;
+		}		
+		
+	}
+
+	</script>
+</body>
+</html>

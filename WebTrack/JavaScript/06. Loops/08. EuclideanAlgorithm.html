@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that calculates the greatest common divisor (GCD) of given two numbers. Use the Euclidean algorithm (find it in Internet).
+		</p>
+	</div>
+	<input type="text" id = "num1" value = "Number 1: "/>
+	<input type="text" id = "num2" value = "Number 2: "/>
+	<button onclick="Solve()">Evaluate</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var num1 = jsConsole.readInteger("#num1");
+		var num2 = jsConsole.readInteger("#num2");
+
+		while(num2 != 0)
+		{
+			var smaller = num1 < num2 ? num1 : num2;
+			var larger = num1 > num2 ? num1: num2;
+			num1 = smaller;
+			num2 = larger % smaller;
+		}
+		
+		jsConsole.writeLine("The greatest common divisor is: " + num1);
+	}
+	</script>
+</body>
+</html>

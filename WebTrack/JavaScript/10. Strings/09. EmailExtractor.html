@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Extract e-mails from text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>
+            Write a function for extracting all email addresses from given text. All substrings that match the format &ltidentifier&gt@&lthost&gt…&ltdomain&gt should be recognized as emails. Return the emails as array of strings.
+
+        </p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "My mail is aAp13@someDomain.uk. Yours is not valid: notValid@validity.179"
+
+    var email = text.match(/\b[A-Za-z0-9]+@[A-Za-z0-9]+\.[a-z]{1,3}/g);
+
+    for(i in email)
+    {
+        jsConsole.writeLine(email[i]);
+    }
+
+
+
+    </script>
+</body>
+</html>

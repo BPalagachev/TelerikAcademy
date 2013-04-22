@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Using Objects - Overview</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function that groups an array of persons by age, first or last name. The function must return an associative array, with keys - the groups, and values -arrays with persons in this groups</p>
+		<div>
+			<code>
+				var persons = {…}; </br>
+				var groupedByFname = group(persons,"firstname");</br>
+				var groupedByAge= group(persons,"age");</br>
+			</code>
+		</div>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function group(people, keyWord)
+	{
+		var grouped = {};
+		for (var i = 0; i <people.length; i++)
+		{
+			if (grouped[people[i][keyWord]] == undefined)
+			{
+				grouped[people[i][keyWord]] = [];
+				grouped[people[i][keyWord]].push(people[i]);
+			}
+			else
+			{
+				grouped[people[i][keyWord]].push(people[i]);
+			}	
+		}
+		return grouped;
+	}
+
+	var persons = [
+			{firstname : "Gosho", lastname: "Petrov", age: 32}, 
+	  		{firstname : "Bay", lastname: "Ivan", age: 81},
+	  		{firstname : "Bat", lastname: "Stamat", age: 7},
+	  		{firstname : "Kolio", lastname: "Stamat", age: 7}
+	  	];
+
+	var grouped = group(persons, "lastname");
+
+	// print groups
+	for (var p in grouped)
+	{
+		jsConsole.writeLine("Group " + p + ": ");
+		
+		var arr = grouped[p];
+		for (var j = 0; j < arr.length; j++)
+		{
+			jsConsole.writeLine(arr[j].firstname + ", " + arr[j].lastname + ", " + 	arr[j].age);
+		}
+		
+	}
+	
+
+	</script>
+</body>
+</html>

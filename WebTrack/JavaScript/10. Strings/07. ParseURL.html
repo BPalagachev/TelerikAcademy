@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Parse URL</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>
+            Write a script that parses an URL address given in the format:
+            <code>protocol]://[server]/[resource]</code>
+            and extracts from it the [protocol], [server] and [resource] elements. Return the elements in a JSON object.
+        </p>
+        <p>
+            For example from the URL http://www.devbg.org/forum/index.php the following information should be extracted:
+            <div>
+                <code>
+                    {</br>
+                        protocol: "http",</br>
+                        server: "www.devbg.org",</br>
+                        resource: "/forum/index.php"</br>
+                    }
+                </code>
+            </div>
+        </p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+    var buildUrlParse = function(url)
+    {
+        var tempURL = url;
+
+        var protocol = tempURL.substring(0, tempURL.indexOf("://"));
+        tempURL = tempURL.replace(tempURL.substring(0, tempURL.indexOf("://")+3), "");
+
+        var server = tempURL.substring(0, tempURL.indexOf("/"));
+        tempURL = tempURL.replace(tempURL.substring(0, tempURL.indexOf("/")+1), "");
+
+        var resource = tempURL;
+
+        return {protocol: protocol, server: server, resource: resource};
+    }
+
+    var url = "http://www.devbg.org/forum/index.php";
+
+    var urlParsed = buildUrlParse(url);
+
+    for(prop in urlParsed)
+    {
+        jsConsole.writeLine(prop + ": " + urlParsed[prop]);
+    }
+    
+        
+    </script>
+</body>
+</html>

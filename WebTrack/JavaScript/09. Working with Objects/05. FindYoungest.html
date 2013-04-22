@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Find the youngest person</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function that finds the youngest person in a given array of persons and prints his/hers full name</p>
+		<ul>
+			<li>Each person have properties firstname, lastname and age, as shown:</li>
+		</ul>
+		<div>
+			<code>
+				var persons = [ </br>
+  				{firstname : "Gosho", lastname: "Petrov", age: 32}, </br>
+  				{firstname : "Bay", lastname: "Ivan", age: 81},…];</br>
+			</code>
+		</div>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		
+		function findYoungest(people)
+		{
+			var minimalAge = people[0].age;
+			var fname = people[0].firstname;
+			var lname = people[0].lastname;
+
+			for(var i = 0; i < people.length ; i++)
+			{
+				if (minimalAge > people[i].age)
+				{
+					var minimalAge = people[i].age;
+					var fname = people[i].firstname;
+					var lname = people[i].lastname;
+				};
+			}
+			return {firstname : fname, lastname: lname, age: minimalAge};
+		}
+
+		var persons = [
+			{firstname : "Gosho", lastname: "Petrov", age: 32}, 
+	  		{firstname : "Bay", lastname: "Ivan", age: 81},
+	  		{firstname : "Bat", lastname: "Stamat", age: 7},
+	  		{firstname : "Kolio", lastname: "Stamat", age: 7}
+	  	];
+
+	  	
+	  	var youngest = findYoungest(persons);
+
+	  	jsConsole.writeLine("First Name: " + youngest.firstname);
+	  	jsConsole.writeLine("Last Name: " + youngest.lastname);
+	  	jsConsole.writeLine("Age: " + youngest.age);
+
+
+
+
+
+	</script>
+</body>
+</html>

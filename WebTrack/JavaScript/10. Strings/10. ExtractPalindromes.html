@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Extract Palindromes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>
+            Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+        </p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+    var isPalindrome = function(word)
+    {
+        var result = true;
+        for(var i=0; i< Math.floor(word.length/2); i++)
+        {
+            result = (result&&(word[i] == word[word.length-1-i] ));
+        }
+        return result;
+    }
+
+        var text = "ABBA is not lamal but it could be exe";
+
+        var words = text.match(/\b\w+\b/g);
+
+        for(i in words)
+        {
+            if (isPalindrome(words[i]))
+            {
+                jsConsole.writeLine(words[i]);
+            }
+        }
+    </script>
+</body>
+</html>

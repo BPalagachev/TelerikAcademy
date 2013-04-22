@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that reads a number N and calculates the sum of the first N members of the sequence of Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, …
+			Each member of the Fibonacci sequence (except the first two) is a sum of the previous two members.
+		</p>
+	</div>
+	<input type="text" id = "N" value = "N: "/>
+	<button onclick="Solve()">Evaluate</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var N = jsConsole.readInteger("#N");
+		var sum = N == 1? 0 : 1;
+
+		var firstNumber = 0;
+		var secondNumber = 1;
+		var thirdNumber = 0;
+		
+		for (var i = 3; i <= N; i++ )
+		{
+			thirdNumber = firstNumber + secondNumber;
+			firstNumber =  secondNumber;
+			secondNumber = thirdNumber;
+			sum += thirdNumber;
+		}
+
+		jsConsole.writeLine("Sum of the first " + N + " numbers of the Fibonacci sequence is: " + sum);
+	}
+	</script>
+</body>
+</html>

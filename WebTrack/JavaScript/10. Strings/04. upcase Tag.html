@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Tags</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>You are given a text. Write a function that changes the text in all regions:</p>
+        <ul>
+            <li>&ltupcase&gt tag - to uppercase.</li>
+            <li>&ltlowcase&gt tag - to lowercase</li>
+            <li>&ltmixcase&gt tag -  to mix casing(random)</li>
+        </ul>
+        <p>
+                We are &ltmixcase&gtliving&lt/mixcase&gt in a &ltupcase&gtyellow submarine&lt/upcase&gt. We &ltmixcase&gtdont&lt/mixcase&gt have &ltlowcase&gtanything&lt/lowcase&gt else.
+       </p>
+        <p> Will result in:
+                We are LiVinG in a YELLOW SUBMARINE. We dOnT have anything else.
+        </p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        var handleTag = function (str, tag,func)
+        {
+            var open = tag;
+            var close = formCloseTag(tag);
+
+            var startIndex = str.indexOf(open);
+            var endIndex = str.indexOf(close);
+            
+            while (startIndex != -1)
+            {
+                if (endIndex > startIndex && startIndex != -1)
+                {
+                    var temp = str.substring(startIndex+open.length, endIndex);
+                    temp = func(temp);
+                    str = str.replace(str.substring(startIndex, endIndex + close.length), temp);
+                }
+                startIndex =  str.indexOf(open, startIndex+1);
+                endIndex = str.indexOf(close, endIndex+1);
+            }
+
+            return str;
+        }
+
+        var formCloseTag = function(tag)
+        {
+            var closed = convertStringToArray(tag);
+            closed.splice(1,0,"/");
+            return closed.join("");
+        }
+
+        var convertStringToArray = function(str)
+        {
+            var arr = [];
+            for(var i = 0; i < str.length; i++)
+            {
+                arr.push(str[i]);
+            }
+
+            return arr;
+        }
+
+        var handleMixCase = function(str)
+        {
+            var charArr = [];
+
+            for( var i = 0; i<str.length; i++)
+            {
+                if(Math.random() >0.5)
+                {
+                    charArr.push(str.charAt(i).toUpperCase());
+                }
+                else
+                {
+                    charArr.push(str.charAt(i).toLocaleLowerCase());
+                }
+            }
+
+            return charArr.join("");
+        }
+
+        String.prototype.htmlEscape = function (){
+            var escapedStr = String(this).replace(/&/g, '&amp;');
+            escapedStr = escapedStr.replace(/</g, '&lt;');
+            escapedStr = escapedStr.replace(/>/g, '&gt;');
+            escapedStr = escapedStr.replace(/"/g, '&quot;');
+            escapedStr = escapedStr.replace(/'/g, "&#39");
+            return escapedStr;
+        }
+
+
+        var str = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>Anything</lowcase> else.";
+        
+        jsConsole.writeLine(str.htmlEscape());
+
+        str = handleTag(str, "<upcase>" , function (str){return str.toUpperCase()});
+        str = handleTag(str, "<lowcase>", function (str){return str.toLocaleLowerCase()});
+        str = handleTag(str, "<mixcase>", handleMixCase);
+
+        jsConsole.writeLine(str.htmlEscape());
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that, for a given two integer numbers N and X, calculates the sum
+			S = 1 + 1!/X + 2!/X^2 + … + N!/X^N
+		</p>
+	</div>
+	<input type="text" id = "N" value = "N: "/>
+	<input type="text" id = "X" value = "X: "/>
+	<button onclick="Solve()">Evaluate</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var N = jsConsole.readInteger("#N");
+		var X = jsConsole.readInteger("#X");
+		var result = 1;
+		
+		for (var i = 1; i <= N; i++ )
+		{
+			result += factorial(i)/power(X, i);
+		}
+
+		jsConsole.writeLine("S = 1 + 1!/X + 2!/X^2 + … + N!/X^N = " + result);
+	}
+	function factorial(num)
+	{
+		var result = 1;
+		while(num > 0)
+		{
+			result *= num;
+			num--;
+		}
+		return result;
+	}
+	function power(num, power)
+	{
+		var result = 1;
+		while(power > 0)
+		{
+			result *= num;
+			power--;
+		}
+		return result;
+	}
+	</script>
+</body>
+</html>

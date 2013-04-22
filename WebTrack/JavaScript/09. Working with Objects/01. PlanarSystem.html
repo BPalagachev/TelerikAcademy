@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Points and Line in Planar Coordinate System</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write functions for working with shapes in  standard Planar coordinate system
+			<ul>
+				<li>Points are represented by coordinates P(X, Y)</li>
+				<li>Lines are represented by two points, marking their beginning and ending</li>
+				<li>L(P1(X1,Y1),P2(X2,Y2))</li>
+				<li>Calculate the distance between two points</li>
+				<li>Check if three segment lines can form a triangle</li>
+			</ul>
+		</p>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+		function Point(xCoord, yCoord)
+		{
+			this.xCoord = xCoord;
+			this.yCoord = yCoord;
+
+			this.calcDistance = function(point2)
+			{
+				var x = point2.xCoord - this.xCoord;
+				var y = point2.yCoord - this.yCoord;
+				return Math.sqrt(x*x +y*y)
+			}
+		}
+
+		function Line(startPoint, endPoint)
+		{
+			this.startPoint = startPoint;
+			this.endPoint = endPoint;
+
+			this.getLength = function()
+			{
+				return this.startPoint.calcDistance(this.endPoint);
+			}
+
+			this.isValidTriangle = function(secondLine, thirdLine)
+			{
+				if (this.getLength() < secondLine.getLength() + thirdLine.getLength() &&
+					secondLine.getLength() < this.getLength() + thirdLine.getLength() &&
+					thirdLine.getLength() < this.getLength() + secondLine.getLength()
+					)
+				{
+					return true;
+				}
+				return false;
+			}
+		}
+
+		// testing with famoust Pythagorean Triple: 3, 4, 5 - placed at the beginning of the coor system
+
+		// vertices - points
+		var C = new Point(0,0);
+		var B = new Point(0,3);
+		var A = new Point(4,0); 
+
+		// sides - lines
+		var c = new Line(B, A);
+		var b = new Line(C, A);
+		var a = new Line(C, B);
+
+		// length of the sides
+		jsConsole.writeLine("Length of c: " + c.getLength());
+		jsConsole.writeLine("Length of b: " + b.getLength());
+		jsConsole.writeLine("Length of a: " + a.getLength());
+
+		// Chech if this is correct triangle
+		jsConsole.writeLine("This is a valid triangle: " + c.isValidTriangle(a,b));
+
+		// Test the method with invalid triagnle. Side c made longer.
+		var newLine = new Line(A, new Point(-10, 10));
+		jsConsole.writeLine("This is a valid triangle: " + c.isValidTriangle(a,newLine));
+				   
+	</script>
+</body>
+</html>

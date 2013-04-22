@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>Div counter</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function to count the number of divs on the web page
+	</p>
+	</div>
+	<a href="#" class="js-console-btn" onclick="Solve()">Count divs</a>
+	<div id="js-console"></div>
+	<br />
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function Solve()
+	{
+		var divCount = document.getElementsByTagName("div").length;
+		jsConsole.writeLine("There are "+ divCount + " divs on this page!");	
+	}
+	</script>
+</body>
+</html>

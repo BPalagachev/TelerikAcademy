@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>Find first bigger neightbor</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+		Write a Function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+		<ul>
+			<li>Use the function from the previous exercise.</li>
+		</ul>
+		</p>
+		<p>The array is hardcoded!</p>
+	</div>
+	<a href="#" class="js-console-btn" onclick="Solve()">Check Array!</a>
+	<div id="js-console"></div>
+	<br />
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function checkPosition(arr, position)
+	{
+		if (position == 0 || position == arr.length-1)
+		{
+			return false; // there is only one neighbor
+		}
+		else if ( arr[position] > arr[position-1] && arr[position] > arr[position+1])
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+
+	function findBigerThanNeighbours(arr)
+	{
+		for( var i = 0; i < arr.length; i++)
+		{
+			if (checkPosition(arr, i) == true)
+			{
+				return i;
+			};
+		}
+		return -1;
+	}
+
+	function Solve()
+	{
+		var arr = [1, 33, 6, 7, 8, 9 , 7, 9];
+
+		jsConsole.writeLine("Best index in arr=" + findBigerThanNeighbours(arr));
+
+	}
+
+
+
+	</script>
+</body>
+</html>

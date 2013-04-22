@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a script that finds the maximal increasing sequence in an array. Example: {3, 2, 3, 4, 2, 2, 4}  {2, 3, 4}.
+
+		</p>
+		<p>
+			Separate numbers with [comma space]. E.g. 3, 2, 3, 4, 2, 2, 4 
+		</p>
+	</div>
+	<input type="text" id="seq" value="Sequence: e.g. 1,2,4,0">
+	<button onclick="Solve()">Solve Problem</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		var seq = document.getElementById("seq").value;
+		var numbers = seq.split(", ");
+		numbers.push("\0");
+
+		var counter = 1;
+		var maxCounter = 0;
+		var bestIndex = 0;
+
+		for ( var i = 1; i < numbers.length; i++)
+		{
+			if (numbers[i] > numbers[i-1]) {
+				counter++;
+			}
+			else
+			{
+				if (counter > maxCounter) {
+					maxCounter = counter;
+					bestIndex = i;
+				}
+				counter = 1;
+			}
+		}
+		jsConsole.writeLine("Increasing sequence of " + maxCounter + " symbols found!");
+		jsConsole.writeLine(numbers.slice(bestIndex - maxCounter, bestIndex ) );
+	}
+	</script>
+</body>
+</html>

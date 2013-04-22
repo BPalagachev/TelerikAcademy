@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>Chech if element is bigger than its neighbours</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+		</p>
+		<p>The array is hardcoded!</p>
+	</div>
+	<a href="#" class="js-console-btn" onclick="Solve()">Check Positions!</a>
+	<div id="js-console"></div>
+	<br />
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function checkPosition(arr, position)
+	{
+		if (position == 0 || position == arr.length-1)
+		{
+			return false; // there is only one neighbor
+		}
+		else if ( arr[position] > arr[position-1] && arr[position] > arr[position+1])
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+
+	function Solve()
+	{
+		var arr = [1, 4, 6, 7, 8, 9 , 7, 9];
+
+		jsConsole.writeLine("arr[0] " + checkPosition(arr, 0));
+		jsConsole.writeLine("arr[3] " + checkPosition(arr, 3));
+		jsConsole.writeLine("arr[5] " + checkPosition(arr, 5));
+
+	}
+	</script>
+</body>
+</html>

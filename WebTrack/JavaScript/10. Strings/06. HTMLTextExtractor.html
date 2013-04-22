@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - HTML Text Extractor</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <script src="scripts/string-extensions.js"></script>
+</head>
+<body>
+    <div>
+        <p>Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:</p>
+        <p>
+            &lthtml&gt&lthead&gt&lttitle&gtSample site&lt/title&gt&lt/head&gt&ltbody&gt&ltdiv&gttext&ltdiv&gtmore text&lt/div&gtand more...&lt/div&gtin body&lt/body&gt&lt/html&gt
+        </p>
+        <p>Result</p>
+        <p>
+            Sample sitetextmore textand more...in body
+        </p>
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        var htmlTextExtractor = function(str)
+        {
+            var inTag = false;
+
+            var charArr = [];
+
+            for(var i = 0; i < str.length; i++)
+            {
+                if (inTag == false && str[i] == "<")
+                {
+                    inTag = true;
+                }
+                if (inTag == true && str[i] == ">")
+                {
+                    inTag = false;
+                    continue;
+                }
+
+                if (inTag == false)
+                {
+                    charArr.push(str[i]);
+                }
+            }
+
+            return charArr.join("");
+        }
+
+        String.prototype.htmlEscape = function (){
+            var escapedStr = String(this).replace(/&/g, '&amp;');
+            escapedStr = escapedStr.replace(/</g, '&lt;');
+            escapedStr = escapedStr.replace(/>/g, '&gt;');
+            escapedStr = escapedStr.replace(/"/g, '&quot;');
+            escapedStr = escapedStr.replace(/'/g, "&#39");
+            return escapedStr;
+        }
+
+        var str = "<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+       
+       jsConsole.writeLine(str.htmlEscape());
+
+       var text = htmlTextExtractor(str);
+
+       jsConsole.writeLine(text.htmlEscape());
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - a href replacer</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <p>
+            Write a JavaScript function that replaces in a HTML document given as string all the tags &lta href="…"&gt…&lt/a&gt with corresponding tags [URL=…]…/URL]. Sample HTML fragment:
+        </p>        
+        <p>
+            <div>
+                &ltp&gtPlease visit &lta href="http://academy.telerik. com">our site&lt/a> to choose a training course. Also visit &lta href="www.devbg.org">our forum&lt/a&gt to discuss the courses.&lt/p&gt
+            </div>
+            <div>
+                &ltp&gtPlease visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.&lt/p&gt
+            </div>
+        </p>
+    </div>
+     <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        var parseTagAttributes = function(openingTag)
+        {
+            var urlbuilded = "";
+            var tagLength = openingTag.length;
+
+            var index = -1;
+
+            index = openingTag.indexOf("href=\"")
+            if (index != -1)
+            {
+                index += 6; // length of href attribute
+                urlbuilded = openingTag.substring(index, openingTag.indexOf("\"", index) );
+            }
+
+            return urlbuilded;
+
+        }
+
+        function parseLink(link)
+        {
+
+            var urlbuilded = "";
+            var temp = link.match(/<a.*?>/);
+            var tempLength = 0;
+
+            if (temp != null)
+            {
+                var result  = parseTagAttributes(temp[0]);
+                if (result.length > 0)
+                {
+                    urlbuilded = "[URL=\"" + result +"\"]";
+                }
+                else
+                {
+                    urlbuilded = "[URL]";
+                }
+            }
+            else 
+            {
+                return null;
+            }
+
+            var closeIndex = link.indexOf("</a>", tempLength);
+            if (closeIndex == -1)
+            {
+                // no closing a tag was found
+                // take the rest of the string
+                closeIndex = link.length; 
+            }
+            temp = link.substring(tempLength, closeIndex);
+            urlbuilded = urlbuilded + temp + "[/URL]";
+            return urlbuilded;
+        }
+
+        String.prototype.htmlEscape = function (){
+            var escapedStr = String(this).replace(/&/g, '&amp;');
+            escapedStr = escapedStr.replace(/</g, '&lt;');
+            escapedStr = escapedStr.replace(/>/g, '&gt;');
+            escapedStr = escapedStr.replace(/"/g, '&quot;');
+            escapedStr = escapedStr.replace(/'/g, "&#39");
+            return escapedStr;
+        }
+
+        var url = "<p>Please visit <a href=\"http://academy.telerik. com\">our site</a> to choose a training course. Also visit <a href=\"www.devbg.org\">our forum</a> to discuss the courses.</p>";
+
+        var result = url.replace(/<a.*?<\/a>/g, parseLink);
+
+        jsConsole.writeLine(result.htmlEscape());
+
+
+    </script>
+</body>
+</html>

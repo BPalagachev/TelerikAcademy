@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+	<title>06. Loops</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a program that finds the most frequent number in an array. Example:
+			{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3} -> 4 (5 times)
+		</p>
+		<p>
+			Test array hard-coded
+		</p>
+	</div>
+	<button onclick="Solve()">Solve Problem</button><br/>
+	<div id="js-console"></div>	
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	function Solve()
+	{		
+		// sort and use task 3
+		var numbers = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
+		numbers.sort(function (x, y) {
+                return (x == y) ? 0 : (x > y) ? 1 : -1;});
+		var counter = 1;
+		var maxCounter = 0;
+		var bestIndex = 0;
+
+		for ( var i = 1; i < numbers.length; i++)
+		{
+			if (numbers[i] == numbers[i-1]) {
+				counter++;
+			}
+			else
+			{
+				if (counter > maxCounter) {
+					maxCounter = counter;
+					bestIndex = i;
+				}
+				counter = 1;
+			}
+		}
+		jsConsole.writeLine("Most frequent appears - " + maxCounter + " times");
+		jsConsole.writeLine("It is " + numbers[bestIndex - maxCounter] + " !" );
+
+		
+
+
+	}
+	function findIndexOfMin(arr, start)
+	{
+		var min = arr[start];
+		var bestIndex = start;
+		for (var i = start; i < arr.length; i++)
+		{
+			if (min > arr[i]) {
+				min = arr[i];
+				bestIndex = i;
+			};
+		}
+		return bestIndex;
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>Find word Case(in)sensensitive</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>Write a function that finds all the occurrences of word in a text
+			<ul>
+				<li>The search can case sensitive or case insensitive</li>
+				<li>Use function overloading</li>
+			</ul>
+	</p>
+	<p>Text is hard-coded</p>
+	</div>
+	<a href="#" class="js-console-btn" onclick="Solve()">Count Words</a>
+	<br />
+	<div id="js-console"></div>
+	<br />
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	function getWordCount (text, word, isSensitive)
+	{
+		function getWordCountCaseSensitive(text, word)
+		{
+			var wordCount = 0;
+
+			for(var i = 0; i < text.length - word.length; i++)
+			{
+				var found = true;
+				for( var j = 0; j < word.length; j++ )
+				{
+					if (text[i+j]!=word[j])
+					{
+						found = false;
+						break;
+					};
+				}
+				if (found == true)
+				{
+					wordCount++;
+				};
+			}
+
+			return wordCount;
+		}
+
+		function getWordCountCaseInsensitive(text, word)
+		{
+			var wordCount = 0;
+
+			for(var i = 0; i < text.length - word.length; i++)
+			{
+				var found = true;
+				for( var j = 0; j < word.length; j++ )
+				{
+					if ( (text[i+j]!=word[j].toLowerCase() && text[i+j]!=word[j].toUpperCase()))
+					{
+						found = false;
+						break;
+					};
+				}
+				if (found == true)
+				{
+					wordCount++;
+				};
+			}
+
+			return wordCount;
+		}
+
+		temp = text.concat('\0'); // used as terminating symbol - in case we need to count the last word as well
+		if (isSensitive == true)
+		{
+			return getWordCountCaseSensitive(temp, word);
+		}
+		else
+		{
+			return getWordCountCaseInsensitive(temp, word);
+		}
+	}
+
+
+
+	function Solve()
+	{
+		var str = "Koito pie zlo ne misli. Pie Pie Pie";
+		var word = "pie";
+
+		jsConsole.writeLine("CaseSensitive: " + getWordCount(str, word, true));
+		jsConsole.writeLine("CaseInsensitive: " + getWordCount(str, word, false));
+
+	}
+
+
+	</script>
+</body>
+</html>

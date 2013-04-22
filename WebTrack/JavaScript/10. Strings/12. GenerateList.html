@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Strings - Generate HTML List</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+
+    <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+
+    <div id="display"></div>    
+
+    <script>
+    var stringFormat = function(str, obj)
+    {
+        for (var i in obj)
+        {
+            var pattern = "\\{"+i+"\\}";
+            var re = new RegExp(pattern, "g");
+            str = str.replace(re, obj[i]);
+        }
+        return str;
+    }
+
+        var people =[{name: "Peter", age: 14},
+                     {name: "Kolio Piandeto", age: 7},
+                     {name: "Lelq Mara", age: 14},
+                    ];
+        var template = document.getElementById("list-item").innerHTML;
+        //"<strong>Name: {name}</strong> <span>Age: {age}</span>";
+
+        var htmlList = [];
+        htmlList.push("<ul>");
+        for( var i = 0; i < people.length; i++)
+        {
+            htmlList.push("<li>");
+            var test = stringFormat(template, people[i]);
+            htmlList.push(test);
+            htmlList.push("</li>");
+            jsConsole.writeLine(test);
+        }
+        htmlList.push("</ul>")
+
+        document.getElementById("display").innerHTML = htmlList;
+        
+        
+    </script>
+</body>
+</html>

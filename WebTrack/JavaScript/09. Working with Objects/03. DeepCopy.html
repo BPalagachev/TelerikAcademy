@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Deep Copy</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div>
+		<p>
+			Write a function that makes a deep copy of an object
+			<ul>
+				<li>The function should work for both primitive and reference types</li>
+			</ul>
+		</p>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+
+	// reference: "Object Oriented JavaScript" by Stoyan Stefanov				   
+	function deepCopy(source, destination)
+	{
+		var destination = destination || {};
+
+		for (var prop in source)
+		{
+			if (typeof source[prop] === 'object')
+			{
+				destination[prop] = (source[prop].constructor === Array) ? [] : {};
+				deepCopy(source[prop], destination[prop]);
+			}
+			else
+			{
+				destination[prop] = source[prop];
+			}
+		}
+		return destination;
+	}
+
+	var marks = [
+					{subject: "JavaScript", score: 5.50},
+					{subject: "OOP", score: 5.00},
+					{subject: "Slice and Dice", score: 4.00}
+				];
+
+	var student = {name: "Balkan Superman", marks: marks}; 
+	var copiedStudent = deepCopy(student, copiedStudent);
+	var notCopiedStudent = student;
+
+	jsConsole.writeLine("Student: " +  student.marks[1].score);
+
+	// when we change notCopiedStudent we change both objects
+	notCopiedStudent.marks[1].score = 0;
+	jsConsole.writeLine("Not copied student: " + notCopiedStudent.marks[1].score);
+	jsConsole.writeLine("Student: " + student.marks[1].score);
+
+	// when we change copiedStudent we dont change student object
+	copiedStudent.marks[1].score = 6;
+	jsConsole.writeLine("Copied student: " + copiedStudent.marks[1].score);
+	jsConsole.writeLine("Student: " + student.marks[1].score);
+
+
+
+
+
+
+	</script>
+</body>
+</html>
