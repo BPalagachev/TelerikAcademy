@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>04. Color Inputs</title>
+</head>
+<body>
+    <div>
+        <p>
+            Problem 4:
+        </p>
+        <p>
+            Create a text area and two inputs with type="color":
+            <ul>
+                <li>Make the font color of the text area as the value of the first color input</li>
+                <li>Make the background color of the text area as the value of the second input</li>
+            </ul>
+        </p>
+
+        <div>
+            <label>Text Color:</label><input type="color" id="textColor" /><br/>
+            <label>Background Color:</label><input type="color" id="backgroundColor" /><br/>
+            <button onclick="onSetColors()">Set Colors</button><br/>
+            <textarea cols="10" rows="5" id="text">Test Text</textarea>
+        </div>
+    </div>
+    <script>
+        function onSetColors() {
+            var textArea = document.getElementById("text");
+            var textColor = document.getElementById("textColor").value;
+            var backgroundColor = document.getElementById("backgroundColor").value;
+            textArea.style.background = backgroundColor;
+            textArea.style.color = textColor;
+        }
+    </script>
+</body>
+</html>

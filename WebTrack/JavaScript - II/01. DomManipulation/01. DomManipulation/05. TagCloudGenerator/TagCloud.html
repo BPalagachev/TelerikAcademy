@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>05. Tag Cloud Generator</title>
+</head>
+<body>
+    <body>
+    <div>
+        <p>Problem 5:</p>
+        <p>
+            Create a tag cloud:
+            <ul>
+                <li>Visualize a string of tags (strings) in a given container</li>
+                <li>By given minFontSize and maxFontSize, generate the tags with different font-size, depending on the number of occurrences</li>
+            </ul>
+        </p>
+
+        
+        <button onclick="onGenerate()">Generate</button>
+
+    </div>
+        <script>
+
+            function onGenerate() {
+                var tags = ["cms", "javascript", "js", "ASP.NET MVC", ".net", ".net", "css", "wordpress", "xaml", "js", "http", "web", "asp.net", "asp.net MVC", "ASP.NET MVC", "wp", "javascript", "js", "cms", "html", "javascript", "http", "http", "CMS"];
+
+                var minFontSize = 17;
+                var maxFontSize = 30;
+
+                var tagCloud = generateTagCloud(tags, minFontSize, maxFontSize);
+
+                document.body.appendChild(tagCloud);
+            }
+
+            function generateTagCloud(tags, minFont, maxFont) {
+                var tagsAndFrequency = buildWordsWithFrequency(tags);
+                var minFreq = findLowestFrequency(tagsAndFrequency);
+                var maxFreq = findHightesFrequency(tagsAndFrequency);
+
+                var tagCloudContainer = createTagContainerWithStyles();
+
+                for (var i in tagsAndFrequency) {
+                    var newTagCloudElement = document.createElement("div");
+                    newTagCloudElement.style.display = "inline-block";
+                    //newTagCloudElement.style.margin = "5px";
+                    //newTagCloudElement.style.height = "20px";
+                    newTagCloudElement.style.float = "left";
+					//newTagCloudElement.style.border = "solid 1px red";
+                    newTagCloudElement.style.fontSize = mapFontSizeToFrequency(minFont, maxFont, minFreq, maxFreq, tagsAndFrequency[i]) + "px";
+                    newTagCloudElement.innerHTML = i;
+                    newTagCloudElement.style.marginTop = randomizeDistanceInPxs(0, 15);
+                    newTagCloudElement.style.paddingLeft = randomizeDistanceInPxs(0, 50);
+
+                    tagCloudContainer.appendChild(newTagCloudElement);
+                }
+
+                return tagCloudContainer;
+            }
+
+			    function buildWordsWithFrequency(tags) {
+                // return assotiative array  - [tag] -> number of occurrences (frequency)
+                var tagsCounted = {};
+
+                for (var i = 0; i < tags.length; i++) {
+                    if (tagsCounted[tags[i]] != undefined) {
+                        tagsCounted[tags[i]]++;
+                    }
+                    else {
+                        tagsCounted[tags[i]] = 1;
+                    }
+                }
+
+                return tagsCounted;
+            }
+			
+            function createTagContainerWithStyles() {
+                var tagCloudContainer = document.createElement("div");
+                tagCloudContainer.style.width = "300px";
+                return tagCloudContainer;
+            }
+
+            function randomizeDistanceInPxs(min, max) {
+                var size = Math.random() * (max - min) + min | 0;
+                return size + "px";
+            }
+
+            function mapFontSizeToFrequency(minFont, maxFont, minFreq, maxFreq, currentFreq) {
+                var scale = (maxFont - minFont);
+                var range = (maxFreq - minFreq);
+                var unit = scale / range;
+
+                var fontSize = minFont + (currentFreq - minFreq) * unit;
+
+                return fontSize | 0;
+            }
+
+            function findHightesFrequency(tagsCounted) {
+                // finds the frequency of the most frequent tag element (word)
+                var max = -1;
+
+                for (var i in tagsCounted) {
+                    if (max < tagsCounted[i]) {
+                        max = tagsCounted[i];
+                    }
+                }
+
+                return max;
+            }
+
+            function findLowestFrequency(tagsCounted) {
+                // find the frequency of the least frequent tag element (word)
+                var min = 999999;
+
+                for (var i in tagsCounted) {
+                    if (min > tagsCounted[i]) {
+                        min = tagsCounted[i];
+                    }
+                }
+
+                return min;
+            }
+
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01. Randomize a Number of Divs</title>
+
+    <style>
+        .userInput {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .playground {
+            width: 750px;
+            height: 750px;
+            position: relative;
+            margin: 25px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Problem 1</p>
+        <p>
+            Write a script that creates a number of div elements.Each div element must have the following:
+        </p>
+        <ul>
+            <li>Random width and height between 20px and 100px</li>
+            <li>Random background color</li>
+            <li>Random font color</li>
+            <li>Random position on the screen (position:absolute)</li>
+            <li>A strong element with text "div" inside the div</li>
+            <li>Random border-radius</li>
+            <li>Random border color</li>
+            <li>Random border-width between 1px and 20px</li>
+        </ul>
+
+    </div>
+
+    <div class="userInput">
+        <label>How many divs?</label>
+        <input type="text" id="numberOfDivs" value="5" />
+        <button onclick="onGenerateNowEvent()">Generate Now!</button>
+    </div>
+
+    <div class="playground">
+    </div>
+
+    <script>
+        function onGenerateNowEvent() {
+
+            var userInput = document.getElementById("numberOfDivs");
+            var numberOfDivs = parseInt(userInput.value);
+
+            var divs = generateNumberOfDivs(numberOfDivs);
+
+            var divsFragment = document.createDocumentFragment();
+
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.position = "absolute";
+                divs[i].innerHTML = "<strong>div</strong>";
+
+                divs[i].style.top = randomizeDistanceInPxs(0, 750);
+                divs[i].style.left = randomizeDistanceInPxs(0, 750);
+                divs[i].style.width = randomizeDistanceInPxs(20, 100);
+                divs[i].style.height = randomizeDistanceInPxs(20, 100);
+                divs[i].style.background = randomizeColorRgb();
+                divs[i].style.color = randomizeColorRgb();
+                divs[i].style.borderRadius = randomizeDistanceInPxs(0, 10);
+                divs[i].style.borderColor = randomizeColorRgb();
+                divs[i].style.borderWidth = randomizeDistanceInPxs(1, 20);
+				divs[i].style.borderStyle = "solid";
+
+
+                divsFragment.appendChild(divs[i]);
+            }
+
+            var container = document.getElementsByClassName("playground");
+
+            while (container[0].firstChild) {
+                container[0].removeChild(container[0].firstChild);
+            }
+
+            container[0].appendChild(divsFragment);
+
+            // function for generating array of divs
+            function generateNumberOfDivs(numberOfDivs) {
+                var divs = [];
+
+                for (var i = 0; i < numberOfDivs; i++) {
+                    var div = document.createElement("div");
+                    divs.push(div);
+                }
+
+                return divs;
+            }
+
+            function randomizeDistanceInPxs(min, max) {
+                var size = Math.random() * (max - min) + min | 0;
+                return size + "px";
+            }
+
+            function randomizeColorRgb() {
+                var red = Math.random() * 255 | 0;
+                var green = Math.random() * 255 | 0;
+                var blue = Math.random() * 255 | 0;
+
+                return "rgb(" + red + ", " + green + ", " + blue + ")";
+            }
+        }
+
+    </script>
+</body>
+</html>

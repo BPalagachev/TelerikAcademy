@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #toDoList div{
+            display: inline-block;
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid green;
+            background-color: #dedede;
+            border-radius: 10px;
+            min-height: 150px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Create a TODO list with the following UI controls:
+        <ul>
+            <li>Form input for new Item</li>
+            <li>Button for adding the new Item</li>
+            <li>Button for deleting some item</li>
+            <li>Show and Hide Button</li>
+        </ul>
+    </div>
+    
+    <div id="toDoList">
+        <form>
+            Todo Title: <input type="text" name="todoTitle" id="todoTitle" /><br />
+            ToDo Task: <input type="text" name="todoTask" id="todoTask" /><br />
+        </form>
+         <button onclick="add()">Add Task</button><br />
+    </div>
+    <script>
+        var toDoItemBuilder = (function () {
+        var idNumber = 0;
+
+        function craeteTodo(title, task) {
+            var toDoItem = {
+                id: "todo" + idNumber,
+                title: title,
+                task : task
+            }
+
+            idNumber += 1;
+
+            return toDoItem;
+        }
+
+        return {
+            craeteTodo: craeteTodo
+        };
+        }());
+		
+        var toDoItems = {};
+
+        function remove(e) {
+            var container = document.getElementById("toDoList");
+
+            var sender = e.target;
+            
+            if (sender.nodeName == "DIV") {
+                container.removeChild(sender);
+            }
+            else {
+                container.removeChild(sender.parentNode);
+            }
+        }
+
+        function add() {
+            var titleElement = document.getElementById("todoTitle");
+            var taskElement = document.getElementById("todoTask");
+
+            var title = titleElement.value;
+            var value = taskElement.value;
+
+            if (title == "" && value == "") {
+                return;
+            }
+
+            var todoItem = toDoItemBuilder.craeteTodo(titleElement.value, taskElement.value);
+
+            var toCoDiv = document.createElement("div");
+            toCoDiv.innerHTML = "<h1>" + todoItem.title + "</h1> <p>" + todoItem.task + "</p>";
+            toCoDiv.id = todoItem.id;
+            toCoDiv.addEventListener("click", remove, false)
+            
+            var toDoListContainter = document.getElementById("toDoList");
+            toDoListContainter.appendChild(toCoDiv);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿.<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="500"></canvas>
+</body>
+
+<script>
+    function drawCircle(center, radius, ctx) {
+        ctx.strokeStyle = "rgb(255, 0, 0)";
+        ctx.save();
+        ctx.translate(center.x, center.y);
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.restore();
+    }
+
+
+    function removeCircle(center, radius, ctx) {
+        ctx.save();
+        ctx.translate(center.x - (radius + 1), center.y - (radius + 1));
+        ctx.clearRect(0, 0, radius * 2 + 2, radius * 2 + 2);
+        ctx.restore();
+    }
+
+    function moveCircle(canvasiId) {
+        var canvas = document.getElementById(canvasiId);
+        var ctx = canvas.getContext('2d');
+        var radius = 10;
+        var center = {
+            // initial center is random
+            x: getRandomInRange(0 + radius, canvas.offsetWidth - radius) | 0,
+            y: getRandomInRange(0 + radius, canvas.offsetHeight - radius) | 0
+        };
+
+        var timer;
+        var dirX = 1;
+        var dirY = 1;
+        timer = setInterval(function () {
+            if (center.x < 0 + radius || center.x > canvas.offsetWidth - radius) {
+                dirX *= -1; // reverse x direction ball is outside the canvas
+            }
+
+            if (center.y < 0 + radius || center.y > canvas.offsetHeight - radius) {
+                dirY *= -1; // reverse y direction ball is outside the canvas
+            }
+
+            var nextCenter = {
+                x: center.x + dirX,
+                y: center.y + dirY
+            };
+
+            removeCircle(center, radius, ctx);
+            drawCircle(nextCenter, radius, ctx);
+
+            center = nextCenter;
+        }, 50);
+    }
+
+    function getRandomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    moveCircle("canvas");
+    //var canvas = document.getElementById("canvas");
+    //var ctx = canvas.getContext('2d');
+    //drawCircle({ x: 15, y: 15 }, 10, ctx);
+    //drawCircle({ x: 30, y: 30 }, 10, ctx);
+    //drawCircle({ x: 50, y: 50 }, 10, ctx);
+    //drawCircle({ x: 100, y: 100 }, 10, ctx);
+
+</script>
+</html>

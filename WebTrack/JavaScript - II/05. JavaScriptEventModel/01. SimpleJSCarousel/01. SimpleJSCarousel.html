@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple JS Carousel</title>
+    <style>
+        body {
+            background-color: #dedede;
+        }
+        #container {
+            position: relative;
+            top: 250px;
+            left: 500px;
+            width: 500px;
+            background-color: #dedede;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Create a Simple JS Carousel with N images and two arrows for image control 
+    </div>
+    <div id="container"></div>
+    <button onclick="rotate(angles, 'left')">Go Left</button>
+    <button onclick="rotate(angles, 'right')">Go Right</button>
+
+    <script>
+        var MAX_PICTURE_SIZE = 256;
+        var ELLIPSE_X_RADIUS = 400;
+        var ELLIPSE_Y_RADIUS = 100;
+
+        var pictures = readPicturesPath(7);
+        var angles = []; // used to store the current offset angle for each picture
+        var numberOfPictures = pictures.length;
+        var carouselContainer = document.getElementById("container");
+
+        initializeCarousel(pictures, angles, carouselContainer, ELLIPSE_X_RADIUS, ELLIPSE_Y_RADIUS);
+        rotate(angles, "left"); // rotate once immediately after initialization to scale img size
+
+        // var timer = setInterval('rotate(angles)', 10);
+
+        function readPicturesPath(numberOfPictures) {
+            var pictures = [];
+
+            for (var i = 1; i <= numberOfPictures; i++) {
+                pictures.push("img/js" + i + ".png");
+            }
+
+            return pictures;
+        }
+
+        function initializeCarousel(pictures, angles, container, ellipseXRadius, ellipseYRadius) {
+            var fullCircleInRadians = Math.PI * 2;
+
+            for (var i = 0; i < pictures.length; i++) {
+                var initialAngle = (fullCircleInRadians / pictures.length) * i;
+                angles.push(initialAngle); // push the initial angle for each picture
+                var xyPosition = calculatePositionOnEllipse(initialAngle, ellipseXRadius, ellipseYRadius);
+                var divAndImg = createDivAndImg(i, xyPosition.xCoord, xyPosition.yCoord, parseInt(xyPosition.yCoord), pictures[i]);
+                container.innerHTML += divAndImg;
+            }
+        }
+
+        function calculatePositionOnEllipse(offsetInRadians, xRadius, yRadius) {
+            var position = {
+                xCoord: parseInt(Math.cos(offsetInRadians) * xRadius),
+                yCoord: parseInt(Math.sin(offsetInRadians) * yRadius)
+            }
+
+            return position;
+        }
+
+        function createDivAndImg(id, xPos, yPos, zIndex, src) {
+            var divAttributes = "id='div" + id + "' style='position: absolute; top: " + yPos + "px; left: " + xPos + "px; z-index: " + zIndex + ";'";
+            var imageAttibutes = "id='img" + id + "' src='" + src + "'";
+            var imgInsideDiv = "<div " + divAttributes + "><img " + imageAttibutes + "/>";
+
+            return imgInsideDiv;
+        }
+
+        function rotate(angles, direction) {
+            // recalculates each picture new coords based on their current offset angles (stored in angles)
+            var directionMultiple = 1;
+            if (direction == "left") {
+                directionMultiple = 1;
+            }
+            else {
+                directionMultiple = -1;
+            }
+
+            for (var i = 0; i < angles.length; i++) {
+                if (angles[i] <= 2 * Math.PI) {
+                    // works with non variable step of one-onehudred of a full circle
+                    angles[i] += directionMultiple * 2 * Math.PI / 100;
+                }
+                else {
+                    angles[i] = 0;
+                }
+
+                var xyPosition = calculatePositionOnEllipse(angles[i], ELLIPSE_X_RADIUS, ELLIPSE_Y_RADIUS);
+
+                var carouselDiv = document.getElementById("div" + i);
+                carouselDiv.style.left = xyPosition.xCoord + "px";
+                carouselDiv.style.top = xyPosition.yCoord + "px";
+                carouselDiv.style.zIndex = parseInt(xyPosition.yCoord);
+
+                var carouselImg = document.getElementById("img" + i);
+                var xOffset = Math.sin(angles[i]);
+                var scaleImgSize = map(xOffset, -1, 1, 0.25, 1);
+
+                carouselImg.style.width = MAX_PICTURE_SIZE * scaleImgSize + "px";
+                carouselImg.style.height = MAX_PICTURE_SIZE * scaleImgSize + "px";
+            }
+        }
+
+        function map(x, in_min, in_max, out_min, out_max) {
+            return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+        }
+    </script>
+</body>
+</html>

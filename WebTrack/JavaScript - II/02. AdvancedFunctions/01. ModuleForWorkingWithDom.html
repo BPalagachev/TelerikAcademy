@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01. Create a module for orking with the DOM.</title>
+</head>
+<body>
+    <div>
+        Create a <a href="#" class="button">module</a> for working with DOM. The module should have the following functionality:
+        <ul>
+            <li>Add element to an element(s) specified a given selector</li>
+            <li>Remove element(s) from the DOM  by given selector</li>
+            <li>Attach event to given selector by given event type and event hander</li>
+            <li>Add elements to buffer and append them when their number is 100
+                <ul id="inner">
+                    <li>Buffer can contain different elements and selectors</li>
+                </ul>
+            </li>
+            <li>Get elements by CSS selector</li>
+            <li>The module should reveal the necessary methods. All methods that are not relevant to the user interface shoudl be private.</li>
+        </ul>
+    </div>
+
+    <script>
+        var domModule = (function () {
+            var _maxNumberOfElementsInBuffer = 3;
+            var _elementBuffer = [];
+
+            function getElementstByCssSelector(cssSelector) {
+                var allNodes = document.querySelectorAll(cssSelector);
+                var elements = [];
+
+                for (var i in allNodes) {
+                    if (allNodes[i].nodeType == 1) {
+                        elements.push(allNodes[i]);
+                    }
+                }
+
+                return elements;
+            }
+
+            function appendChild(element, cssSelectorParernt) {
+                var matchedParrents = getElementstByCssSelector(cssSelectorParernt);
+
+                for (var i in matchedParrents) {
+                    if (matchedParrents[i].nodeType == 1) {
+                        matchedParrents[i].appendChild(element);
+                    }
+                }
+            }
+
+            function removeDomElements(cssSelector) {
+                var matchedElements = getElementstByCssSelector(cssSelector);
+
+                for (var i in matchedElements) {
+                    if (matchedElements[i].nodeType == 1) {
+                        var parrentNode = matchedElements[i].parentElement;
+                        parrentNode.removeChild(matchedElements[i]);
+                    }
+                }
+            }
+
+            function addHandler(cssSelector, eventType, handlerFunction) {
+                var matchedElements = getElementstByCssSelector(cssSelector);
+
+                for (var i in matchedElements) {
+                    if (matchedElements[i].nodeType == 1) {
+                        matchedElements[i].addEventListener(eventType, handlerFunction, false);
+                    }
+                }
+            }
+
+            function pushElementInBuffer(element, cssSelectorParernt) {
+                var elementParrentSelectorPair = {
+                    element: element,
+                    parrentSelector: cssSelectorParernt
+                };
+                _elementBuffer.push(elementParrentSelectorPair);
+
+                if (_elementBuffer.length == _maxNumberOfElementsInBuffer) {
+                    for (var i = 0; i < _elementBuffer.length; i++) {
+                        var element = _elementBuffer[i].element;
+                        var parrentSelector = _elementBuffer[i].parrentSelector;
+
+                        appendChild(element, parrentSelector);
+                    }
+
+                    _elementBuffer = [];
+                }
+            }
+
+            return {
+                getElementstByCssSelector: getElementstByCssSelector,
+                appendChild: appendChild,
+                removeDomElements: removeDomElements,
+                addHandler: addHandler,
+                pushElementInBuffer: pushElementInBuffer
+            };
+        })();
+
+
+        // The following examples show how to use the dom module - best tested in debug mode
+
+        // Example how to add an element - need an element and selector for the parrent element
+        var juicyDiv = document.createElement("div");
+        juicyDiv.style.width = "100px";
+        juicyDiv.style.height = "100px";
+        juicyDiv.style.border = "1px solid black";
+        domModule.appendChild(juicyDiv, "li ul");
+
+        // Example how to add element to the buffer - analogous to adding single element with appendChild
+        // for sake of testing, the whole buffer if processed when 3 elements are pushed instead of 100
+        domModule.pushElementInBuffer(juicyDiv.cloneNode(true), "li ul");
+        domModule.pushElementInBuffer(juicyDiv.cloneNode(true), "li ul");
+        domModule.pushElementInBuffer(juicyDiv.cloneNode(true), "li ul");
+
+        // Example how to remove an element - use a css selector to target an element
+        domModule.removeDomElements("li:first-child");
+        domModule.removeDomElements("li ul div");
+
+        // Example how to atach event to given element - 
+        domModule.addHandler("a.button", 'click', function () { alert("Clicked") });
+
+        // Example how to get all elements that are matched by a css selector -  
+        var allLies = domModule.getElementstByCssSelector("ul li");
+        for (var i in allLies) {
+            var innerHTML = allLies[i].innerHTML;
+            console.log(innerHTML);
+        }
+    </script>
+</body>
+</html>

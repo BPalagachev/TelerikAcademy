@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        Create a module to work with the console object.Implement functionality for:
+        <ul>
+            <li>Writing a line to the console</li>
+            <li>Writing a line to the console using a format</li>
+            <li>Writing to the console should call toString() to each element</li>
+            <li>Writing errors and warnings to the console with and without format</li>
+        </ul>
+    </div>
+
+    <script>
+        var specialConsole = (function () {
+            
+            function formatString(str, tokens)
+            {
+                var str = arguments[0].toString();
+                for(var i = 0; i < arguments.length-1; i++)
+                {
+                    var pattern = "\\{"+i+"\\}";
+                    var re = new RegExp(pattern, "g");
+                    if (typeof arguments[i + 1] === 'function') {
+                        str = str.replace(re, arguments[i + 1].toString());
+                    }
+                    else {
+                        str = str.replace(re, arguments[i + 1]);
+                    }
+                }
+                return str;
+            }
+
+            function writeLine() {
+                var formattedString = formatString.apply(null, arguments);
+                console.log(formattedString);
+            }
+
+            function writeError() {
+                writeLine.apply(null, arguments);
+            }
+
+            function writeWarning() {
+                writeLine.apply(null, arguments);
+            }
+
+            return {
+                writeLine: writeLine,
+                writeError: writeError,
+                writeWarning: writeWarning
+            };
+        })();
+
+        specialConsole.writeLine("Message: hello");
+        //logs to the console "Message: hello"
+        specialConsole.writeLine("Message: {0}", "hello");
+        //logs to the console "Message: hello"
+        specialConsole.writeError("Error: {0}", "Something happened");
+        specialConsole.writeWarning("Warning: {0}", "A warning");
+
+        specialConsole.writeLine("Lets see the code here: {0}", specialConsole.writeWarning);
+
+
+    </script>
+</body>
+</html>

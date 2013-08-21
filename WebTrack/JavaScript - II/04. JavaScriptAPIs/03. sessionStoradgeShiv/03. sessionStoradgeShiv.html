@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>03. sessionStoradge shiv</title>
+</head>
+<body>
+    <div>03. Create shiv/shim/polyfill to enable sessionStorage in browsers that do not support them</div>
+    <input type="text" id ="key" />
+    <input type="text" id="value" />
+    <button onclick="setData()">Set Custom Session Storadge</button>
+    <button onclick="getData()">Get Info from Custom Session Storadge</button>
+    <div id="display"></div>
+    <script>
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+
+        var customSessionStoradge = function () { };
+        customSessionStoradge.prototype = {
+            addItem: function (key, value) {
+                setCookie(key, value, null);
+            },
+            getItem: function (key) {
+                return getCookie(key);
+            }
+        };
+
+        var sessionStoradgeShiv = new customSessionStoradge();
+
+        function setData() {
+            var key = document.getElementById("key").value;
+            var data = document.getElementById("value").value;
+            sessionStoradgeShiv.addItem(key, data);
+        }
+
+        function getData() {
+            var display = document.getElementById("display");
+            while (display.firstElementChild != undefined) {
+                display.removeChild(display.firstElementChild);
+            }
+
+            var key = document.getElementById("key").value;
+            var value = sessionStoradgeShiv.getItem(key);
+
+            display.innerHTML = key + " -> " + value;
+        }
+    </script>
+</body>
+</html>

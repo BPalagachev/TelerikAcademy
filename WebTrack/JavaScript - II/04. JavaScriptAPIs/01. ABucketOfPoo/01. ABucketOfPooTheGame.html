@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #playfield {
+            width: 350px;
+            height: 350px;
+            border: 3px solid black;
+            background-color: #dedede;
+        }
+
+        #scores {
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="start()">New Game</button>
+    <div id="playfield"></div>
+    <div>Scores:<ul id="scores"></ul>
+    </div>
+
+
+
+    <script>
+        var BucketOfPoo = function (params) {
+            this.params = params;
+            this.gameContainer = document.getElementById(params.containerId);
+            this.Bucket = null;
+            // build-in champions
+            this.scores = [{ name: "Sedefch0", time: 5000 },
+            { name: "Kolio Piandeto", time: 7000 },
+            { name: "SuperMan", time: 11000 },
+            { name: "Spito ot Nadejda", time: 15000 },
+            { name: "Sedefcho pak", time: 30000 }];
+
+            this.startTime = null;
+            this.endTime = null;
+        }
+
+        BucketOfPoo.prototype = {
+            init: function () {
+                this.initContainer();
+                this.initPlayground();
+                this.initBucket();
+
+                this.startTime = Date.now();
+
+                var bestScores = localStorage.getObject("HighestPoopers");
+                if (bestScores != null) {
+                    this.scores = bestScores;
+                }
+                this.drawScores();
+
+            },
+            initContainer: function () {
+                // remove all childred, before adding new ones
+                while (this.gameContainer.firstElementChild != undefined) {
+                    this.gameContainer.removeChild(this.gameContainer.firstElementChild);
+                }
+
+                // ensure its position is relative
+                this.gameContainer.style.position = "relative";
+            },
+            initBucket: function () {
+                var self = this;
+
+                var bucket = document.createElement("div");
+                bucket.setAttribute("id", "bucket");
+
+                bucket.ondrop = function (evt) {
+                    evt.preventDefault();
+                    var data = evt.dataTransfer.getData("dragged-id");
+
+                    var el = document.getElementById(data);
+                    evt.target.style.backgroundImage = "url(" + self.params.bucketClosedSrc + ")";
+                    el.parentElement.removeChild(el);
+
+                    if (self.gameContainer.children.length == 1) {
+                        // there are no more trash => game ends
+                        self.endTime = Date.now();
+                        self.handleGameEnd();
+                    }
+                }
+
+                bucket.ondragleave = function () {
+                    evt.target.style.backgroundImage = "url(" + self.params.bucketClosedSrc + ")";
+                }
+
+                bucket.ondragover = function (evt) {
+                    evt.preventDefault()
+                    evt.target.style.backgroundImage = "url(" + self.params.bucketOpenSrc + ")";
+                };
+
+                bucket.style.backgroundImage = "url(" + this.params.bucketClosedSrc + ")";
+                bucket.style.width = this.params.bucketSize + "px";
+                bucket.style.height = this.params.bucketSize + "px";
+
+                this.gameContainer.appendChild(bucket);
+                this.Bucket = bucket;
+            },
+            initPlayground: function () {
+                var numberOfTrash = this.getRandomArbitary(15, 20) | 0;
+
+                for (var i = 0; i < numberOfTrash; i++) {
+                    var newTrash = this.generateTrash("t" + i);
+                    this.gameContainer.appendChild(newTrash);
+                }
+            },
+            generateTrash: function (id) {
+                var self = this;
+
+                var leftPosition = this.getRandomArbitary(0, this.gameContainer.offsetWidth - this.params.trashSize) | 0;
+
+                var topPosition;
+                // ensure there is no trash on the bucket
+                if (leftPosition < this.params.bucketSize) {
+                    topPosition = this.getRandomArbitary(this.params.bucketSize, this.gameContainer.offsetHeight - this.params.trashSize) | 0;
+                }
+                else {
+                    topPosition = this.getRandomArbitary(0, this.gameContainer.offsetHeight - this.params.trashSize) | 0;
+                }
+
+                var newTrash = document.createElement("img");
+                newTrash.setAttribute("id", id);
+                newTrash.style.position = "absolute";
+                newTrash.style.left = leftPosition + "px";
+                newTrash.style.top = topPosition + "px";
+                newTrash.setAttribute("src", this.params.trashSrc);
+
+                newTrash.setAttribute("draggable", "true");
+
+                newTrash.addEventListener("dragstart", function (evt) {
+                    evt.dataTransfer.setData("dragged-id", evt.target.id);
+                    self.Bucket.style.backgroundImage = "url(" + self.params.bucketClosedSrc + ")";
+                }, false);
+
+                return newTrash;
+            },
+            handleGameEnd: function () {
+                var gameTime = this.endTime - this.startTime;
+
+                for (var i = 0; i < this.scores.length; i++) {
+                    if (this.scores[i].time > gameTime) {
+                        this.scores.pop();
+                        var playerName = this.promptForName();
+                        this.scores.splice(i, 0, { name: playerName, time: gameTime });
+                        localStorage.setObject("HighestPoopers", this.scores);
+                        this.drawScores();
+                        return;
+                    }
+                }
+            },
+            drawScores: function () {
+                var scoreBoard = document.getElementById(this.params.scoreContainerId);
+                while (scoreBoard.firstElementChild != undefined) {
+                    scoreBoard.removeChild(scoreBoard.firstElementChild);
+                }
+
+                for (var i = 0; i < this.scores.length; i++) {
+                    var li = document.createElement("li");
+                    li.innerHTML = "No. " + (i + 1) + " " + this.scores[i].name + " " + this.scores[i].time;
+                    scoreBoard.appendChild(li);
+                }
+            },
+            getRandomArbitary: function (min, max) {
+                return Math.random() * (max - min) + min;
+            },
+            promptForName: function () {
+                var name = prompt("Your Name: ");
+                return name;
+            }
+        }
+
+        var gameObject = new BucketOfPoo({
+            containerId: "playfield",
+            bucketOpenSrc: "images/trashOpened.png",
+            bucketClosedSrc: "images/trashClosed.png",
+            bucketSize: 128,
+            trashSrc: "images/poop.png",
+            trashSize: 24,
+            scoreContainerId: "scores"
+        });
+
+        // start(restarts) game when butto is pressed
+        function start() {
+            gameObject.init();
+        }
+
+        // helper functions for localStoradge
+        (function () {
+            if (!Storage.prototype.setObject) {
+                Storage.prototype.setObject = function setObject(key, obj) {
+                    var jsonObj = JSON.stringify(obj);
+                    this.setItem(key, jsonObj);
+                };
+
+            }
+            if (!Storage.prototype.getObject) {
+                Storage.prototype.getObject = function getObject(key) {
+                    var jsonObj = this.getItem(key);
+                    var obj = JSON.parse(jsonObj);
+                    return obj;
+                };
+            }
+        })();
+    </script>
+</body>
+</html>

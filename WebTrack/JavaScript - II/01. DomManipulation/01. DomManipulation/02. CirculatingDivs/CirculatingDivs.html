@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>02. Circulating Divs</title>
+    <style>
+        #ring {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 100px;
+            border-radius: 100%;
+            background: #dedede;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: green;
+            position: absolute;
+            top: 60px;
+            left: 135px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Write a script that creates 5 div elements and moves them in circular path with interval of 100 milliseconds.
+    </div>
+    <button onclick="onGoDivs()">Go Divs</button>
+
+    <div id="ring">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script>
+        function onGoDivs() {
+            var ring = document.getElementById("ring");
+
+            var circles = document.getElementsByClassName("circle");
+
+            var timer;
+
+            var angleInRad = 0;
+            var offsetBetweenCirclesInRad = (2 * Math.PI) / 5;
+
+            timer = setInterval(
+                function () {
+                    // refreshes the element position each 100 ms, increasing angle with 1/100 of a full circle (3.6 degrees)
+                    for (var i = 0; i < circles.length; i++) {
+                        var currentOffsetAngle = angleInRad + i * offsetBetweenCirclesInRad;
+                        var position = calculatePositionOnCircle(currentOffsetAngle, circles[i].offsetWidth, ring);
+                        circles[i].style.top = position.top + "px";
+                        circles[i].style.left = position.left + "px";
+                    }
+
+                    angleInRad += 2 * Math.PI / 100;
+
+                    if (angleInRad >= 2 * Math.PI) {
+                        angleInRad = 0;
+                    }
+
+                },
+                100);
+            
+            function calculatePositionOnCircle(offsetInRadians, circleRadius, relativeContainer) {
+                // calculate the x,y coordinates of an element moving on a circle
+                var contaierWidth = relativeContainer.offsetWidth;
+                var containerHeight = relativeContainer.offsetHeight;
+
+                var x = Math.cos(offsetInRadians) * contaierWidth / 2 + contaierWidth / 2 - circleRadius / 2 | 0;
+                var y = Math.sin(offsetInRadians) * containerHeight / 2 + containerHeight / 2 - circleRadius / 2 | 0;
+
+                return { top: y, left: x }
+            }
+
+
+            function getElementPositionInWindow(element) {
+                var currentElement = element;
+
+                var offsetLeft = 0;
+                var offsetTop = 0;
+
+                while (currentElement != null) {
+                    offsetLeft += currentElement.offsetLeft;
+                    offsetTop += currentElement.offsetTop;
+                    currentElement = currentElement.offsetParent;
+                }
+
+                return { top: offsetTop, left: offsetLeft }
+            }
+        }
+    </script>
+</body>
+</html>

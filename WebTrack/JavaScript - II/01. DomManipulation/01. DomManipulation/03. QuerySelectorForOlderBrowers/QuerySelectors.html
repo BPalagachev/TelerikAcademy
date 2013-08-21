@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Query Selectors</title>
+</head>
+<body>
+    
+    <div id="testID">
+        <p  class="testClass">Problem 3</p>
+        <p>
+            Write a script that shims querySelector and querySelectorAll in older browsers
+        </p>
+        <p>
+            Selectors with > (direct child), . (class), # (id) and tag name work.
+        </p>
+    </div>
+
+    <div>
+        <input type="text" value="div#testID>p.testClass" id="selector" />
+        <button onclick="onTestSelector()">Test Selector</button>
+        <p>
+            
+        </p>
+    </div>
+
+    <div>
+        See result in the console
+    </div>
+
+    <script>
+
+        // #id
+        // .class
+        // > 
+        // tag 
+
+        function onTestSelector() {
+
+            var selector = document.getElementById("selector").value;
+            var resultQueryAll = customQuerySelectorAll(selector);
+            var resultQuery = customQuerySelector(selector);
+
+            console.log("resultQueryAll:");
+            for (var i = 0; i < resultQueryAll.length; i++) {
+                console.log("New Element:");
+                console.log(resultQueryAll[i].outerHTML);
+            }
+            console.log("---- QuerySelector ----");
+            console.log(resultQuery.outerHTML);
+
+            // functions:   
+
+            function customQuerySelector(querySelector) {
+                return customQuerySelectorAll(querySelector)[0];
+            }
+
+            function customQuerySelectorAll(querySelector) {
+
+                var singleSelectorsToProcess = decomposeToSimpleSelectors(querySelector);
+                var selectedCollection = [document]; // initially is assumed the document object is selected
+
+                for (var i = 0; i < singleSelectorsToProcess.length; i++) {
+
+                    var currentCollection = [];
+                    for (var j = 0; j < selectedCollection.length; j++) {
+                        currentCollection.push(handleSingleSelector(singleSelectorsToProcess[i], selectedCollection[j]));
+                    }
+
+                    selectedCollection = [];
+                    // transfer all from currentCollection to new selectedCollection
+                    for (var k = 0; k < currentCollection.length; k++) {
+                        for (var l = 0; l < currentCollection[k].length; l++) {
+                            selectedCollection.push(currentCollection[k][l]);
+                        }
+                    }
+
+                    currentCollection = [];                    
+                }
+
+                return selectedCollection;
+            }
+
+
+            function decomposeToSimpleSelectors(cssSelector) {
+                var selector = cssSelector + " ";
+                selector = selector.substring(selector.indexOf("#"));
+
+                var index = 0;
+                var startingIndex = 0;
+                var simpleSelectors = [];
+
+                while (selector[index] != undefined) {
+                    
+                    if (selector[index] == " " || selector[index] == ">") {
+                        simpleSelectors.push(selector.substring(startingIndex, index));
+                        startingIndex = index;
+                    }
+                    index++;
+                }
+
+                return simpleSelectors;
+            }
+
+            function handleSingleSelector(simpleSelector, parrent) {
+                var selector = simpleSelector.trim();
+
+                // remove tag and use only class or id i.e. div.class == .class
+                selector = selector.substring(selector.indexOf("#"));
+                selector = selector.substring(selector.indexOf("."));
+
+                var returnOnlyFirstChild = false;
+                if (selector[0] == ">") {
+                    returnOnlyFirstChild = true;
+                    selector = selector.substring(1);
+                }
+
+                var selectedElements = [];
+                if (selector[0] == "#") { // handle ID
+                    selector = selector.substring(1);
+                    selectedElements.push(document.getElementById(selector));
+                }
+                else if (selector[0] == ".") { // handle class
+                    selector = selector.substring(1);
+                    selectedElements = parrent.getElementsByClassName(selector);
+                }
+                else { // handle tags
+                    selectedElements = parrent.getElementsByTagName(selector);
+                }
+
+                if (returnOnlyFirstChild) {
+                    return [selectedElements[0]];
+                }
+                else {
+                    return selectedElements;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>

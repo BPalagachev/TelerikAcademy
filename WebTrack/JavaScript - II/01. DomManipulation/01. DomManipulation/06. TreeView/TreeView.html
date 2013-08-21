@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tree View</title>
+    <style>
+        body {
+            padding: 25px;
+            font-size: 50px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            display: inline-block;
+            background-image: url('imgs/Closed.png');
+            background-repeat: no-repeat;
+            padding-left: 65px;
+            padding-top: 5px;
+        }
+
+        .selected > a {
+            background-image: url('imgs/Closed.png');
+        }
+
+        .disselected > a {
+            background-image: url('imgs/Opened.png');
+        }
+       
+        .selected > ul{
+            display: block;
+
+        }
+        .disselected > ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="disselected">
+            <a href="#" onclick="go(event)">Item</a>
+            <ul>
+                <li class="disselected">
+                    <a href="#" onclick="go(event)">Sub Item</a>
+                </li>
+                <li class="disselected">
+                    <a href="#" onclick="go(event)">Sub Item</a>
+                    <ul >
+                        <li class="disselected">
+                            <a href="#" onclick="go(event)">Sub Item</a>
+                        </li>
+                        <li class="disselected">
+                            <a href="#" onclick="go(event)">Sub Item</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="disselected">
+             <a href="#" onclick="go(event)">Item</a>
+        </li>
+        <li class="disselected">
+             <a href="#" onclick="go(event)">Item</a>
+            <ul>
+                <li class="disselected">
+                    <a href="#" onclick="go(event)">Sub Item</a>
+                </li>
+                <li class="disselected">
+                    <a href="#" onclick="go(event)">Sub Item</a>
+                    <ul >
+                        <li class="disselected">
+                            <a href="#" onclick="go(event)">Sub Item</a>
+                        </li>
+                        <li class="disselected">
+                            <a href="#" onclick="go(event)">Sub Item</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="disselected">
+             <a href="#" onclick="go(event)">Item</a>
+        </li>
+        <li class="disselected">
+             <a href="#" onclick="go(event)">Item</a>
+        </li>
+    </ul>
+
+    <script>
+        function go(event) {
+            
+            var liEl = event.target.parentElement;
+
+            if (liEl.className == "disselected") {
+                liEl.className = "selected";
+            }
+            else {
+                liEl.className = "disselected";
+            }
+        }
+    </script>
+</body>
+</html>

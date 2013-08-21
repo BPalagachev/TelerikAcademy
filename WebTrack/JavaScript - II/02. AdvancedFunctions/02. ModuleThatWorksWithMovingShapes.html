@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>02. Create a module that works with moving shapes.</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Create a module that works with moving div elements. Implement functionality for:
+        <ul>
+            <li>Add new moving div element to the DOM
+                <ul>
+                    <li>The module should generate random background, font and border colors</li>
+                    <li>All the div elements are with the same width and height</li>
+                </ul>
+            </li>
+            <li>The movements of the div elements can be either circular or rectangular</li>
+            <li>The elements should be moving all the time</li>
+        </ul>
+    </div>
+    <div>
+        Controls:
+        <div>
+            <button onclick="movingShapes.goRectangular()">Go Rectangular</button>
+            <button onclick="movingShapes.goCircular();">Go Circular</button>
+            <button onclick="movingShapes.add('rect')">Add Rect</button>
+            <button onclick="movingShapes.add('circle');">Add Circle</button>
+        </div>
+    </div>
+    <script>
+
+        /**
+        * This class store information about css styles and can construct dom element based on them
+        * Also holds offset property which stores the percentage of a circular movement 
+        */
+        function ShapeInformation() {
+            this.generalStyles = {};
+
+            this.offset = 0;
+        }
+        ShapeInformation.prototype.setAnyStyle = function setAnyStyle(key, value) {
+            this.generalStyles[key] = value;
+        }
+        ShapeInformation.prototype.removeStyle = function removeStyle(key) {
+            if (this.generalStyles[key] != undefined) {
+                delete this.generalStyles[key];
+            }
+        }
+        ShapeInformation.prototype.readStyle = function readStyle(keyValueObject) {
+            for (var i in keyValueObject) {
+                this.generalStyles[i] = keyValueObject[i];
+            }
+        }
+        ShapeInformation.prototype.createDivWithAppliedStyles = function createDivWithAppliedStyles() {
+            var newElement = document.createElement("div");
+
+            newElement.style.position = "absolute";
+            
+            for (var i in this.generalStyles) {
+                newElement.style[i] = this.generalStyles[i];
+            }
+
+            return newElement;
+        }
+
+
+
+        var movingShapes = (function () {
+            var _shapes = [];
+            var SHAPE_SIZE_IN_UNITS = 10; // width == height for rectangles(squares) and radius for circles
+
+            var timer;
+
+            var outerContainer = document.createElement("div");
+            styleOuterCotainer(outerContainer);
+            outerContainer.style.border = "1px solid black";
+            outerContainer.style.position = "relative";
+            document.body.appendChild(outerContainer);
+            
+            /**
+            * This method adds new element in the module
+            *@param {string} elementShape - rect or circle 
+            */
+            function add(elementShape) {
+                var shape = new ShapeInformation();
+                var newShapeStyle = generateRandomStyles();
+
+                shape.readStyle(newShapeStyle);
+
+                if (elementShape === "rect") {
+                    shape.setAnyStyle("borderRadius", "0");
+                }
+                else if (elementShape === "circle") {
+                    shape.setAnyStyle("borderRadius", "100%");
+                }
+                else {
+                    return;
+                }
+
+               _shapes.push(shape);
+            }
+
+            function generateRandomStyles() {
+                var styles = {
+                    background: randomizeRgbColor(),
+                    color: randomizeRgbColor(),
+                    border: "1px solid " + randomizeRgbColor(),
+                    width: SHAPE_SIZE_IN_UNITS + "px",
+                    height: SHAPE_SIZE_IN_UNITS + "px"
+                };
+
+                return styles;
+            }
+
+            function randomizeRgbColor() {
+                var red = parseInt(Math.random() * 255);
+                var green = parseInt(Math.random() * 255);
+                var blue = parseInt(Math.random() * 255);
+
+                return "rgb(" + red + ", " + green + ", " + blue + ")";
+            }
+
+            function styleOuterCotainer(outerContainer) {
+                var outerSize = "50px";
+
+                outerContainer.style.width = outerSize;
+                outerContainer.style.height = outerSize;
+            }
+
+            function calculatePositionOnCircle(offsetInRadians, shapeSize, relativeContainer) {
+                // calculate the x,y coordinates of an element moving on a circle
+                var contaierWidth = relativeContainer.offsetWidth;
+                var containerHeight = relativeContainer.offsetHeight;
+                offsetInRadians -= 0.75 * Math.PI;
+
+                var x = Math.cos(offsetInRadians) * contaierWidth / 2 + contaierWidth / 2 - shapeSize / 2 | 0;
+                var y = Math.sin(offsetInRadians) * containerHeight / 2 + containerHeight / 2 - shapeSize / 2 | 0;
+
+                return { top: y, left: x}
+            }
+
+            function calculatePositionOnRectangle(offsetInRadians, shapeSize, relativeContainter)
+            {
+                var containerSize = relativeContainter.offsetWidth;
+                var containerPerimeter = 4 * containerSize;
+
+                var positionOnTheRectangle = offsetInRadians % (Math.PI * 2); // as parts of 2*PI (analogy to circle)
+
+                var positionRelativeToThePerimeter = containerPerimeter * (positionOnTheRectangle / (Math.PI * 2));
+
+
+                var nextPositionOnRectangle = {};
+                if (positionRelativeToThePerimeter >= 0
+                    && positionRelativeToThePerimeter < containerSize) { // top side
+                    var positionOnTheCurrentSide = positionRelativeToThePerimeter % containerSize;
+                    nextPositionOnRectangle = {
+                        top: 0,
+                        left: positionOnTheCurrentSide
+                    }
+                }
+                else if (positionRelativeToThePerimeter >= containerSize
+                        && positionRelativeToThePerimeter < 2 * containerSize) { //right side
+                    var positionOnTheCurrentSide = positionRelativeToThePerimeter % containerSize;
+                    nextPositionOnRectangle = {
+                        top: positionOnTheCurrentSide,
+                        left: containerSize
+                    }
+                }
+                else if (positionRelativeToThePerimeter >= 2 * containerSize
+                         && positionRelativeToThePerimeter < 3 * containerSize) { // bottom side
+                    var positionOnTheCurrentSide = positionRelativeToThePerimeter % containerSize;
+                    nextPositionOnRectangle = {
+                        top: containerSize,
+                        left: containerSize-positionOnTheCurrentSide
+                    }
+                }
+                else if (positionRelativeToThePerimeter >= 3 * containerSize
+                         && positionRelativeToThePerimeter < containerPerimeter) { // left side
+                    var positionOnTheCurrentSide = positionRelativeToThePerimeter % containerSize;
+                    nextPositionOnRectangle = {
+                        top: containerSize - positionOnTheCurrentSide,
+                        left: 0
+                    }
+                }
+
+                return nextPositionOnRectangle;
+            }
+
+            function startMoving(coordinateCalculator) {
+                timer = setInterval(
+                    function () {
+                        emptyOuterContainer(outerContainer);
+                        var appendAllInOnceFragment = document.createDocumentFragment();
+
+                        for (var i = 0; i < _shapes.length; i++) {
+                            var currentOffset = _shapes[i].offset;
+                            var nextPosition = coordinateCalculator(currentOffset, SHAPE_SIZE_IN_UNITS, outerContainer);
+                            //var nextPosition = calculatePositionOnRectangle(currentOffset, SHAPE_SIZE_IN_UNITS, outerContainer);
+
+                            _shapes[i].offset = currentOffset + 2 * Math.PI / 100; // one one-hundred of a circle
+                            _shapes[i].setAnyStyle("top", nextPosition.top+"px");
+                            _shapes[i].setAnyStyle("left", nextPosition.left + "px");
+                            //console.log(_shapes[i].offset);
+
+                            var newlyMovedShape = _shapes[i].createDivWithAppliedStyles();
+
+                            appendAllInOnceFragment.appendChild(newlyMovedShape);
+
+                        }
+                        outerContainer.appendChild(appendAllInOnceFragment);
+                        //console.log(nextPosition.top + " , " + nextPosition.left);
+                    },
+                    100
+                );
+            }            
+
+            function emptyOuterContainer(container) {
+                while (container.firstChild) {
+                    container.removeChild(container.firstChild);
+                }
+            }
+
+            function goCircular() {
+                clearInterval(timer);
+                outerContainer.style.borderRadius = "100%";
+                startMoving(calculatePositionOnCircle);
+            }
+
+            function goRectangular() {
+                clearInterval(timer);
+                outerContainer.style.borderRadius = "0%";
+                startMoving(calculatePositionOnRectangle);
+            }
+
+
+            return {
+                add: add,
+                goCircular: goCircular,
+                goRectangular: goRectangular
+            };
+        })();
+        movingShapes.add("rect");
+        movingShapes.goRectangular();
+
+        var counter = 0;
+
+        //var a = setInterval(function () {
+        //    movingShapes.add("circle");
+        //    counter++;
+        //    if (counter === 98) {
+        //        clearInterval(a);
+        //    }
+
+        //}, 5300);
+      //  movingShapes.add("circle");
+
+
+        var bp;
+    </script>
+</body>
+</html>

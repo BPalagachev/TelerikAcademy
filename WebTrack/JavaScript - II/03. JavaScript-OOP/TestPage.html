@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="InheritanceUtilities.js"></script>
+    <script src="PropulsionDevice.js"></script>
+    <script src="Wheel.js"></script>
+    <script src="Nozzels.js"></script>
+    <script src="Propellers.js"></script>
+    <script src="Vehicle.js"></script>
+    <script src="AirVehicle.js"></script>
+    <script src="WaterVehicle.js"></script>
+    <script src="LandVehicle.js"></script>
+    <script src="AmphibiousVehicle.js"></script>
+</head>
+<body>
+    <div>
+        Write a hierarchy of classes to simulate vehicles:
+        <ul>
+            <li>All vehicles should have speed and propulsion units (things which make them move) and a Accelerate method, which should update their speed by summing it with the acceleration of their propulsion units</li>
+            <li>Each propulsion unit can produce acceleration (change in speed). There should be three types of propulsion units - wheels, propelling nozzles and propellers</li>
+            <li>A wheel should have a radius and the acceleration it produces should be equal to its perimeter</li>
+            <li>A propelling nozzle should have power and an afterburner switch. The acceleration the nozzle should produce as much acceleration as it has power, but if the afterburner is on it should produce double acceleration.</li>
+            <li>A propeller should have a number of fins and a spin direction. The acceleration a propeller produces should by default be equal to the number of fins it has. The spin direction should be clockwise and counter-clockwise. If the spin direction is counter-clockwise, the acceleration the propeller produces should be negative, if the spin direction is clockwise, the acceleration should be positive.</li>
+            <li>There should be land, air and water vehicles. Land vehicles should have 4 wheels, air vehicles should have 1 propelling nozzles and water vehicles should have a customizable number of propellers (passed in the constructor).</li>
+            <li>Air vehicles should have the ability to switch on/off their afterburners.</li>
+            <li>Water vehicles should have the ability to change the spin direction of their propellers.</li>
+            <li>Implement one additional amphibious vehicle. It should both have a propeller (so it can move on water) and wheels (so it can move on land). The amphibious vehicle should be able to switch between land and water mode and it's speed property and Accelerate method should respectively depend on its wheels in the first case and on its propeller in the second case.</li>
+        </ul>
+    </div>
+    <div>
+        I've decided on the following class diagram:<br/>
+        <img src="ProjectClassDiagram.jpg"/>
+    </div>
+    <script>
+        //Test propulsion devices
+        //var wheels = new Wheels(4);
+        //var landAcc = wheels.getAcceleration();
+        //console.log(landAcc);
+
+        //var nozzels = new Nozzels(100); // Konq Bace
+
+        //var airAcc = nozzels.getAcceleration();
+        //console.log("Acceleration: " + airAcc);
+        //nozzels.isAfterBurnOn = true;
+        //var airAccAfterBurnOn = nozzels.getAcceleration();
+        //console.log("Acceleration with after burners on, bace: " + airAccAfterBurnOn);
+
+        //var propellers = new Propellers(7, 10);
+        //var onWaterGoForward = propellers.getAcceleration();
+        //console.log(onWaterGoForward);
+        //propellers.isDirectionClockwise = false;
+        //var onWaterGoBackwards = propellers.getAcceleration();
+        //console.log(onWaterGoBackwards);
+
+        // testing vehicles
+        console.log("Air Vehicle");
+
+        var airPlane = new AirVehicle(1000); // ilqda konq
+        console.log("Initial Speed: " + airPlane.currentSpeed);
+        airPlane.accelerate();
+        console.log("Speed after accelerating with after burners OFF: " + airPlane.currentSpeed);
+        airPlane.switchOnNozzlesAfterBurner();
+        airPlane.accelerate();
+        console.log("Speed after accelerating with after burners ON: " + airPlane.currentSpeed);
+
+        console.log("Water Vehicle");
+
+        var motorizedBoat = new WaterVehicle(7, 10);
+        console.log("Initial Speed: " + motorizedBoat.currentSpeed);
+        motorizedBoat.goForward();
+        motorizedBoat.accelerate();
+        console.log("Speed after accelerating forward: " + motorizedBoat.currentSpeed);
+        motorizedBoat.goBackwards();
+        motorizedBoat.accelerate(); // decelerate
+        console.log("Speed after accelerating in opposite direction (decelerate):" + motorizedBoat.currentSpeed);
+
+
+        console.log("Land Vehicle");
+
+        var car = new LandVehicle(17); // janti siimnajskiiii 
+        console.log("Initial Speed: " + car.currentSpeed);
+        car.accelerate();
+        console.log("Speed after accelerating: " + car.currentSpeed);
+
+        console.log("Amphibiuos Vehicle");
+
+        var amphibian = new AmphibiousVehicle(7, 10, 17);
+        amphibian.switchToLandMode();
+        console.log("Initial Speed On Land: " + amphibian.currentSpeed);
+        amphibian.accelerate();
+        console.log("Speed after acceleration: " + amphibian.currentSpeed);
+        amphibian.switchToWaterMode();
+        console.log("Amphibian entered water at this speed: " + amphibian.currentSpeed);
+        amphibian.goForwardOnWater();
+        amphibian.accelerate();
+        console.log("Amphibian accelerated on water and the current speed is: " + amphibian.currentSpeed);
+        amphibian.goBackwardsOnWater();
+        amphibian.accelerate();
+        console.log("Speed after deceleration on water: " + amphibian.currentSpeed);
+
+    </script>
+</body>
+</html>
