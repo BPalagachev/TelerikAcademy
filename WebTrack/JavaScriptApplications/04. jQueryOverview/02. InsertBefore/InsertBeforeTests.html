@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>02. InsertBefore</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+    <style>
+        div {
+            margin: 15px;
+        }
+
+        .InsertBeforeThoseElements {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .Inserted {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>Using jQuery implement functionality to insert a DOM element before or after another element</div>
+    <div class="InsertBeforeThoseElements">
+        On click, insert before this element
+    </div>
+    <script>
+        (function ($) {
+            $(".InsertBeforeThoseElements").on("click", function () {
+                var newDiv = $(document.createElement("div"));
+                newDiv.addClass("Inserted");
+                newDiv.text("This item has been inserted");
+
+                newDiv.insertBefore(".InsertBeforeThoseElements");
+            });
+        }(jQuery))
+    </script>
+</body>
+</html>

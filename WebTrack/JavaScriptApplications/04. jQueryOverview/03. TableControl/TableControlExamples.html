@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>03. TableControl</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+    <script src="Scripts/OOPPlugin.js"></script>
+    <script src="Scripts/TableControl.js"></script>
+
+    <style>
+        #Table table{
+            border: solid 1px black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+            #Table table tr td{
+                border: solid 1px black;
+            }
+            #Table table tr th{
+                border: solid 1px black;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        By given an array of students, generate a table that represents these students
+        <ul>
+            <li>Each student has first name,last name and grade</li>
+            <li>Use jQuery</li>
+        </ul>
+    </div>
+    <div id="Table">
+
+    </div>
+    <script>
+        var students = [];
+        students.push({
+            firstName: "Peter",
+            lastName: "Ivanov",
+            grade: 3
+        });
+        students.push({
+            firstName: "Milena",
+            lastName: "Grigorova",
+            grade: 6
+        });
+        students.push({
+            firstName: "Gergana",
+            lastName: "Borisova",
+            grade: 12
+        });
+        students.push({
+            firstName: "Boyko",
+            lastName: "Petrov",
+            grade: 7
+        });
+
+
+        var control = new TableControl("#Table");
+        control.addHeaders(["First Name", "Last Name", "Grade"]);
+
+        for (var i in students) {
+            control.addData(students[i]);
+        }
+
+        control.render();
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>05. GridViewControl</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+    <script src="Scripts/OOPPlugin.js"></script>
+    <script src="Scripts/GridViewItem.js"></script>
+    <script src="Scripts/Row.js"></script>
+    <script src="Scripts/GridViewControl.js"></script>
+    <link href="CSS/GridViewExamples.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        *Implement a GridView control
+        <ul>
+            <li>Rows can be added dynamically</li>
+            <li>A header row can be added dynamically
+                <ul>
+                    <li>Each GridView can have at most one header row</li>
+                </ul>
+            </li>
+            <li>Each row can have  a nested GridView
+                <ul>
+                    <li>Each GridView can have <strong>at most one nested</strong> GridView</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="GridView">
+        <div>Click on row to add data dynamically</div>
+        <input type="text" value="Spiro, Spitov, 4" />
+    </div>
+
+    <script>
+
+        var gridView = new GridViewControl("#GridView");
+        gridView.setEventHandler("click", function (ev) {
+            var element = $(ev.target).parent();
+            if (element.not(".GridViewTableHeader").is("tr")) {
+                var data = $("#GridView input").val();
+                var arrayOfData = data.split(",");
+                var newRow = new Row(arrayOfData);
+                var rowElement = newRow.render();
+                rowElement.insertAfter(element);
+            }
+        });
+
+        gridView.addHeader(["First Name", "Last Name", "Grade"]);
+        gridView.addRow(["Kolio", "Piandeto", "3ti"]);
+        gridView.addRow(["Lelq", "Erma", 7]);
+        gridView.addRow(["Valio", "Ludoto", 9]);
+
+            var innerGrid = gridView.addGridSubGridView();
+            innerGrid.addHeader(["SubGridViewHeader 1", "SubGridViewHeader 2", "SubGridViewHeader 3"]);
+            innerGrid.addRow(["SubGridViewItem 11", "SubGridViewItem 12", "SubGridViewItem 13"]);
+            innerGrid.addRow(["SubGridViewItem 21", "SubGridViewItem 22", "SubGridViewItem 23"]);
+            innerGrid.addRow(["SubGridViewItem 31", "SubGridViewItem 31", "SubGridViewItem 33"]);
+
+                var thirdLevel = innerGrid.addGridSubGridView();
+                thirdLevel.addHeader(["Deeper", "Cooler Looking", "Meaner"]);
+                thirdLevel.addRow(["YES", "YES", "YES"]);
+
+                    var thirdLevelOverrider = innerGrid.addGridSubGridView();
+                    thirdLevelOverrider.addHeader(["If another grid", "is added, it is going", "to be overriden"]);
+                    thirdLevelOverrider.addRow(["True", "True", "True"]);
+
+        gridView.render();  
+
+
+    </script>
+</body>
+</html>

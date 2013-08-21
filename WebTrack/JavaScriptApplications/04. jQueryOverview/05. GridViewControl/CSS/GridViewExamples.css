@@ -1,0 +1,28 @@
+﻿#GridView {
+    text-align: center;
+}
+input {
+    width: 400px;
+    margin: 10px;
+}
+
+strong {
+    color: red;
+}
+
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    table tr td {
+        border: solid 1px black;
+        padding: 5px;
+    }
+
+    table tr th {
+        border: solid 1px black;
+        padding: 10px;
+    }

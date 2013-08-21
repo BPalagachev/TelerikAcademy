@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <!-- Add styles for width and height -->
+    <style>
+        html, body, #map-canvas {
+            margin: 0;
+            padding: 0;
+            height: 500px;
+            width: 1000px;
+        }
+
+        body {
+            padding: 150px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+</head>
+<body>
+    <div id="map-canvas"></div>
+    <button id="previous-button">Previous</button><button id="next-button">Next</button>
+    <ul>
+        <li><a href="#" id="Sofia">Sofia</a></li>
+        <li><a href="#" id="Paris">Paris</a></li>
+        <li><a href="#" id="London">London</a></li>
+        <li><a href="#" id="Warsaw">Warsaw</a></li>
+        <li><a href="#" id="Lisbon">Lisbon</a></li>
+        <li><a href="#" id="Moskow">Moskow</a></li>
+        <li><a href="#" id="Beijing">Beijing</a></li>
+        <li><a href="#" id="Canberra">Canberra</a></li>
+        <li><a href="#" id="Washington">Washington</a></li>
+        <li><a href="#" id="Mexico">Mexico City</a></li>
+
+    </ul>
+
+    <script src="MapTourism.js"></script>
+
+</body>
+</html>

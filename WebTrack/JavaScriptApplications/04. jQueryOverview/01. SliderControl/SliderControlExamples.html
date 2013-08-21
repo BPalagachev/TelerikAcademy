@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01. SliderControl</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+    <script src="Scripts/OOPPlugin.js"></script>
+    <script src="Scripts/Slider.js"></script>
+    <script src="Scripts/SliderItemGenerator.js"></script>
+
+    <style>
+        #slider {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 960px;
+            padding: 25px;
+            margin: 25px;
+        }
+        .SliderItem {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 15px;
+       }
+        .SliderItem:after {
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            visibility: hidden;
+        }
+            .SliderItem img {
+                margin-right: 15px;
+                float: left;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Create a slider control using jQuery
+        </p>
+        <ul>
+            <li>The slider can have many slides</li>
+            <li>Only one slide is visible at a time</li>
+            <li>
+                Each slide contains HTML code
+                <ul>
+                    <li>i.e. it can contain images, forms, divs, headers, links, etc…</li>
+                </ul>
+            </li>
+            <li>Implement functionality for changing the visible slide after 5 seconds</li>
+            <li>Create buttons for next and previous slide</li>
+        </ul>
+    </div>
+
+    <div id="slider"></div>
+    <script>
+        var slideGenerator = new SliderItemGenerator();
+        var lorem1 = slideGenerator.getHTML({
+            header: "Lorem Ipsum - Item 1",
+            img: "Images/LoremIpsum.jpg",
+            paragraphs: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis dolor eu tellus tempus, consectetur placerat libero congue. Nunc et ante eu nulla vestibulum hendrerit quis ut nulla. Sed vel porta neque. In at placerat mauris. Fusce malesuada tempus auctor. Quisque fermentum et mi aliquam ornare. Aenean blandit, dolor et pulvinar venenatis, libero odio scelerisque justo, vel tristique eros velit nec lacus. Aliquam erat volutpat."
+        });
+        var lorem2 = slideGenerator.getHTML({
+            header: "Lorem Ipsum - Item 2",
+            img: "Images/People.jpg",
+            paragraphs: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis dolor eu tellus tempus, consectetur placerat libero congue. Nunc et ante eu nulla vestibulum hendrerit quis ut nulla. Sed vel porta neque. In at placerat mauris. Fusce malesuada tempus auctor. Quisque fermentum et mi aliquam ornare. Aenean blandit, dolor et pulvinar venenatis, libero odio scelerisque justo, vel tristique eros velit nec lacus. Aliquam erat volutpat."
+        });
+        var lorem3 = slideGenerator.getHTML({
+            header: "Lorem Ipsum - Item 3",
+            img: "Images/TShirt.jpg",
+            paragraphs: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis dolor eu tellus tempus, consectetur placerat libero congue. Nunc et ante eu nulla vestibulum hendrerit quis ut nulla. Sed vel porta neque. In at placerat mauris. Fusce malesuada tempus auctor. Quisque fermentum et mi aliquam ornare. Aenean blandit, dolor et pulvinar venenatis, libero odio scelerisque justo, vel tristique eros velit nec lacus. Aliquam erat volutpat."
+        });
+
+        var testSlider = new Slider("#slider");
+        testSlider.addNewItem(lorem1);
+        testSlider.addNewItem(lorem2);
+        testSlider.addNewItem(lorem3);
+        testSlider.render();
+        testSlider.autoRotate();
+    </script>
+</body>
+</html>

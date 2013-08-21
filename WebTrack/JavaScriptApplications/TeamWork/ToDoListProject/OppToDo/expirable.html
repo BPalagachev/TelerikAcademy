@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-framework="jquery">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>jQuery • TodoMVC</title>
+	<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<section id="expirable">
+		<header class="header">
+			<h1>todos</h1>
+            <input class="date" placeholder="When needs to be done?" autofocus />
+			<input class="new-todo" placeholder="What needs to be done?"  />
+		</header>
+		<section class="main">
+			<input class="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+			<ul class="todo-list"></ul>
+		</section>
+		<footer class="footer">
+			<span class="todo-count"><strong>0</strong> item left</span>
+			<button class="clear-completed">Clear completed</button>
+		</footer>
+	</section>
+	<footer id="info">
+		<p>Double-click to edit a todo</p>
+		<p>Created by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
+		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+	</footer>
+	<script id="todo-template-expirable" type="text/x-handlebars-template">
+	{{#this}}
+	<li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
+		<div class="view">
+			<input class="toggle" type="checkbox" {{#if completed}}checked{{/if}}>
+			<label>{{title}}</label>
+            <label>Date: {{expirationDate}}</label>
+            <button class="destroy"></button>
+		</div>
+		<input class="edit" value="{{title}}">
+	</li>
+	{{/this}}
+	</script>
+	<script id="footer-template" type="text/x-handlebars-template">
+	<span id="todo-count"><strong>{{activeTodoCount}}</strong> {{activeTodoWord}} left</span>
+	{{#if completedTodos}}<button id="clear-completed">Clear completed ({{completedTodos}})</button>{{/if}}
+	</script>
+	<script src="bower_components/todomvc-common/base.js"></script>
+	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/handlebars/handlebars.js"></script>
+
+    <script src="bower_components/jquery/OOPPlugin.js"></script>
+
+    <script src="js/Utils.js"></script>
+    <script src="js/BasicTodo.js"></script>
+    <script src="js/TodoManager.js"></script>
+
+    <script src="js/ExpirableTodo.js"></script>
+    <script src="js/ExpirableTodoManager.js"></script>
+
+    <script src="bower_components/jquery/jquery.ui.core.js"></script>
+    <script src="bower_components/jquery/jquery.ui.widget.js"></script>
+    <script src="bower_components/jquery/jquery.ui.mouse.js"></script>
+    <script src="bower_components/jquery/jquery.ui.sortable.js"></script>
+    
+    <script>
+        //var a = new TodoManager();
+        //a.test();
+        //var testTodo = new BasicTodo();
+        //testTodo.test();
+
+        // //test inheritance
+        //var expirable = new ExpirableTodo("id", "title", "completed", "dneska");
+        //expirable.test();
+        //console.log(expirable.id);
+        //console.log(expirable.expirationDate);
+
+        var e = new ExpirableTodoManager("#expirable", "#todo-template-expirable");
+
+        $(function () {
+            console.log($("#todo-list").html());
+            $("#todo-list").sortable();
+            $("#todo-list").disableSelection();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>04. BackgroundColorChanger</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+</head>
+<body>
+    <div>
+        Implement functionality to change the background color of a web page
+        <ul>
+            <li>i.e. select a color from a color picker and set this color as the background color of the page</li>
+        </ul>
+        <p>Works in Chrome</p>
+    </div>
+
+    <div>
+        <p>Select your favorite color: <input type="color" name="favcolor"/></p>
+        <button>ChangeColor</button>
+    </div>
+
+    <script>
+        (function ($) {
+            $("button").click("click", function () {
+                var color = $("input").val();
+                $("body").css("background-color", color);
+            });
+        }(jQuery))
+    </script>
+    
+</body>
+</html>

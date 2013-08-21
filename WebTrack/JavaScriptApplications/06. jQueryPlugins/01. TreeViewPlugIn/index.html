@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01. TreeViewPlugIn</title>
+    <script src="Scripts/jquery-2.0.2.js"></script>
+    <script src="Scripts/TreeViewPlugIn.js"></script>
+    <style>
+        #TreeViewContainer {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Create a TreeView jQuery Plugin
+        <ul>
+            <li>Initially only the top items must be visible</li>
+            <li>
+                On item click
+                <ul>
+                    <li>If its children are hidden (collapsed), they must be made visible (expanded)</li>
+                    <li>If its children are visible (expanded), they must be made hidden (collapsed)</li>
+                </ul>
+            </li>
+            <li>Research about events</li>
+        </ul>
+    </div>
+    <div id="TreeViewContainer">
+        <ul>
+            <li>
+                Item 1
+                <ul>
+                    <li>
+                        Sub Item 1
+                        <ul>
+                            <li>Sub SubItem 1</li>
+                            <li>Sub SubItem 2</li>
+                            <li>Sub SubItem 3</li>
+                        </ul>
+                    </li>
+                    <li>Sub Item 2</li>
+                    <li>Sub Item 3</li>
+                </ul>
+            </li>
+            <li>
+                Item 2
+            </li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+    <script>
+        $().TreeViewControl("#TreeViewContainer", function (ev) {
+            alert("Item Opened");
+        }, 
+        function (ev) {
+            alert("Item Closed");
+        });
+    </script>
+
+</body>
+</html>

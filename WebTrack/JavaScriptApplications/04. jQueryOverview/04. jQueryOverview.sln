@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. SliderControl", "01. SliderControl\01. SliderControl.csproj", "{9952F462-5FA8-4B4F-B4C6-06453C872E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. InsertBefore", "02. InsertBefore\02. InsertBefore.csproj", "{D86C7D43-16B4-483E-8D9A-6010F9233A1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. TableControl", "03. TableControl\03. TableControl.csproj", "{68B4AD83-49B0-49AF-A197-00E5E8D3FB87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. BackgroundColorChanger", "04. BackgroundColorChanger\04. BackgroundColorChanger.csproj", "{9E667E4A-A569-4FCF-8336-712FCE142C26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. GridViewControl", "05. GridViewControl\05. GridViewControl.csproj", "{81A1F21F-E8EC-4023-B026-8EC6F96F6403}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9952F462-5FA8-4B4F-B4C6-06453C872E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9952F462-5FA8-4B4F-B4C6-06453C872E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9952F462-5FA8-4B4F-B4C6-06453C872E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9952F462-5FA8-4B4F-B4C6-06453C872E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86C7D43-16B4-483E-8D9A-6010F9233A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86C7D43-16B4-483E-8D9A-6010F9233A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86C7D43-16B4-483E-8D9A-6010F9233A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86C7D43-16B4-483E-8D9A-6010F9233A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B4AD83-49B0-49AF-A197-00E5E8D3FB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B4AD83-49B0-49AF-A197-00E5E8D3FB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B4AD83-49B0-49AF-A197-00E5E8D3FB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B4AD83-49B0-49AF-A197-00E5E8D3FB87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E667E4A-A569-4FCF-8336-712FCE142C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E667E4A-A569-4FCF-8336-712FCE142C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E667E4A-A569-4FCF-8336-712FCE142C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E667E4A-A569-4FCF-8336-712FCE142C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A1F21F-E8EC-4023-B026-8EC6F96F6403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A1F21F-E8EC-4023-B026-8EC6F96F6403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A1F21F-E8EC-4023-B026-8EC6F96F6403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A1F21F-E8EC-4023-B026-8EC6F96F6403}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
