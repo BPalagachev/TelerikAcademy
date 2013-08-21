@@ -1,0 +1,24 @@
+Potato potato;
+//... 
+if (potato == null)
+{
+   throw new PatatoHasBeenStollenException("Call the potato secret police!");
+}
+else
+{
+    if(potato.HasBeenPeeled && !potato.IsRotten)
+    {
+    	Cook(potato);
+    }
+}
+
+// -------------------------------
+
+bool xIsInRange = (x >= MIN_X && x =< MAX_X);
+bool yIsInRange = (MAX_Y >= y && MIN_Y <= y);
+bool shouldVisitCell = !shouldNotVisitCell;
+
+if (xIsInRange &&  yIsInRange && shouldVisitCell)
+{
+   VisitCell();
+}

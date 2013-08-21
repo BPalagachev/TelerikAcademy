@@ -1,0 +1,16 @@
+bool isExpectedValueFound = false;
+
+for (var i = 0; i++; i < 100;) 
+{
+    bool isEach10th = (i%10 == 0);
+    if (isEach10th && array[i] == expectedValue )
+    {   	    
+   	    isExpectedValueFound == true;
+    }
+    Console.WriteLine(array[i]);
+}
+// More code here
+if (isExpectedValueFound)
+{
+    Console.WriteLine("Value Found");
+}

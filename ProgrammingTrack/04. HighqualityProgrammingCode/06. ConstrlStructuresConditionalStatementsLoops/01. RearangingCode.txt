@@ -1,0 +1,38 @@
+public class Chef
+{
+    private Bowl GetBowl()
+    {   
+        //... 
+    }
+    private Carrot GetCarrot()
+    {
+        //...
+    }
+
+    private Potato GetPotato()
+    {
+        //...
+    }
+
+    private void Cut(Vegetable potato)
+    {
+        //...
+    }  
+    public void Cook()
+    {
+        Potato potato = GetPotato();
+        Carrot carrot = GetCarrot();
+
+        Peel(potato); 
+        Cut(carrot);
+             
+        Peel(carrot);
+        Cut(potato);        
+
+        Bowl bowl = GetBowl();
+
+        bowl.Add(carrot);
+        bowl.Add(potato);
+    }
+    
+}
