@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pubnub - Demo</title>
+</head>
+
+<body>
+	<div 
+        pub-key="pub-c-4edf8554-5df2-4ef1-98dc-e52cba494052" 
+        sub-key="sub-c-0fa139cc-04bf-11e3-a5e8-02ee2ddab7fe" 
+        ssl="off" origin="pubsub.pubnub.com" id="pubnub"></div>
+    <script src=http://cdn.pubnub.com/pubnub-3.5.3.min.js></script>
+    <h1>Listening for messages from Pubnub...</h1>
+    <textarea id="messagesArea" style="width:300px; height:300px"></textarea>
+    <script>
+        (function() {
+            document.write("")
+            PUBNUB.subscribe({
+                channel: "eide-na-chata",
+                callback: function (message) { 
+                    // Received a message --> print it in the page
+                    document.getElementById('messagesArea').innerHTML += message + '\n';
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
