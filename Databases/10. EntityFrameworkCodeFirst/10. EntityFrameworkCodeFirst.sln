@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem.Models", "StudentSystem.Models\StudentSystem.Models.csproj", "{7E535802-CE38-4731-A9E8-3AEA05C742F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem.Data", "StudentSystem.Data\StudentSystem.Data.csproj", "{83C17086-C5C5-42E1-930B-2738A3E89DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem.Client", "StudentSystem.Client\StudentSystem.Client.csproj", "{6C75A90E-5C05-497C-8F0C-1C79CFAD8FA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E535802-CE38-4731-A9E8-3AEA05C742F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E535802-CE38-4731-A9E8-3AEA05C742F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E535802-CE38-4731-A9E8-3AEA05C742F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E535802-CE38-4731-A9E8-3AEA05C742F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C17086-C5C5-42E1-930B-2738A3E89DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C17086-C5C5-42E1-930B-2738A3E89DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C17086-C5C5-42E1-930B-2738A3E89DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C17086-C5C5-42E1-930B-2738A3E89DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C75A90E-5C05-497C-8F0C-1C79CFAD8FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C75A90E-5C05-497C-8F0C-1C79CFAD8FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C75A90E-5C05-497C-8F0C-1C79CFAD8FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C75A90E-5C05-497C-8F0C-1C79CFAD8FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

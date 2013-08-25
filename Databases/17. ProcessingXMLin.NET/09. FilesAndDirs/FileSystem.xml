@@ -1,0 +1,1537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileSystem>
+	<Dir name="temp">
+		<file name="Academy-Entrance-Exams-Preparation-Team-Work-Project.docx" />
+		<file name="ChinookDatabase1.4_CompleteVersion.zip" />
+		<file name="Customer-Service.pptx" />
+		<file name="Databases-Teamwork-Practical-Project.zip" />
+		<file name="efquerysamples (1).zip" />
+		<file name="efquerysamples.zip" />
+		<file name="Entity-Framework-Performance.pptx" />
+		<file name="ExamFile_boyan.palagachev_Technical Support 2013_2013-07-18_17-28.rar" />
+		<file name="ExpressoSetup3.msi" />
+		<file name="Handling Angry Customers (1).pptx" />
+		<file name="Handling Angry Customers.pptx" />
+		<file name="HW_boyan.palagachev_Modelirane-na-danni-i-ER-diagrami_2013-07-14_18-21.rar" />
+		<file name="HW_boyan.palagachev_Preparing-sample-project-and-isolating-a_2013-07-18_14-18.rar" />
+		<file name="HW_boyan.palagachev_Responding-to-Client-Procedures_2013-07-23_20-51.docx" />
+		<file name="install_pubs.sql" />
+		<file name="mysql-installer-web-community-5.6.12.0.msi" />
+		<file name="OpenAccess-ORM-Exercises.docx" />
+		<file name="Opera_15.0.1147.130_Setup.exe" />
+		<file name="Preparing Sample Project and Isolating an Issue (1).pptx" />
+		<file name="Preparing Sample Project and Isolating an Issue (2).pptx" />
+		<file name="Preparing Sample Project and Isolating an Issue (3).pptx" />
+		<file name="Preparing Sample Project and Isolating an Issue.pptx" />
+		<file name="RadMenuIcons (1).zip" />
+		<file name="RadMenuIcons.zip" />
+		<file name="Soft Skills Client Communication (1).pptx" />
+		<file name="Soft Skills Client Communication (2).pptx" />
+		<file name="Soft Skills Client Communication.pptx" />
+		<file name="SQLite-1.0.66.0-setup.exe" />
+		<file name="sqlite-netFx20-setup-bundle-x64-2005-1.0.87.0.exe" />
+		<file name="sqlite-netFx40-setup-bundle-x86-2010-1.0.84.0.exe" />
+		<file name="sqlite-netFx45-setup-bundle-x64-2012-1.0.87.0.exe" />
+		<file name="sqlite-shell-win32-x86-3071700.zip" />
+		<file name="SQLite.NET.0.21_x68_dll.zip" />
+		<file name="SSDTSetup.exe" />
+		<file name="Teams.xlsx" />
+		<file name="Telerik-Academy-AntiCheat.zip" />
+		<file name="TelerikJustCodeSetup_2013_2_611.exe" />
+		<file name="Telerik_OpenAccess_ORM_Free_Edition_Installer_Q2_2013_SP1.exe" />
+		<file name="TextFiles.rar" />
+		<file name="TextFiles.sln" />
+		<file name="VS2012.3.exe" />
+		<file name="Wireshark-win64-1.10.0.exe" />
+		<file name="WritingStyle_Attitude_Wording (1).pptx" />
+		<file name="WritingStyle_Attitude_Wording (2).pptx" />
+		<file name="WritingStyle_Attitude_Wording (3).pptx" />
+		<file name="WritingStyle_Attitude_Wording.pptx" />
+		<file name="XML-Basics.pptx" />
+		<Dir name="db">
+			<file name="08. EntityFramework.rar" />
+			<file name="HW_boyan.palagachev_Dostup-do-danni-s-ADO.NET_2013-07-16_19-54 (1).rar" />
+			<file name="HW_boyan.palagachev_Dostup-do-danni-s-ADO.NET_2013-07-16_19-54.rar" />
+			<file name="HW_boyan.palagachev_Ezik-SQL--grupirane-i-DDL_2013-07-14_18-21.rar" />
+			<file name="HW_boyan.palagachev_Ezik-SQL--osnovi_2013-07-14_18-21.rar" />
+			<file name="HW_boyan.palagachev_Ezik-Transact-SQL-i-suhraneni-proceduri_2013-07-14_18-22.rar" />
+			<file name="HW_boyan.palagachev_Modelirane-na-danni-i-ER-diagrami_2013-07-14_18-21.rar" />
+			<file name="HW_boyan.palagachev_ORM-tehnologii-i-Entity-Framework_2013-07-16_20-13.rar" />
+			<file name="HW_boyan.palagachev_ORM-tehnologii-i-Entity-Framework_2013-07-17_13-48.rar" />
+			<file name="HW_boyan.palagachev_Proizvoditelnost-v-Entity-Framework_2013-07-18_14-27.rar" />
+			<Dir name="07. ADO.NET">
+				<file name="07. ADO.NET.sln" />
+				<file name="07. ADO.NET.v11.suo" />
+				<Dir name="01. CountRows">
+					<file name="01. CountRows.csproj" />
+					<file name="App.config" />
+					<file name="CountRows.cs" />
+					<file name="Settings.Designer.cs" />
+					<file name="Settings.settings" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_01.CountRows.exe" />
+							<file name="_01.CountRows.exe.config" />
+							<file name="_01.CountRows.pdb" />
+							<file name="_01.CountRows.vshost.exe" />
+							<file name="_01.CountRows.vshost.exe.config" />
+							<file name="_01.CountRows.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="01. CountRows.csproj.FileListAbsolute.txt" />
+							<file name="01. CountRows.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferences.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_01.CountRows.exe" />
+							<file name="_01.CountRows.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="02. CategoriesInformation">
+					<file name="02. CategoriesInformation.csproj" />
+					<file name="App.config" />
+					<file name="CategoriesInformationRetriever.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_02.CategoriesInformation.exe" />
+							<file name="_02.CategoriesInformation.exe.config" />
+							<file name="_02.CategoriesInformation.pdb" />
+							<file name="_02.CategoriesInformation.vshost.exe" />
+							<file name="_02.CategoriesInformation.vshost.exe.config" />
+							<file name="_02.CategoriesInformation.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="02. CategoriesInformation.csproj.FileListAbsolute.txt" />
+							<file name="02. CategoriesInformation.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_02.CategoriesInformation.exe" />
+							<file name="_02.CategoriesInformation.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="03. CategorisAndProducts">
+					<file name="03. CategorisAndProducts.csproj" />
+					<file name="App.config" />
+					<file name="CategoriesAndProductsRetriever.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_03.CategorisAndProducts.exe" />
+							<file name="_03.CategorisAndProducts.exe.config" />
+							<file name="_03.CategorisAndProducts.pdb" />
+							<file name="_03.CategorisAndProducts.vshost.exe" />
+							<file name="_03.CategorisAndProducts.vshost.exe.config" />
+							<file name="_03.CategorisAndProducts.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="03. CategorisAndProducts.csproj.FileListAbsolute.txt" />
+							<file name="03. CategorisAndProducts.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_03.CategorisAndProducts.exe" />
+							<file name="_03.CategorisAndProducts.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="04. AddingProduct">
+					<file name="04. AddingProduct.csproj" />
+					<file name="App.config" />
+					<file name="ProductDescriber.cs" />
+					<file name="ProductInterter.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_04.AddingProduct.exe" />
+							<file name="_04.AddingProduct.exe.config" />
+							<file name="_04.AddingProduct.pdb" />
+							<file name="_04.AddingProduct.vshost.exe" />
+							<file name="_04.AddingProduct.vshost.exe.config" />
+							<file name="_04.AddingProduct.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="04. AddingProduct.csproj.FileListAbsolute.txt" />
+							<file name="04. AddingProduct.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_04.AddingProduct.exe" />
+							<file name="_04.AddingProduct.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="05. CopyImagesLocally">
+					<file name="05. CopyImagesLocally.csproj" />
+					<file name="App.config" />
+					<file name="ImageDownloader.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_05.CopyImagesLocally.exe" />
+							<file name="_05.CopyImagesLocally.exe.config" />
+							<file name="_05.CopyImagesLocally.pdb" />
+							<file name="_05.CopyImagesLocally.vshost.exe" />
+							<file name="_05.CopyImagesLocally.vshost.exe.config" />
+							<file name="_05.CopyImagesLocally.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="CategoriesImages">
+						<file name="Beverages.jpg" />
+						<file name="Condiments.jpg" />
+						<file name="Confections.jpg" />
+						<file name="Dairy Products.jpg" />
+						<file name="GrainsCereals.jpg" />
+						<file name="MeatPoultry.jpg" />
+						<file name="Produce.jpg" />
+						<file name="Seafood.jpg" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="05. CopyImagesLocally.csproj.FileListAbsolute.txt" />
+							<file name="05. CopyImagesLocally.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_05.CopyImagesLocally.exe" />
+							<file name="_05.CopyImagesLocally.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="06. ExcelConnection">
+					<file name="06. 07. ExcelConnection.csproj" />
+					<file name="App.config" />
+					<file name="ExcelReader.cs" />
+					<file name="ExcelTestFile.xlsx" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_06.ExcelConnection.exe" />
+							<file name="_06.ExcelConnection.exe.config" />
+							<file name="_06.ExcelConnection.pdb" />
+							<file name="_06.ExcelConnection.vshost.exe" />
+							<file name="_06.ExcelConnection.vshost.exe.config" />
+							<file name="_06.ExcelConnection.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="06. 07. ExcelConnection.csproj.FileListAbsolute.txt" />
+							<file name="06. ExcelConnection.csproj.FileListAbsolute.txt" />
+							<file name="06. ExcelConnection.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_06.ExcelConnection.exe" />
+							<file name="_06.ExcelConnection.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="08. EntityFramework">
+					<file name="08. EntityFramework.sln" />
+					<file name="08. EntityFramework.v11.suo" />
+					<Dir name="02. CustomersModifier.Client">
+						<file name="02. CustomersModifier.Client.csproj" />
+						<file name="App.config" />
+						<file name="CustomersModifier.cs" />
+						<file name="packages.config" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_02.CustomersModifier.Client.exe" />
+								<file name="_02.CustomersModifier.Client.exe.config" />
+								<file name="_02.CustomersModifier.Client.pdb" />
+								<file name="_02.CustomersModifier.Client.vshost.exe" />
+								<file name="_02.CustomersModifier.Client.vshost.exe.config" />
+								<file name="_02.CustomersModifier.Client.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="02. CustomersModifier.Client.csproj.FileListAbsolute.txt" />
+								<file name="02. CustomersModifier.Client.csprojResolveAssemblyReference.cache" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_02.CustomersModifier.Client.exe" />
+								<file name="_02.CustomersModifier.Client.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="03. CustomerMatch">
+						<file name="03. CustomerMatch.csproj" />
+						<file name="App.config" />
+						<file name="CustomerSearcher.cs" />
+						<file name="packages.config" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_03.CustomerMatch.exe" />
+								<file name="_03.CustomerMatch.exe.config" />
+								<file name="_03.CustomerMatch.pdb" />
+								<file name="_03.CustomerMatch.vshost.exe" />
+								<file name="_03.CustomerMatch.vshost.exe.config" />
+								<file name="_03.CustomerMatch.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="03. CustomerMatch.csproj.FileListAbsolute.txt" />
+								<file name="03. CustomerMatch.csprojResolveAssemblyReference.cache" />
+								<file name="04. CustomerMatchNaviteQuery.csproj.FileListAbsolute.txt" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_03.CustomerMatch.exe" />
+								<file name="_03.CustomerMatch.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="04. CustomerMatchNaviteQuery">
+						<file name="04. CustomerMatchNaviteQuery.csproj" />
+						<file name="App.config" />
+						<file name="CustomerSearcher.cs" />
+						<file name="packages.config" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_04.CustomerMatchNaviteQuery.exe" />
+								<file name="_04.CustomerMatchNaviteQuery.exe.config" />
+								<file name="_04.CustomerMatchNaviteQuery.pdb" />
+								<file name="_04.CustomerMatchNaviteQuery.vshost.exe" />
+								<file name="_04.CustomerMatchNaviteQuery.vshost.exe.config" />
+								<file name="_04.CustomerMatchNaviteQuery.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="04. CustomerMatchNaviteQuery.csproj.FileListAbsolute.txt" />
+								<file name="04. CustomerMatchNaviteQuery.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_04.CustomerMatchNaviteQuery.exe" />
+								<file name="_04.CustomerMatchNaviteQuery.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="05. MatchSelsByRegionAndPeriod">
+						<file name="05. MatchSelsByRegionAndPeriod.csproj" />
+						<file name="App.config" />
+						<file name="packages.config" />
+						<file name="SalesSearcher.cs" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_05.MatchSelsByRegionAndPeriod.exe" />
+								<file name="_05.MatchSelsByRegionAndPeriod.exe.config" />
+								<file name="_05.MatchSelsByRegionAndPeriod.pdb" />
+								<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe" />
+								<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe.config" />
+								<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="05. MatchSelsByRegionAndPeriod.csproj.FileListAbsolute.txt" />
+								<file name="05. MatchSelsByRegionAndPeriod.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_05.MatchSelsByRegionAndPeriod.exe" />
+								<file name="_05.MatchSelsByRegionAndPeriod.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="07. ConcurencyConflict">
+						<file name="07. ConcurencyConflict.csproj" />
+						<file name="App.config" />
+						<file name="ContextConflicter.cs" />
+						<file name="packages.config" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_07.ConcurencyConflict.exe" />
+								<file name="_07.ConcurencyConflict.exe.config" />
+								<file name="_07.ConcurencyConflict.pdb" />
+								<file name="_07.ConcurencyConflict.vshost.exe" />
+								<file name="_07.ConcurencyConflict.vshost.exe.config" />
+								<file name="_07.ConcurencyConflict.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="07. ConcurencyConflict.csproj.FileListAbsolute.txt" />
+								<file name="07. ConcurencyConflict.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_07.ConcurencyConflict.exe" />
+								<file name="_07.ConcurencyConflict.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="08. EmplyeeExtention">
+						<file name="08. EmplyeeExtention.csproj" />
+						<file name="App.config" />
+						<file name="packages.config" />
+						<file name="Program.cs" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_08.EmplyeeExtention.exe" />
+								<file name="_08.EmplyeeExtention.exe.config" />
+								<file name="_08.EmplyeeExtention.pdb" />
+								<file name="_08.EmplyeeExtention.vshost.exe" />
+								<file name="_08.EmplyeeExtention.vshost.exe.config" />
+								<file name="_08.EmplyeeExtention.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="08. EmplyeeExtention.csproj.FileListAbsolute.txt" />
+								<file name="08. EmplyeeExtention.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_08.EmplyeeExtention.exe" />
+								<file name="_08.EmplyeeExtention.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="09. Transactions">
+						<file name="09. Transactions.csproj" />
+						<file name="App.config" />
+						<file name="packages.config" />
+						<file name="TransactionMaker.cs" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_09.Transactions.exe" />
+								<file name="_09.Transactions.exe.config" />
+								<file name="_09.Transactions.pdb" />
+								<file name="_09.Transactions.vshost.exe" />
+								<file name="_09.Transactions.vshost.exe.config" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="09. Transactions.csproj.FileListAbsolute.txt" />
+								<file name="09. Transactions.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_09.Transactions.exe" />
+								<file name="_09.Transactions.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="10. CallCustomStoredProcedure">
+						<file name="10. CallCustomStoredProcedure.csproj" />
+						<file name="App.config" />
+						<file name="CUstomeStoredProcedureExecutor.cs" />
+						<file name="packages.config" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="_10.CallCustomStoredProcedure.exe" />
+								<file name="_10.CallCustomStoredProcedure.exe.config" />
+								<file name="_10.CallCustomStoredProcedure.pdb" />
+								<file name="_10.CallCustomStoredProcedure.vshost.exe" />
+								<file name="_10.CallCustomStoredProcedure.vshost.exe.config" />
+								<file name="_10.CallCustomStoredProcedure.vshost.exe.manifest" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="10. CallCustomStoredProcedure.csproj.FileListAbsolute.txt" />
+								<file name="10. CallCustomStoredProcedure.csprojResolveAssemblyReference.cache" />
+								<file name="build.force" />
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<file name="_10.CallCustomStoredProcedure.exe" />
+								<file name="_10.CallCustomStoredProcedure.pdb" />
+								<Dir name="TempPE" />
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="EntityFrameworkHomework.Data">
+						<file name="Alphabetical_list_of_product.cs" />
+						<file name="App.config" />
+						<file name="Category.cs" />
+						<file name="Category_Sales_for_1997.cs" />
+						<file name="Contact.cs" />
+						<file name="Current_Product_List.cs" />
+						<file name="Customer.cs" />
+						<file name="CustomerDemographic.cs" />
+						<file name="Customers_By_City_Result.cs" />
+						<file name="Customer_and_Suppliers_by_City.cs" />
+						<file name="CustOrderHist_Result.cs" />
+						<file name="CustOrdersDetail_Result.cs" />
+						<file name="CustOrdersOrders_Result.cs" />
+						<file name="Employee.cs" />
+						<file name="Employee_Sales_by_Country_Result.cs" />
+						<file name="EntityFrameworkHomework.Data.csproj" />
+						<file name="Get_Customer_And_Orders_Result.cs" />
+						<file name="install_NorthwindDBFromEntityModel.edmx.sql" />
+						<file name="Invoice.cs" />
+						<file name="NorthwindEntities.edmx.sql" />
+						<file name="NorthwindModel.Context.cs" />
+						<file name="NorthwindModel.Context.tt" />
+						<file name="NorthwindModel.cs" />
+						<file name="NorthwindModel.Designer.cs" />
+						<file name="NorthwindModel.edmx" />
+						<file name="NorthwindModel.edmx.diagram" />
+						<file name="NorthwindModel.tt" />
+						<file name="Order.cs" />
+						<file name="Orders_Qry.cs" />
+						<file name="Order_Detail.cs" />
+						<file name="Order_Details_Extended.cs" />
+						<file name="Order_Subtotal.cs" />
+						<file name="packages.config" />
+						<file name="Product.cs" />
+						<file name="ProductsUnderThisUnitPrice_Result.cs" />
+						<file name="Products_Above_Average_Price.cs" />
+						<file name="Products_by_Category.cs" />
+						<file name="Product_Sales_for_1997.cs" />
+						<file name="Region.cs" />
+						<file name="SalesByCategory_Result.cs" />
+						<file name="Sales_by_Category.cs" />
+						<file name="Sales_by_Year_Result.cs" />
+						<file name="Sales_Totals_by_Amount.cs" />
+						<file name="Shipper.cs" />
+						<file name="sp_helpdiagramdefinition_Result.cs" />
+						<file name="sp_helpdiagrams_Result.cs" />
+						<file name="Summary_of_Sales_by_Quarter.cs" />
+						<file name="Summary_of_Sales_by_Year.cs" />
+						<file name="Supplier.cs" />
+						<file name="sysdiagram.cs" />
+						<file name="Ten_Most_Expensive_Products_Result.cs" />
+						<file name="Territory.cs" />
+						<file name="Whole_Or_Partial_Customers_Set_Result.cs" />
+						<Dir name="bin">
+							<Dir name="Debug">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.dll.config" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+							</Dir>
+							<Dir name="Release" />
+						</Dir>
+						<Dir name="obj">
+							<Dir name="Debug">
+								<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+								<file name="EntityFrameworkHomework.Data.csproj.FileListAbsolute.txt" />
+								<file name="EntityFrameworkHomework.Data.csprojResolveAssemblyReference.cache" />
+								<file name="EntityFrameworkHomework.Data.dll" />
+								<file name="EntityFrameworkHomework.Data.pdb" />
+								<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+								<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+								<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+								<Dir name="edmxResourcesToEmbed">
+									<file name="FreshModel.csdl" />
+									<file name="FreshModel.msl" />
+									<file name="FreshModel.ssdl" />
+									<file name="NorthwindEntities.csdl" />
+									<file name="NorthwindEntities.msl" />
+									<file name="NorthwindEntities.ssdl" />
+									<file name="NorthwindModel.csdl" />
+									<file name="NorthwindModel.msl" />
+									<file name="NorthwindModel.ssdl" />
+								</Dir>
+								<Dir name="TempPE">
+									<file name="FreshModel.cs.dll" />
+									<file name="FreshModel.Designer.cs.dll" />
+									<file name="NorthwindEntities.cs.dll" />
+									<file name="NorthwindEntities.Designer.cs.dll" />
+									<file name="NorthwindModel.cs.dll" />
+									<file name="NorthwindModel.Designer.cs.dll" />
+								</Dir>
+							</Dir>
+						</Dir>
+						<Dir name="Properties">
+							<file name="AssemblyInfo.cs" />
+						</Dir>
+					</Dir>
+					<Dir name="packages">
+						<file name="repositories.config" />
+						<Dir name="EntityFramework.5.0.0">
+							<file name="EntityFramework.5.0.0.nupkg" />
+							<file name="EntityFramework.5.0.0.nuspec" />
+							<Dir name="Content">
+								<file name="App.config.transform" />
+								<file name="Web.config.transform" />
+							</Dir>
+							<Dir name="lib">
+								<Dir name="net40">
+									<file name="EntityFramework.dll" />
+									<file name="EntityFramework.xml" />
+								</Dir>
+								<Dir name="net45">
+									<file name="EntityFramework.dll" />
+									<file name="EntityFramework.xml" />
+								</Dir>
+							</Dir>
+							<Dir name="tools">
+								<file name="about_EntityFramework.help.txt" />
+								<file name="EntityFramework.PowerShell.dll" />
+								<file name="EntityFramework.PowerShell.Utility.dll" />
+								<file name="EntityFramework.PS3.psd1" />
+								<file name="EntityFramework.psd1" />
+								<file name="EntityFramework.psm1" />
+								<file name="init.ps1" />
+								<file name="install.ps1" />
+								<file name="migrate.exe" />
+								<file name="Redirect.config" />
+								<file name="Redirect.VS11.config" />
+							</Dir>
+						</Dir>
+					</Dir>
+				</Dir>
+				<Dir name="08. SearchForProducts">
+					<file name="08. SearchForProducts.csproj" />
+					<file name="App.config" />
+					<file name="ProductSearcher.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="_08.SearchForProducts.exe" />
+							<file name="_08.SearchForProducts.exe.config" />
+							<file name="_08.SearchForProducts.pdb" />
+							<file name="_08.SearchForProducts.vshost.exe" />
+							<file name="_08.SearchForProducts.vshost.exe.config" />
+							<file name="_08.SearchForProducts.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="08. SearchForProducts.csproj.FileListAbsolute.txt" />
+							<file name="08. SearchForProducts.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_08.SearchForProducts.exe" />
+							<file name="_08.SearchForProducts.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="09. MySqlProvider">
+					<file name="09. MySqlProvider.csproj" />
+					<file name="App.config" />
+					<file name="install_Library.sql" />
+					<file name="MySqlConnector.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="MySql.Data.dll" />
+							<file name="_09.MySqlProvider.exe" />
+							<file name="_09.MySqlProvider.exe.config" />
+							<file name="_09.MySqlProvider.pdb" />
+							<file name="_09.MySqlProvider.vshost.exe" />
+							<file name="_09.MySqlProvider.vshost.exe.config" />
+							<file name="_09.MySqlProvider.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="09. MySqlProvider.csproj.FileListAbsolute.txt" />
+							<file name="09. MySqlProvider.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_09.MySqlProvider.exe" />
+							<file name="_09.MySqlProvider.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="10. SQLiteProvider">
+					<file name="10. SQLiteProvider.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="sqlite3.exe" />
+					<file name="SQLiteConnector.cs" />
+					<file name="sqTestDB.db" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="System.Data.SQLite.dll" />
+							<file name="System.Data.SQLite.Linq.dll" />
+							<file name="_10.SQLiteProvider.exe" />
+							<file name="_10.SQLiteProvider.exe.config" />
+							<file name="_10.SQLiteProvider.pdb" />
+							<file name="_10.SQLiteProvider.vshost.exe" />
+							<file name="_10.SQLiteProvider.vshost.exe.config" />
+							<file name="_10.SQLiteProvider.vshost.exe.manifest" />
+							<Dir name="x64">
+								<file name="SQLite.Interop.dll" />
+							</Dir>
+							<Dir name="x86">
+								<file name="SQLite.Interop.dll" />
+							</Dir>
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="10. SQLiteProvider.csproj.FileListAbsolute.txt" />
+							<file name="10. SQLiteProvider.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_10.SQLiteProvider.exe" />
+							<file name="_10.SQLiteProvider.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+					<Dir name="x64">
+						<file name="SQLite.Interop.dll" />
+					</Dir>
+					<Dir name="x86">
+						<file name="SQLite.Interop.dll" />
+					</Dir>
+				</Dir>
+				<Dir name="packages">
+					<file name="repositories.config" />
+					<Dir name="MySql.Data.6.7.4">
+						<file name="MySql.Data.6.7.4.nupkg" />
+						<file name="MySql.Data.6.7.4.nuspec" />
+						<Dir name="lib">
+							<Dir name="net20">
+								<file name="MySQL.Data.dll" />
+							</Dir>
+							<Dir name="net20-cf">
+								<file name="MySql.Data.cf.dll" />
+							</Dir>
+							<Dir name="net40">
+								<file name="MySql.Data.dll" />
+							</Dir>
+						</Dir>
+					</Dir>
+					<Dir name="System.Data.SQLite.1.0.87.0">
+						<file name="System.Data.SQLite.1.0.87.0.nupkg" />
+						<file name="System.Data.SQLite.1.0.87.0.nuspec" />
+						<Dir name="content">
+							<Dir name="net20">
+								<Dir name="x64">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+								<Dir name="x86">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+							</Dir>
+							<Dir name="net40">
+								<Dir name="x64">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+								<Dir name="x86">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+							</Dir>
+							<Dir name="net45">
+								<Dir name="x64">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+								<Dir name="x86">
+									<file name="SQLite.Interop.dll" />
+								</Dir>
+							</Dir>
+						</Dir>
+						<Dir name="lib">
+							<Dir name="net20">
+								<file name="System.Data.SQLite.dll" />
+								<file name="System.Data.SQLite.Linq.dll" />
+							</Dir>
+							<Dir name="net40">
+								<file name="System.Data.SQLite.dll" />
+								<file name="System.Data.SQLite.Linq.dll" />
+							</Dir>
+							<Dir name="net45">
+								<file name="System.Data.SQLite.dll" />
+								<file name="System.Data.SQLite.Linq.dll" />
+							</Dir>
+						</Dir>
+						<Dir name="tools">
+							<file name="install.ps1" />
+						</Dir>
+					</Dir>
+				</Dir>
+			</Dir>
+			<Dir name="08. EntityFramework">
+				<file name="08. EntityFramework.sln" />
+				<file name="08. EntityFramework.v11.suo" />
+				<Dir name="02. CustomersModifier.Client">
+					<file name="02. CustomersModifier.Client.csproj" />
+					<file name="App.config" />
+					<file name="CustomersModifier.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_02.CustomersModifier.Client.exe" />
+							<file name="_02.CustomersModifier.Client.exe.config" />
+							<file name="_02.CustomersModifier.Client.pdb" />
+							<file name="_02.CustomersModifier.Client.vshost.exe" />
+							<file name="_02.CustomersModifier.Client.vshost.exe.config" />
+							<file name="_02.CustomersModifier.Client.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="02. CustomersModifier.Client.csproj.FileListAbsolute.txt" />
+							<file name="02. CustomersModifier.Client.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_02.CustomersModifier.Client.exe" />
+							<file name="_02.CustomersModifier.Client.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="03. CustomerMatch">
+					<file name="03. CustomerMatch.csproj" />
+					<file name="App.config" />
+					<file name="CustomerSearcher.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_03.CustomerMatch.exe" />
+							<file name="_03.CustomerMatch.exe.config" />
+							<file name="_03.CustomerMatch.pdb" />
+							<file name="_03.CustomerMatch.vshost.exe" />
+							<file name="_03.CustomerMatch.vshost.exe.config" />
+							<file name="_03.CustomerMatch.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="03. CustomerMatch.csproj.FileListAbsolute.txt" />
+							<file name="03. CustomerMatch.csprojResolveAssemblyReference.cache" />
+							<file name="04. CustomerMatchNaviteQuery.csproj.FileListAbsolute.txt" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_03.CustomerMatch.exe" />
+							<file name="_03.CustomerMatch.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="04. CustomerMatchNaviteQuery">
+					<file name="04. CustomerMatchNaviteQuery.csproj" />
+					<file name="App.config" />
+					<file name="CustomerSearcher.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_04.CustomerMatchNaviteQuery.exe" />
+							<file name="_04.CustomerMatchNaviteQuery.exe.config" />
+							<file name="_04.CustomerMatchNaviteQuery.pdb" />
+							<file name="_04.CustomerMatchNaviteQuery.vshost.exe" />
+							<file name="_04.CustomerMatchNaviteQuery.vshost.exe.config" />
+							<file name="_04.CustomerMatchNaviteQuery.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="04. CustomerMatchNaviteQuery.csproj.FileListAbsolute.txt" />
+							<file name="04. CustomerMatchNaviteQuery.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_04.CustomerMatchNaviteQuery.exe" />
+							<file name="_04.CustomerMatchNaviteQuery.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="05. MatchSelsByRegionAndPeriod">
+					<file name="05. MatchSelsByRegionAndPeriod.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="SalesSearcher.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_05.MatchSelsByRegionAndPeriod.exe" />
+							<file name="_05.MatchSelsByRegionAndPeriod.exe.config" />
+							<file name="_05.MatchSelsByRegionAndPeriod.pdb" />
+							<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe" />
+							<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe.config" />
+							<file name="_05.MatchSelsByRegionAndPeriod.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="05. MatchSelsByRegionAndPeriod.csproj.FileListAbsolute.txt" />
+							<file name="05. MatchSelsByRegionAndPeriod.csprojResolveAssemblyReference.cache" />
+							<file name="build.force" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_05.MatchSelsByRegionAndPeriod.exe" />
+							<file name="_05.MatchSelsByRegionAndPeriod.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="07. ConcurencyConflict">
+					<file name="07. ConcurencyConflict.csproj" />
+					<file name="App.config" />
+					<file name="ContextConflicter.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_07.ConcurencyConflict.exe" />
+							<file name="_07.ConcurencyConflict.exe.config" />
+							<file name="_07.ConcurencyConflict.pdb" />
+							<file name="_07.ConcurencyConflict.vshost.exe" />
+							<file name="_07.ConcurencyConflict.vshost.exe.config" />
+							<file name="_07.ConcurencyConflict.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="07. ConcurencyConflict.csproj.FileListAbsolute.txt" />
+							<file name="07. ConcurencyConflict.csprojResolveAssemblyReference.cache" />
+							<file name="build.force" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_07.ConcurencyConflict.exe" />
+							<file name="_07.ConcurencyConflict.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="08. EmplyeeExtention">
+					<file name="08. EmplyeeExtention.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="Program.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_08.EmplyeeExtention.exe" />
+							<file name="_08.EmplyeeExtention.exe.config" />
+							<file name="_08.EmplyeeExtention.pdb" />
+							<file name="_08.EmplyeeExtention.vshost.exe" />
+							<file name="_08.EmplyeeExtention.vshost.exe.config" />
+							<file name="_08.EmplyeeExtention.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="08. EmplyeeExtention.csproj.FileListAbsolute.txt" />
+							<file name="08. EmplyeeExtention.csprojResolveAssemblyReference.cache" />
+							<file name="build.force" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_08.EmplyeeExtention.exe" />
+							<file name="_08.EmplyeeExtention.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="09. Transactions">
+					<file name="09. Transactions.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="TransactionMaker.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_09.Transactions.exe" />
+							<file name="_09.Transactions.exe.config" />
+							<file name="_09.Transactions.pdb" />
+							<file name="_09.Transactions.vshost.exe" />
+							<file name="_09.Transactions.vshost.exe.config" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="09. Transactions.csproj.FileListAbsolute.txt" />
+							<file name="09. Transactions.csprojResolveAssemblyReference.cache" />
+							<file name="build.force" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_09.Transactions.exe" />
+							<file name="_09.Transactions.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="10. CallCustomStoredProcedure">
+					<file name="10. CallCustomStoredProcedure.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="Program.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="_10.CallCustomStoredProcedure.exe" />
+							<file name="_10.CallCustomStoredProcedure.exe.config" />
+							<file name="_10.CallCustomStoredProcedure.pdb" />
+							<file name="_10.CallCustomStoredProcedure.vshost.exe" />
+							<file name="_10.CallCustomStoredProcedure.vshost.exe.config" />
+							<file name="_10.CallCustomStoredProcedure.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="10. CallCustomStoredProcedure.csproj.FileListAbsolute.txt" />
+							<file name="10. CallCustomStoredProcedure.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_10.CallCustomStoredProcedure.exe" />
+							<file name="_10.CallCustomStoredProcedure.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="EntityFrameworkHomework.Data">
+					<file name="Alphabetical_list_of_product.cs" />
+					<file name="App.config" />
+					<file name="Category.cs" />
+					<file name="Category_Sales_for_1997.cs" />
+					<file name="Contact.cs" />
+					<file name="Current_Product_List.cs" />
+					<file name="Customer.cs" />
+					<file name="CustomerDemographic.cs" />
+					<file name="Customers_By_City_Result.cs" />
+					<file name="Customer_and_Suppliers_by_City.cs" />
+					<file name="CustOrderHist_Result.cs" />
+					<file name="CustOrdersDetail_Result.cs" />
+					<file name="CustOrdersOrders_Result.cs" />
+					<file name="Employee.cs" />
+					<file name="Employee_Sales_by_Country_Result.cs" />
+					<file name="EntityFrameworkHomework.Data.csproj" />
+					<file name="Get_Customer_And_Orders_Result.cs" />
+					<file name="install_NorthwindDBFromEntityModel.edmx.sql" />
+					<file name="Invoice.cs" />
+					<file name="NorthwindEntities.edmx.sql" />
+					<file name="NorthwindModel.Context.cs" />
+					<file name="NorthwindModel.Context.tt" />
+					<file name="NorthwindModel.cs" />
+					<file name="NorthwindModel.Designer.cs" />
+					<file name="NorthwindModel.edmx" />
+					<file name="NorthwindModel.edmx.diagram" />
+					<file name="NorthwindModel.tt" />
+					<file name="Order.cs" />
+					<file name="Orders_Qry.cs" />
+					<file name="Order_Detail.cs" />
+					<file name="Order_Details_Extended.cs" />
+					<file name="Order_Subtotal.cs" />
+					<file name="packages.config" />
+					<file name="Product.cs" />
+					<file name="ProductsUnderThisUnitPrice_Result.cs" />
+					<file name="Products_Above_Average_Price.cs" />
+					<file name="Products_by_Category.cs" />
+					<file name="Product_Sales_for_1997.cs" />
+					<file name="Region.cs" />
+					<file name="SalesByCategory_Result.cs" />
+					<file name="Sales_by_Category.cs" />
+					<file name="Sales_by_Year_Result.cs" />
+					<file name="Sales_Totals_by_Amount.cs" />
+					<file name="Shipper.cs" />
+					<file name="sp_helpdiagramdefinition_Result.cs" />
+					<file name="sp_helpdiagrams_Result.cs" />
+					<file name="Summary_of_Sales_by_Quarter.cs" />
+					<file name="Summary_of_Sales_by_Year.cs" />
+					<file name="Supplier.cs" />
+					<file name="sysdiagram.cs" />
+					<file name="Ten_Most_Expensive_Products_Result.cs" />
+					<file name="Territory.cs" />
+					<file name="Whole_Or_Partial_Customers_Set_Result.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.dll.config" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="EntityFrameworkHomework.Data.csproj.FileListAbsolute.txt" />
+							<file name="EntityFrameworkHomework.Data.csprojResolveAssemblyReference.cache" />
+							<file name="EntityFrameworkHomework.Data.dll" />
+							<file name="EntityFrameworkHomework.Data.pdb" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<Dir name="edmxResourcesToEmbed">
+								<file name="FreshModel.csdl" />
+								<file name="FreshModel.msl" />
+								<file name="FreshModel.ssdl" />
+								<file name="NorthwindEntities.csdl" />
+								<file name="NorthwindEntities.msl" />
+								<file name="NorthwindEntities.ssdl" />
+								<file name="NorthwindModel.csdl" />
+								<file name="NorthwindModel.msl" />
+								<file name="NorthwindModel.ssdl" />
+							</Dir>
+							<Dir name="TempPE">
+								<file name="FreshModel.cs.dll" />
+								<file name="FreshModel.Designer.cs.dll" />
+								<file name="NorthwindEntities.cs.dll" />
+								<file name="NorthwindEntities.Designer.cs.dll" />
+								<file name="NorthwindModel.cs.dll" />
+								<file name="NorthwindModel.Designer.cs.dll" />
+							</Dir>
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="packages">
+					<file name="repositories.config" />
+					<Dir name="EntityFramework.5.0.0">
+						<file name="EntityFramework.5.0.0.nupkg" />
+						<file name="EntityFramework.5.0.0.nuspec" />
+						<Dir name="Content">
+							<file name="App.config.transform" />
+							<file name="Web.config.transform" />
+						</Dir>
+						<Dir name="lib">
+							<Dir name="net40">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+							</Dir>
+							<Dir name="net45">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+							</Dir>
+						</Dir>
+						<Dir name="tools">
+							<file name="about_EntityFramework.help.txt" />
+							<file name="EntityFramework.PowerShell.dll" />
+							<file name="EntityFramework.PowerShell.Utility.dll" />
+							<file name="EntityFramework.PS3.psd1" />
+							<file name="EntityFramework.psd1" />
+							<file name="EntityFramework.psm1" />
+							<file name="init.ps1" />
+							<file name="install.ps1" />
+							<file name="migrate.exe" />
+							<file name="Redirect.config" />
+							<file name="Redirect.VS11.config" />
+						</Dir>
+					</Dir>
+				</Dir>
+			</Dir>
+			<Dir name="09. EntityFrameworkPerformance">
+				<file name="09. EntityFrameworkPerformance.sln" />
+				<file name="09. EntityFrameworkPerformance.v11.suo" />
+				<Dir name="01. ExploreNPlusOneProblem">
+					<file name="01. ExploreNPlusOneProblem.csproj" />
+					<file name="App.config" />
+					<file name="EmplyeeInformationPrinter.cs" />
+					<file name="packages.config" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="PerformanceHomework.Data.dll" />
+							<file name="PerformanceHomework.Data.pdb" />
+							<file name="_01.ExploreNPlusOneProblem.exe" />
+							<file name="_01.ExploreNPlusOneProblem.exe.config" />
+							<file name="_01.ExploreNPlusOneProblem.pdb" />
+							<file name="_01.ExploreNPlusOneProblem.vshost.exe" />
+							<file name="_01.ExploreNPlusOneProblem.vshost.exe.config" />
+							<file name="_01.ExploreNPlusOneProblem.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="01. ExploreNPlusOneProblem.csproj.FileListAbsolute.txt" />
+							<file name="01. ExploreNPlusOneProblem.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_01.ExploreNPlusOneProblem.exe" />
+							<file name="_01.ExploreNPlusOneProblem.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="02. ExploreExtensiveToListUse">
+					<file name="02. ExploreExtensiveToListUse.csproj" />
+					<file name="App.config" />
+					<file name="packages.config" />
+					<file name="ToListTest.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="PerformanceHomework.Data.dll" />
+							<file name="PerformanceHomework.Data.pdb" />
+							<file name="_02.ExploreExtensiveToListUse.exe" />
+							<file name="_02.ExploreExtensiveToListUse.exe.config" />
+							<file name="_02.ExploreExtensiveToListUse.pdb" />
+							<file name="_02.ExploreExtensiveToListUse.vshost.exe" />
+							<file name="_02.ExploreExtensiveToListUse.vshost.exe.config" />
+							<file name="_02.ExploreExtensiveToListUse.vshost.exe.manifest" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="02. ExploreExtensiveToListUse.csproj.FileListAbsolute.txt" />
+							<file name="02. ExploreExtensiveToListUse.csprojResolveAssemblyReference.cache" />
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<file name="_02.ExploreExtensiveToListUse.exe" />
+							<file name="_02.ExploreExtensiveToListUse.pdb" />
+							<Dir name="TempPE" />
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+				<Dir name="packages">
+					<file name="repositories.config" />
+					<Dir name="EntityFramework.5.0.0">
+						<file name="EntityFramework.5.0.0.nupkg" />
+						<file name="EntityFramework.5.0.0.nuspec" />
+						<Dir name="Content">
+							<file name="App.config.transform" />
+							<file name="Web.config.transform" />
+						</Dir>
+						<Dir name="lib">
+							<Dir name="net40">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+							</Dir>
+							<Dir name="net45">
+								<file name="EntityFramework.dll" />
+								<file name="EntityFramework.xml" />
+							</Dir>
+						</Dir>
+						<Dir name="tools">
+							<file name="about_EntityFramework.help.txt" />
+							<file name="EntityFramework.PowerShell.dll" />
+							<file name="EntityFramework.PowerShell.Utility.dll" />
+							<file name="EntityFramework.PS3.psd1" />
+							<file name="EntityFramework.psd1" />
+							<file name="EntityFramework.psm1" />
+							<file name="init.ps1" />
+							<file name="install.ps1" />
+							<file name="migrate.exe" />
+							<file name="Redirect.config" />
+							<file name="Redirect.VS11.config" />
+						</Dir>
+					</Dir>
+				</Dir>
+				<Dir name="PerformanceHomework.Data">
+					<file name="ABCDEFG_Result.cs" />
+					<file name="Active_Today.cs" />
+					<file name="Address.cs" />
+					<file name="App.Config" />
+					<file name="Department.cs" />
+					<file name="Employee.cs" />
+					<file name="Group.cs" />
+					<file name="packages.config" />
+					<file name="PerformanceHomework.Data.csproj" />
+					<file name="Project.cs" />
+					<file name="sp_helpdiagramdefinition_Result.cs" />
+					<file name="sp_helpdiagrams_Result.cs" />
+					<file name="sysdiagram.cs" />
+					<file name="TelerikAcademyModel.Context.cs" />
+					<file name="TelerikAcademyModel.Context.tt" />
+					<file name="TelerikAcademyModel.cs" />
+					<file name="TelerikAcademyModel.Designer.cs" />
+					<file name="TelerikAcademyModel.edmx" />
+					<file name="TelerikAcademyModel.edmx.diagram" />
+					<file name="TelerikAcademyModel.tt" />
+					<file name="Town.cs" />
+					<file name="ufn_Concat_Result.cs" />
+					<file name="ufn_StrConcat_Result.cs" />
+					<file name="User.cs" />
+					<file name="WorkHour.cs" />
+					<file name="WorkHoursLog.cs" />
+					<Dir name="bin">
+						<Dir name="Debug">
+							<file name="EntityFramework.dll" />
+							<file name="EntityFramework.xml" />
+							<file name="PerformanceHomework.Data.dll" />
+							<file name="PerformanceHomework.Data.dll.config" />
+							<file name="PerformanceHomework.Data.pdb" />
+						</Dir>
+						<Dir name="Release" />
+					</Dir>
+					<Dir name="obj">
+						<Dir name="Debug">
+							<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+							<file name="PerformanceHomework.Data.csproj.FileListAbsolute.txt" />
+							<file name="PerformanceHomework.Data.csprojResolveAssemblyReference.cache" />
+							<file name="PerformanceHomework.Data.dll" />
+							<file name="PerformanceHomework.Data.pdb" />
+							<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+							<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+							<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+							<Dir name="edmxResourcesToEmbed">
+								<file name="TelerikAcademyModel.csdl" />
+								<file name="TelerikAcademyModel.msl" />
+								<file name="TelerikAcademyModel.ssdl" />
+							</Dir>
+							<Dir name="TempPE">
+								<file name="TelerikAcademyModel.cs.dll" />
+								<file name="TelerikAcademyModel.Designer.cs.dll" />
+							</Dir>
+						</Dir>
+					</Dir>
+					<Dir name="Properties">
+						<file name="AssemblyInfo.cs" />
+					</Dir>
+				</Dir>
+			</Dir>
+		</Dir>
+		<Dir name="TextFiles">
+			<file name="App.config" />
+			<file name="Program.cs" />
+			<file name="Test1.txt" />
+			<file name="Test2.txt" />
+			<file name="Test3.txt" />
+			<file name="Test6.txt" />
+			<file name="Test9.txt" />
+			<file name="TextFiles.csproj" />
+			<file name="TextFiles.csproj.user" />
+			<file name="WordList.txt" />
+			<Dir name="bin">
+				<Dir name="Debug">
+					<file name="NewTest1.txt" />
+					<file name="NewTest2.txt" />
+					<file name="NewTest3.txt" />
+					<file name="NewTest6.txt" />
+					<file name="result.txt" />
+					<file name="result1.txt" />
+					<file name="Test1.txt" />
+					<file name="Test10.txt" />
+					<file name="Test2.txt" />
+					<file name="Test3.txt" />
+					<file name="Test6.txt" />
+					<file name="Test9.txt" />
+					<file name="TextFiles.exe" />
+					<file name="TextFiles.exe.config" />
+					<file name="TextFiles.pdb" />
+					<file name="TextFiles.vshost.exe" />
+					<file name="TextFiles.vshost.exe.config" />
+					<file name="WordList.txt" />
+				</Dir>
+				<Dir name="Release" />
+			</Dir>
+			<Dir name="obj">
+				<Dir name="Debug">
+					<file name="DesignTimeResolveAssemblyReferencesInput.cache" />
+					<file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+					<file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+					<file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+					<file name="TextFiles.csproj.FileListAbsolute.txt" />
+					<file name="TextFiles.csprojResolveAssemblyReference.cache" />
+					<file name="TextFiles.exe" />
+					<file name="TextFiles.pdb" />
+					<Dir name="TempPE" />
+				</Dir>
+			</Dir>
+			<Dir name="Properties">
+				<file name="AssemblyInfo.cs" />
+			</Dir>
+		</Dir>
+	</Dir>
+</FileSystem>

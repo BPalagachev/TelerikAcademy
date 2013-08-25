@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. MongoDBDictionary", "01. MongoDBDictionary\01. MongoDBDictionary.csproj", "{FFAB766F-C992-4683-B3CD-51E234339276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. RedisDictionary", "02. RedisDictionary\02. RedisDictionary.csproj", "{BF3DCBEC-D545-4A00-8047-711C8ACEC88E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFAB766F-C992-4683-B3CD-51E234339276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFAB766F-C992-4683-B3CD-51E234339276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFAB766F-C992-4683-B3CD-51E234339276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFAB766F-C992-4683-B3CD-51E234339276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3DCBEC-D545-4A00-8047-711C8ACEC88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3DCBEC-D545-4A00-8047-711C8ACEC88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3DCBEC-D545-4A00-8047-711C8ACEC88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3DCBEC-D545-4A00-8047-711C8ACEC88E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

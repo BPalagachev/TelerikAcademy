@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileSystem name="17. ProcessingXMLin.NET">
+  <Dir name="01. Catalogue">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_01.Catalogue.exe</file>
+        <file>_01.Catalogue.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_01.Catalogue.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="02. ParseCatalogue">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_02.ParseCatalogue.exe</file>
+        <file>_02.ParseCatalogue.vshost.exe</file>
+      </Dir>
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_02.ParseCatalogue.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="03. CountArtistsWithXPath">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_03.CountArtistsWithXPath.exe</file>
+        <file>_03.CountArtistsWithXPath.vshost.exe</file>
+      </Dir>
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_03.CountArtistsWithXPath.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="04. PriceComparer">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_04.PriceComparer.exe</file>
+        <file>_04.PriceComparer.vshost.exe</file>
+      </Dir>
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_04.PriceComparer.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="05. SongEctracter">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_05.SongEctracter.exe</file>
+        <file>_05.SongEctracter.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_05.SongEctracter.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="06. SongExtracterXDocument">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_06.SongExtracterXDocument.exe</file>
+        <file>_06.SongExtracterXDocument.vshost.exe</file>
+      </Dir>
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_06.SongExtracterXDocument.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="07. TextToXml">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_07.TextToXml.exe</file>
+        <file>_07.TextToXml.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_07.TextToXml.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="08. CreateAlbums">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_08.CreateAlbums.exe</file>
+        <file>_08.CreateAlbums.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_08.CreateAlbums.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="09. FilesAndDirs">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_09.FilesAndDirs.exe</file>
+        <file>_09.FilesAndDirs.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_09.FilesAndDirs.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+  <Dir name="09. FilesAndDirXDocument">
+    <Dir name="bin">
+      <Dir name="Debug">
+        <file>_09.FilesAndDirXDocument.exe</file>
+        <file>_09.FilesAndDirXDocument.vshost.exe</file>
+      </Dir>
+      <Dir name="Release" />
+    </Dir>
+    <Dir name="obj">
+      <Dir name="Debug">
+        <file>_09.FilesAndDirXDocument.exe</file>
+        <Dir name="TempPE" />
+      </Dir>
+    </Dir>
+    <Dir name="Properties" />
+  </Dir>
+</FileSystem>

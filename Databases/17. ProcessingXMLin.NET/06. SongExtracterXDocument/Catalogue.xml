@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Catalogue>
+	<Album>
+		<name>Rodopa</name>
+		<artist>Pevcheska Trupa Rodopa</artist>
+		<year>1997</year>
+		<producer>Self produced</producer>
+		<price>2500</price>
+		<song>
+			<title>aaa</title>
+			<duration>bbb</duration>
+		</song>
+		<song>
+			<title>ccc</title>
+			<duration>ddd</duration>
+		</song>
+		<song>
+			<title>eee</title>
+			<duration>fff</duration>
+		</song>
+	</Album>
+</Catalogue>

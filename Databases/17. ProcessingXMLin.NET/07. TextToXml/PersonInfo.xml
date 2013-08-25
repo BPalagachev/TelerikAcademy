@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+	<person>
+		<name>Spiro</name>
+		<address />
+		<phone />
+	</person>
+	<person>
+		<name>Mara</name>
+		<address>Nadejda</address>
+		<phone>123456</phone>
+	</person>
+	<person>
+		<name>Ceko</name>
+		<address>Drujba</address>
+		<phone>234567</phone>
+	</person>
+</people>

@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkHomework.Data", "EntityFrameworkHomework.Data\EntityFrameworkHomework.Data.csproj", "{D6BBFF07-909C-496C-8C27-68C32BC001F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. CustomersModifier.Client", "02. CustomersModifier.Client\02. CustomersModifier.Client.csproj", "{200E1C59-EC80-4365-AB86-BC5E2E58EACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. CustomerMatch", "03. CustomerMatch\03. CustomerMatch.csproj", "{15B6EA3F-0DE4-4DE6-9766-CD6BCE65D10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. CustomerMatchNaviteQuery", "04. CustomerMatchNaviteQuery\04. CustomerMatchNaviteQuery.csproj", "{58E07AF4-1606-4EE5-8DF4-FEC70BD959FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. MatchSelsByRegionAndPeriod", "05. MatchSelsByRegionAndPeriod\05. MatchSelsByRegionAndPeriod.csproj", "{215A57B5-30D0-4C07-8EDE-BB0138F9CEB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. GenerateInstallScriptFromModel", "06. GenerateInstallScriptFromModel", "{EFF32A65-AB7E-4C18-ADC7-CD463D2EAB1C}"
+	ProjectSection(SolutionItems) = preProject
+		EntityFrameworkHomework.Data\install_NorthwindDBFromEntityModel.edmx.sql = EntityFrameworkHomework.Data\install_NorthwindDBFromEntityModel.edmx.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. ConcurencyConflict", "07. ConcurencyConflict\07. ConcurencyConflict.csproj", "{BEA7068B-FFFE-47FC-8C06-3160D07ED55B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. EmplyeeExtention", "08. EmplyeeExtention\08. EmplyeeExtention.csproj", "{3B1A0966-E60D-4C1F-91A5-3E9FFB0071F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Transactions", "09. Transactions\09. Transactions.csproj", "{6E1A2CC2-0EB1-431B-9F9C-47B11B7F9B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. CallCustomStoredProcedure", "10. CallCustomStoredProcedure\10. CallCustomStoredProcedure.csproj", "{00052D7D-A94C-4C8B-9C9F-5F7959C31208}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6BBFF07-909C-496C-8C27-68C32BC001F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BBFF07-909C-496C-8C27-68C32BC001F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BBFF07-909C-496C-8C27-68C32BC001F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BBFF07-909C-496C-8C27-68C32BC001F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200E1C59-EC80-4365-AB86-BC5E2E58EACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200E1C59-EC80-4365-AB86-BC5E2E58EACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200E1C59-EC80-4365-AB86-BC5E2E58EACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200E1C59-EC80-4365-AB86-BC5E2E58EACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B6EA3F-0DE4-4DE6-9766-CD6BCE65D10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B6EA3F-0DE4-4DE6-9766-CD6BCE65D10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B6EA3F-0DE4-4DE6-9766-CD6BCE65D10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B6EA3F-0DE4-4DE6-9766-CD6BCE65D10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E07AF4-1606-4EE5-8DF4-FEC70BD959FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E07AF4-1606-4EE5-8DF4-FEC70BD959FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E07AF4-1606-4EE5-8DF4-FEC70BD959FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E07AF4-1606-4EE5-8DF4-FEC70BD959FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215A57B5-30D0-4C07-8EDE-BB0138F9CEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215A57B5-30D0-4C07-8EDE-BB0138F9CEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215A57B5-30D0-4C07-8EDE-BB0138F9CEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215A57B5-30D0-4C07-8EDE-BB0138F9CEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA7068B-FFFE-47FC-8C06-3160D07ED55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA7068B-FFFE-47FC-8C06-3160D07ED55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA7068B-FFFE-47FC-8C06-3160D07ED55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA7068B-FFFE-47FC-8C06-3160D07ED55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1A0966-E60D-4C1F-91A5-3E9FFB0071F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1A0966-E60D-4C1F-91A5-3E9FFB0071F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1A0966-E60D-4C1F-91A5-3E9FFB0071F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1A0966-E60D-4C1F-91A5-3E9FFB0071F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1A2CC2-0EB1-431B-9F9C-47B11B7F9B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1A2CC2-0EB1-431B-9F9C-47B11B7F9B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1A2CC2-0EB1-431B-9F9C-47B11B7F9B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1A2CC2-0EB1-431B-9F9C-47B11B7F9B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00052D7D-A94C-4C8B-9C9F-5F7959C31208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00052D7D-A94C-4C8B-9C9F-5F7959C31208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00052D7D-A94C-4C8B-9C9F-5F7959C31208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00052D7D-A94C-4C8B-9C9F-5F7959C31208}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

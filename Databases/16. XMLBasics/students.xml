@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+<students xmlns="urn:students">
+  <student>
+    <name>Spiro</name>
+    <gender>Male</gender>
+    <birthdate>17-03-1979</birthdate>
+    <phone>+359888123456</phone>
+    <email>spiro@spiro.sp</email>
+    <course>3</course>
+    <specialty>Math</specialty>
+    <facultyNumber>123456</facultyNumber>
+    <exams>
+      <name>Math 1</name>
+      <tutor>Ceko Sifonq</tutor>
+      <score>750</score>
+    </exams>
+    <enrolment>
+      <date>01-09-2012</date>
+      <examScore>999</examScore>
+    </enrolment>
+  </student>
+  <student>
+    <name>Ceko Sifonq</name>
+    <gender>Male</gender>
+    <birthdate>27-11-1944</birthdate>
+    <phone>+359888654321</phone>
+    <email>ceko@ceko.ce</email>
+    <course>1</course>
+    <specialty>Granary</specialty>
+    <facultyNumber>654321</facultyNumber>
+    <exams>
+      <name>Math 1</name>
+      <tutor>125</tutor>
+      <score>Spiro</score>
+    </exams>
+    <enrolment>
+      <date>01-09-2012</date>
+      <examScore>999</examScore>
+    </enrolment>
+  </student>
+</students>

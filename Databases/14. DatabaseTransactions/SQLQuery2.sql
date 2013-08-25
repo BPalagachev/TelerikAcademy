@@ -1,0 +1,57 @@
+use AtmSystem;
+GO
+DROP TABLE CardAccounts ;
+GO
+
+CREATE TABLE CardAccounts
+(
+	Id INT PRIMARY KEY IDENTITY,
+	CardNumber CHAR(10) NOT NULL UNIQUE,
+	CardPIN CHAR(4) NOT NULL,
+	CardCash money
+)
+GO
+
+CREATE TABLE Logs
+(
+	Id INT PRIMARY KEY IDENTITY,
+	CardId INT NOT NULL,
+	OldAmount money,
+	NewAmount money NOT NULL,
+	FOREIGN KEY (CardId) REFERENCES CardAccounts(Id)
+)
+GO
+
+INSERT INTO CardAccounts(CardNumber, CardPIN, CardCash)
+VALUES ('0123456789', '1234', 1500)
+
+INSERT INTO CardAccounts(CardNumber, CardPIN, CardCash)
+VALUES ('9876543210', '1234', 1500)
+
+
+SELECT *
+FROM Logs
+SELECT *
+FROM CardAccounts
+
+UPDATE CardAccounts
+SET CardCash = 1500
+
+
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+
+BEGIN TRAN
+
+
+SELECT * 
+FROM CardAccounts
+--WHERE CardNumber = '9876543210'
+
+WAITFOR DELAY '00:00:10'
+
+SELECT * 
+FROM CardAccounts
+--WHERE CardNumber = '9876543210'
+
+COMMIT TRAN
+
