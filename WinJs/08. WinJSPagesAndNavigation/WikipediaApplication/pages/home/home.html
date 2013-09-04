@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Theory of relativity</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <section>
+                <h2>General</h2>
+                <p>
+                    The theory of relativity, or simply relativity in physics, generally encompasses two theories by Albert Einstein: special relativity and general relativity.(The word relativity can also be used in the context of an older theory, that of Galilean invariance.)
+                </p>
+                <p>
+                    Concepts introduced by the theories of relativity include:
+                    <ul>
+                        <li>Measurements of various quantities are relative to the velocities of observers. In particular, space and time can dilate.</li>
+                        <li>Spacetime: space and time should be considered together and in relation to each other.</li>
+                        <li>The speed of light is nonetheless invariant, the same for all observers.</li>
+                    </ul>
+                </p>
+                <p>
+                    The term "theory of relativity" was based on the expression "relative theory" (German: Relativtheorie) used by Max Planck in 1906, who emphasized how the theory uses the principle of relativity. In the discussion section of the same paper Alfred Bucherer used for the first time the expression "theory of relativity" (German: Relativitätstheorie).
+                </p>
+            </section>
+
+            <section id="section-tiles">
+                <h2>Table of Contents</h2>
+                <div onclick="gotoscope(event)">Scope</div>
+                <div onclick="gototwoTheoryView(event)">Two-theory view</div>
+                <div onclick="gotoonTheTheoryOfRelativity(event)">On the theory of relativity</div>
+                <div onclick="gotospecialRelativity(event)">Special relativity</div>
+                <div onclick="gotogeneralRelativity(event)">General relativity</div>
+                <div onclick="">Experimental evidence</div>
+                <div onclick="gotoTestsOfSpecialRelativity(event)">Tests of special relativity</div>
+                <div onclick="gotoTestsOfGeneralRelativity(event)">Tests of general relativity</div>
+                <div onclick="gotoHistory(event)">History</div>
+                <div onclick="gotoHistory(event)">Minority views</div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

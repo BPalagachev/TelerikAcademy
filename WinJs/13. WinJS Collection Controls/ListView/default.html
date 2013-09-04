@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ListView</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- ListView references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/data.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="computer-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="computer-template">
+            <img src="#" data-win-bind="src: imageUrl" height="300" width="300" />
+            <dl>
+                <dt>Name</dt>
+                <dd data-win-bind="innerText: name"></dd>
+                <dt>Price</dt>
+                <dd><span>$</span><span data-win-bind="innerText: price"></span></dd>
+                <dt>manufacturer</dt>
+                <dd data-win-bind="innerText: manufacturer"></dd>
+                <dt>Processor</dt>
+                <dd>
+                    <dl>
+                        <dt>Model</dt>
+                        <dd data-win-bind="innerText: processor.modelName"></dd>
+                        <dt>Frequency</dt>
+                        <dd data-win-bind="innerText: processor.frequencyGHz"></dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <fieldset id="interface">
+            <legend>Computer Info:</legend>
+            <label for="input-name">Name: </label>
+            <input id="input-name" type="text" /><br />
+            <label for="input-image-url">Image url: </label>
+            <input id="input-image-url" type="text" /><br />
+            <label for="input-price">Price: </label>
+            <input id="input-price" type="text" /><br />
+            <label for="input-manufactorer">Manufacturer: </label>
+            <input id="input-manufactorer" type="text" /><br />
+            <fieldset>
+                <legend>Processoer Info:</legend>
+                <label for="input-processor-name">Model name: </label>
+                <input id="input-processor-name" type="text" /><br />
+                <label for="input-processor-frequency">Frequency in GHz</label><input id="input-processor-frequency" type="text" /><br />
+            </fieldset>
+            <button id="btn-add-computer">Add Computer</button>
+    </fieldset>
+
+     <div data-win-control="WinJS.UI.ListView"
+        data-win-options="{
+        itemDataSource: Data.groupedComputerList.dataSource,
+        groupDataSource: Data.groupedComputerList.groups.dataSource,
+        layout: {type: WinJS.UI.GridLayout},
+        itemTemplate: select('#computer-template-container'), 
+        }">
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_14._LocalAndRemoteResources</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- _14._LocalAndRemoteResources references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/http-requester.js"></script>
+    <script src="js/data.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="post-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="post-template">
+            <span class="author" data-win-bind="innerText: Author"></span><span> says:</span>
+            <div class="content" data-win-bind="innerText: Content"></div>
+        </div>
+    </div>
+
+    <fieldset id="create-new-post">
+        <legend>Create new post</legend>
+        <label for="input-author-name">Author: </label><br />
+        <input id="input-author-name" type="text"/><br />
+        <label for="txtarea-content">Content: </label><br />
+        <textarea id="txtarea-content" cols="75" rows="10"></textarea>
+        <button id="btn-post-content">Post</button>
+        <div id="info"></div>
+    </fieldset>
+
+    <div data-win-control="WinJS.UI.ListView"
+        data-win-options="{
+        itemDataSource: Data.postsList.dataSource,
+        itemTemplate: select('#post-template-container'),
+        layout : {type: WinJS.UI.GridLayout}
+        }">
+    </div>
+</body>
+</html>

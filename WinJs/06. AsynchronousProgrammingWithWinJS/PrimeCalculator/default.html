@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PrimeCalculator</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- PrimeCalculator references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/primesWebWorker.js"></script>
+    <script src="js/PrimeNumbersCalculator.js"></script>
+
+    <script src="/js/default.js"></script>
+
+</head>
+<body>
+    <div id="calculator">
+        <h2>Display: </h2>
+        <div id="display">Calculation results:</div>
+
+        <h2>Calculate prime numbers up to a number</h2>
+        <label for="input-to-number">Number</label>
+        <input id="input-to-number" type="text" />
+        <button id="btn-to-number">Calculate</button>
+        <span id="info-to-number"></span>
+
+        <h2>Calculate first N prime numbers</h2>
+        <label for="input-first-primes">Number of primes</label>
+        <input id="input-first-primes" type="text" />
+        <button id="btn-first-primes">Calculate</button>
+        <span id="info-first-primes"></span>
+
+        <h2>Calculate prime numbers in interval</h2>
+        <label for="input-interval-start">Interval Start</label>
+        <input id="input-interval-start" type="text" />
+        <label for="input-interval-end">Interval End</label>
+        <input id="input-interval-end" type="text" />
+        <button id="btn-interval">Calculate</button>
+        <span id="info-interval"></span>
+
+
+        <h2>Errors: </h2>
+        <div id="errors-display"></div>
+        <h2>Timer:</h2>
+        <div id="timer"></div>
+
+    </div>
+
+    <script>
+        var i = 0;
+        setInterval(function () {
+            document.getElementById("timer").innerText = i + ' sec';
+            i++;
+        }, 1000);
+    </script>
+</body>
+</html>

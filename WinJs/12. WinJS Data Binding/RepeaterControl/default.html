@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RepeaterControl</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- RepeaterControl references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/data.js"></script>
+    <script src="js/RepeaterControl.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="repeater-container">
+        <fieldset id="interface">
+            <legend>Computer Info:</legend>
+            <label for="input-name">Name: </label>
+            <input id="input-name" type="text" /><br />
+            <label for="input-image-url">Image url: </label>
+            <input id="input-image-url" type="text" /><br />
+            <label for="input-price">Price: </label>
+            <input id="input-price" type="text" /><br />
+            <label for="input-rating">Rating: </label>
+            <span id="input-rating" data-win-control="WinJS.UI.Rating"></span>
+            <br />
+            <fieldset>
+                <legend>Processoer Info:</legend>
+                <label for="input-processor-name">Model name: </label>
+                <input id="input-processor-name" type="text" /><br />
+                <label for="input-processor-frequency">Frequency in GHz</label><input id="input-processor-frequency" type="text" /><br />
+            </fieldset>
+            <button id="btn-add-computer">Add Computer</button>
+            <button id="btn-render-computers">Render Computers</button>
+        </fieldset>
+    </div>
+</body>
+</html>

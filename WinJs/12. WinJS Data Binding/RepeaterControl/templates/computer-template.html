@@ -1,0 +1,20 @@
+﻿<div class="computer-template">
+    <img src="#" data-win-bind="src: imageUrl" height="300" width="300" />
+    <dl>
+        <dt>Name</dt>
+        <dd data-win-bind="innerText: name"></dd>
+        <dt>Price</dt>
+        <dd><span>$</span><span data-win-bind="innerText: price"></span></dd>
+        <dt>Prcessor</dt>
+        <dd>
+            <dl>
+                <dt>Model</dt>
+                <dd data-win-bind="innerText: processor.modelName"></dd>
+                <dt>Frequency</dt>
+                <dd data-win-bind="innerText: processor.frequencyGHz"></dd>
+            </dl>
+        </dd>
+        <dt>Rating</dt>
+        <dt data-win-control="WinJS.UI.Rating" data-win-bind="winControl.averageRating: rating"></dt>
+    </dl>
+</div>

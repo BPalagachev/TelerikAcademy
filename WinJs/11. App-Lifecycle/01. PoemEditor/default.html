@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_01._PoemEditor</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- _01._PoemEditor references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/PoemEditor.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="poem-container"></div>
+
+    <div id="appbar-id" data-win-control="WinJS.UI.AppBar" data-win-options="">
+        <button
+            data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdSave',label:'Save',icon:'save',
+                section:'global',tooltip:'Save Poem'}">
+        </button>
+        <button
+            data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdRemove',label:'Load',icon:'upload',
+                section:'global',tooltip:'Load Poem'}">
+        </button>
+        <button
+            data-win-control="WinJS.UI.AppBarCommand"
+            data-win-options="{id:'cmdNew',label:'New',icon:'page2',
+                section:'global',tooltip:'New Poem'}">
+        </button>
+    </div>
+</body>
+
+
+</html>

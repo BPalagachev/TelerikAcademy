@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_05._WinJSClassesAndNamespaces</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- _05._WinJSClassesAndNamespaces references -->
+    <link href="/css/default.css" rel="stylesheet" />
+   
+    <script src="js/Vegetable.js"></script>
+    <script src="js/Tomato.js"></script>
+    <script src="js/Cucumber.js"></script>
+    <script src="js/MushroomMixin.js"></script>
+    <script src="js/TomatoGmo.js"></script>
+    <script src="js/CucumberGMO.js"></script>
+    <script src="/js/default.js"></script>
+
+</head>
+<body>
+    <p>Content goes here</p>
+
+    <script>
+        var tomato = new Plants.Vegetables.Tomato("red", 10);
+        var cucumeber = new Plants.Vegetables.Cucumber("green", 50);
+        var tomatoGmo = new Plants.Vegetables.GMO.TomatoGmo("red", 10);
+        tomatoGmo.waterPlant(100);
+        var cucumberGMO = new Plants.Vegetables.GMO.CucumberGMO("greenish", 100);
+        cucumberGMO.waterPlant(150);
+        var bp = 0;
+    </script>
+</body>
+</html>
