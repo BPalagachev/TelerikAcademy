@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OpenAccess.CodeFirst</id>
+    <version>2013.1.418.2</version>
+    <title>OpenAccess.CodeFirst</title>
+    <authors>Telerik</authors>
+    <owners>Telerik</owners>
+    <licenseUrl>http://www.telerik.com/purchase/license-agreement/orm-free.aspx</licenseUrl>
+    <projectUrl>http://www.telerik.com/products/orm.aspx</projectUrl>
+    <iconUrl>http://www.telerik.com/images/NuGet_Telerik_OpenAccess_ORM.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This package helps when starting a new project with the Code first (also known as Fluent Mapping) approach with Telerik OpenAccess ORM. 
+                    Besided the code only approach Telerik also provides a visual designer integrated with Visual Studio.</description>
+    <summary>This package helps when starting a new project with the Code first (also known as Fluent Mapping) approach with Telerik OpenAccess ORM.</summary>
+    <language>en-US</language>
+    <tags>Telerik DAL ORM RadControls fluent mapping Entity database mapper convention</tags>
+  </metadata>
+</package>

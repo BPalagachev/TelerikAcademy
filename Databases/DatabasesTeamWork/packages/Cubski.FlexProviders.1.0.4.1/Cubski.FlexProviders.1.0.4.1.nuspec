@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Cubski.FlexProviders</id>
+    <version>1.0.4.1</version>
+    <title>Cubski.FlexProviders</title>
+    <authors>Scott Allen</authors>
+    <owners>Scott Allen</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Custom membership provider by Scott Allen for .NET 4.0</description>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebPages.OAuth" version="2.0.20710.0" />
+    </dependencies>
+  </metadata>
+</package>
